@@ -1,0 +1,19 @@
+{
+  "Index": {
+    "title": "Index sayfasına hoşgeldiniz",
+    "message": "Bu Index sayfasıdır"
+  },
+  "Header": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "language": "Dil",
+    "theme": "Tema",
+    "dark": "Karanlık Mod",
+    "light": "Aydınlık Mod"
+  },
+  "Hero": {
+    "heroTitle": "Türkiye'nin ilk Airtable Partneri ile tanışın",
+    "heroText": "Airtable konusunda uzman bir ekibiz ve ihtiyacınız olan her şeyde size yardımcı olabiliriz. Airtable hakkında bilmeniz gereken her şeyde size yardımcı olmak için buradayız."
+  }
+}

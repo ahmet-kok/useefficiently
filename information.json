@@ -1,0 +1,17 @@
+{
+    "company": "Company Name",
+    "address": "Company Address",
+    "phone": "Company Phone",
+    "email": "Company Email",
+    "website": "Company Website",
+    "facebook": "Company Facebook",
+    "twitter": "Company Twitter",
+    "linkedin": "Company LinkedIn",
+    "instagram": "Company Instagram",
+    "youtube": "Company YouTube",
+    "pinterest": "Company Pinterest",
+    "google": "Company Google",
+    "github": "Company GitHub",
+    "gitlab": "Company GitLab",
+    "bitbucket": "Company BitBucket"
+}

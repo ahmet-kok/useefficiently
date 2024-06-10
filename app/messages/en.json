@@ -1,0 +1,19 @@
+{
+  "Index": {
+    "title": "Welcome to the Index page",
+    "message": "This is the Index page"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark Mode",
+    "light": "Light Mode"
+  },
+  "Hero": {
+    "heroTitle": "Your Airtable Service Partner",
+    "heroText": "We are a team of experts in Airtable and we can help you with everything you need to know about Airtable. We are here to help you with all your Airtable needs."
+  }
+}
