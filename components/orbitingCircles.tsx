@@ -4,7 +4,7 @@ import { IconProps } from "@radix-ui/react-icons/dist/types";
 export function OrbitingCircle() {
   return (
     <div className="relative flex h-[450px] w-full items-center justify-center rounded-lg border md:shadow-xl">
-      <span className="z-40 py-2 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+      <span className="z-40 py-2 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center sm:text-7xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
         UseEfficiently
       </span>
 

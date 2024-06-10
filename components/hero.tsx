@@ -17,9 +17,7 @@ export default function HeroSection() {
           <p className="max-w-[600px] text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">
             {t("heroText")}
           </p>
-          <p>
-            <span>Use Efficiently</span>
-          </p>
+
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Link href="#">
               <ShinyButton text="Schedule Consultation" />
