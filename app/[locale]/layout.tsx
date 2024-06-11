@@ -26,7 +26,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body
         className={cn(
           "min-h-screen font-sans antialiased dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900",
