@@ -1,11 +1,7 @@
 {
-  "Index": {
-    "title": "Index sayfasına hoşgeldiniz",
-    "message": "Bu Index sayfasıdır"
-  },
   "Header": {
-    "home": "Anasayfa",
-    "about": "Hakkımızda",
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
     "contact": "İletişim",
     "language": "Dil",
     "theme": "Tema",
@@ -13,7 +9,42 @@
     "light": "Aydınlık Mod"
   },
   "Hero": {
-    "heroTitle": "Türkiye'nin ilk Airtable Servis Partneri ile tanışın",
-    "heroText": "Airtable konusunda uzman bir ekibiz ve ihtiyacınız olan her şeyde size yardımcı olabiliriz. Airtable hakkında bilmeniz gereken her şeyde size yardımcı olmak için buradayız."
+    "heroTitle": "Airtable Hizmet Ortağınız",
+    "heroText": "Türkiye'deki ilk ve tek Airtable partneri olarak, UseEfficiently ekibi Airtable konusunda uzmanlaşmıştır. Airtable'ı etkili bir şekilde kullanmanız ve tüm ihtiyaçlarınızı karşılamanız için buradayız.",
+    "scheduleConsultation": "Danışma Planlayın",
+    "learnMore": "Daha Fazla Bilgi Edinin"
+  },
+  "Testimonials": {
+    "1": {
+      "company": "Türkiye Girişimcilik Vakfı",
+      "customer": "John Doe",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
+    },
+    "2": {
+      "company": "PublicSquare",
+      "customer": "Jane Smith",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Kesinlikle harika bir deneyimdi! Ekip çok destekleyiciydi ve ürün kalitesi beklentilerimi aştı."
+    },
+    "3": {
+      "company": "YetGen",
+      "customer": "Alice Johnson",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Hizmetten son derece memnunum. Yanıt verme süresi ve profesyonellik üst düzeydeydi."
+    }
+  },
+  "ClientTestimonials": {
+    "title": "Müşteri Yorumları",
+    "subtitle": "Önde Gelen Markaların Güvencesi",
+    "description": "Memnun müşterilerimizin, kodsuz çözümlerimizin işletmelerini nasıl dönüştürdüğünü dinleyin."
+  },
+  "Team": {
+    "title": "Neşeli Ekibimiz",
+    "subtitle": "Sihir Arkasındaki Uzmanlarla Tanışın",
+    "description": "Yetkin kodsuz çözümler uzmanı ekibimiz, yenilikçi çözümlerle işletmeleri dönüştürmeye adanmıştır. Sihir arkasındaki yüzlerle tanışın!"
   }
 }

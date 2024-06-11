@@ -20,11 +20,11 @@ export default function HeroSection() {
 
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Link href="#">
-              <ShinyButton text="Schedule Consultation" />
+              <ShinyButton text={t("scheduleConsultation")} />
             </Link>
 
             <Button className="rounded-lg px-6 ">
-              <Link href="#">Learn More</Link>
+              <Link href="#">{t("learnMore")}</Link>
             </Button>
           </div>
         </div>

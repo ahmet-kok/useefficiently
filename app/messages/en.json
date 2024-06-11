@@ -1,8 +1,4 @@
 {
-  "Index": {
-    "title": "Welcome to the Index page",
-    "message": "This is the Index page"
-  },
   "Header": {
     "home": "Home",
     "about": "About",
@@ -14,6 +10,41 @@
   },
   "Hero": {
     "heroTitle": "Your Airtable Service Partner",
-    "heroText": "We are a team of experts in Airtable and we can help you with everything you need to know about Airtable. We are here to help you with all your Airtable needs."
+    "heroText": "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
+    "scheduleConsultation": "Schedule a Consultation",
+    "learnMore": "Learn More"
+  },
+  "Testimonials": {
+    "1": {
+      "company": "Global Entrepreneurship Foundation",
+      "customer": "John Doe",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns."
+    },
+    "2": {
+      "company": "PublicSquare",
+      "customer": "Jane Smith",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Absolutely amazing experience! The team was very supportive and the product quality exceeded my expectations."
+    },
+    "3": {
+      "company": "YetGen",
+      "customer": "Alice Johnson",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch."
+    }
+  },
+  "ClientTestimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "Trusted by Leading Brands",
+    "description": "Hear from our satisfied clients about how our no-code solutions have transformed their businesses."
+  },
+  "Team": {
+    "title": "Our Joyful Team",
+    "subtitle": "Meet the Experts Behind the Magic",
+    "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!"
   }
 }

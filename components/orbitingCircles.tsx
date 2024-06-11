@@ -1,5 +1,6 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
+import Image from "next/image";
 
 export function OrbitingCircle() {
   return (
@@ -9,14 +10,14 @@ export function OrbitingCircle() {
       </span>
 
       {/* Inner Circles */}
-      <OrbitingCircles
+      {/* <OrbitingCircles
         className="h-[30px] w-[30px] border-none bg-transparent"
         duration={20}
         delay={20}
         radius={80}
       >
         <Icons.whatsapp />
-      </OrbitingCircles>
+      </OrbitingCircles> */}
       <OrbitingCircles
         className="h-[60px] w-[60px] border-none bg-transparent block"
         duration={20}
@@ -33,7 +34,12 @@ export function OrbitingCircle() {
         radius={190}
         duration={20}
       >
-        <img src="https://logosandtypes.com/wp-content/uploads/2022/04/make.svg" />
+        <Image
+          src="https://logosandtypes.com/wp-content/uploads/2022/04/make.svg"
+          width={100}
+          height={100}
+          alt="Make.com"
+        />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[40px] w-[40px] border-none bg-transparent block"
@@ -42,7 +48,12 @@ export function OrbitingCircle() {
         duration={20}
         delay={20}
       >
-        <img src="https://asset.brandfetch.io/idytCFzVcY/id3yX15qlX.svg" />
+        <Image
+          src="https://asset.brandfetch.io/idytCFzVcY/id3yX15qlX.svg"
+          width={100}
+          height={100}
+          alt="Softr.io"
+        />
       </OrbitingCircles>
     </div>
   );

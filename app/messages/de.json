@@ -1,0 +1,50 @@
+{
+  "Header": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "theme": "Thema",
+    "dark": "Dunkler Modus",
+    "light": "Heller Modus"
+  },
+  "Hero": {
+    "heroTitle": "Ihr Airtable-Servicepartner",
+    "heroText": "Bei UseEfficiently steht Ihnen unser Expertenteam zur Verfügung, um Ihnen zu helfen, Airtable zu meistern und es effizient zu nutzen, um all Ihre Bedürfnisse zu erfüllen. Wir sind bestrebt, erstklassigen Support und innovative Lösungen anzubieten.",
+    "scheduleConsultation": "Beratung vereinbaren",
+    "learnMore": "Mehr erfahren"
+  },
+  "Testimonials": {
+    "1": {
+      "company": "Global Entrepreneurship Foundation",
+      "customer": "John Doe",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Der Kundenservice, den ich erhalten habe, war außergewöhnlich. Das Support-Team hat alles getan, um meine Bedenken auszuräumen."
+    },
+    "2": {
+      "company": "PublicSquare",
+      "customer": "Jane Smith",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Absolut erstaunliche Erfahrung! Das Team war sehr unterstützend und die Produktqualität übertraf meine Erwartungen."
+    },
+    "3": {
+      "company": "YetGen",
+      "customer": "Alice Johnson",
+      "logo": "/placeholder.svg",
+      "avatar": "/placeholder.svg",
+      "text": "Ich bin äußerst zufrieden mit dem Service. Die Reaktionsfähigkeit und Professionalität waren erstklassig."
+    },
+    "ClientTestimonials": {
+      "title": "Kundenbewertungen",
+      "subtitle": "Vertraut von führenden Marken",
+      "description": "Hören Sie von unseren zufriedenen Kunden, wie unsere No-Code-Lösungen ihre Geschäfte transformiert haben."
+    }
+  },
+  "Team": {
+    "title": "Unser fröhliches Team",
+    "subtitle": "Lernen Sie die Experten hinter der Magie kennen",
+    "description": "Unser talentiertes Team von No-Code-Experten widmet sich der Transformation von Unternehmen mit innovativen Lösungen. Lernen Sie die Gesichter hinter der Magie kennen!"
+  }
+}
