@@ -35,12 +35,12 @@
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "Hizmetten son derece memnunum. Yanıt verme süresi ve profesyonellik üst düzeydeydi."
+    },
+    "ClientTestimonials": {
+      "title": "Müşteri Yorumları",
+      "subtitle": "Önde Gelen Markaların Güvencesi",
+      "description": "Memnun müşterilerimizin, kodsuz çözümlerimizin işletmelerini nasıl dönüştürdüğünü dinleyin."
     }
-  },
-  "ClientTestimonials": {
-    "title": "Müşteri Yorumları",
-    "subtitle": "Önde Gelen Markaların Güvencesi",
-    "description": "Memnun müşterilerimizin, kodsuz çözümlerimizin işletmelerini nasıl dönüştürdüğünü dinleyin."
   },
   "Team": {
     "title": "Neşeli Ekibimiz",

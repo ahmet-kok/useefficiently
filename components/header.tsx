@@ -176,7 +176,13 @@ export default function Header() {
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-2">
                     <GlobeIcon className="h-5 w-5" />
-                    <span>{localActive === "en" ? "English" : "Türkçe"}</span>
+                    <span>
+                      {localActive === "en"
+                        ? "English"
+                        : localActive === "de"
+                        ? "Deutsch"
+                        : "Türkçe"}
+                    </span>
                     <ChevronRightIcon className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">

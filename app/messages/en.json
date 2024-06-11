@@ -16,7 +16,7 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Global Entrepreneurship Foundation",
+      "company": "Turkish Entrepreneurship Foundation",
       "customer": "John Doe",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
@@ -35,12 +35,12 @@
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch."
+    },
+    "ClientTestimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "Trusted by Leading Brands",
+      "description": "Hear from our satisfied clients about how our no-code solutions have transformed their businesses."
     }
-  },
-  "ClientTestimonials": {
-    "title": "Client Testimonials",
-    "subtitle": "Trusted by Leading Brands",
-    "description": "Hear from our satisfied clients about how our no-code solutions have transformed their businesses."
   },
   "Team": {
     "title": "Our Joyful Team",
