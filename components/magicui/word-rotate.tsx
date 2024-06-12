@@ -5,7 +5,7 @@ import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface WordRotateProps {
-  words: string[];
+  words: any[];
   duration?: number;
   framerProps?: HTMLMotionProps<"h1">;
   className?: string;
