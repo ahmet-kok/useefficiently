@@ -16,24 +16,24 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Vestel",
-      "customer": "John Doe",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "company": "Google",
+      "customer": "Beyza Sunay Güler",
+      "logo": "https://github.com/google.png",
+      "avatar": "https://github.com/Beyzasunayguler.png",
       "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
     },
     "2": {
       "company": "Trendyol",
-      "customer": "Jane Smith",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "customer": "Cansu Yılmaz",
+      "logo": "https://github.com/trendyol.png",
+      "avatar": "https://github.com/miaa.png",
       "text": "Kesinlikle harika bir deneyimdi! Ekip çok destekleyiciydi ve ürün kalitesi beklentilerimi aştı."
     },
     "3": {
-      "company": "LC Waikiki",
-      "customer": "Alice Johnson",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "company": "Arçelik",
+      "customer": "İbrahim Ethem",
+      "logo": "https://github.com/arcelik.png",
+      "avatar": "https://github.com/demir.png",
       "text": "Hizmetten son derece memnunum. Yanıt verme süresi ve profesyonellik üst düzeydeydi."
     },
     "ClientTestimonials": {
