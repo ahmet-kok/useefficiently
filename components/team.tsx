@@ -21,8 +21,8 @@ export default function Team() {
             {t("description")}
           </p>
           
-          <Link href="airtable[at]useefficiently.com">
-            <ShinyButton text="airtable@useefficienly.com" />
+          <Link href="mailto:hello@useefficiently.com">
+            <ShinyButton text="hello@useefficienly.com" />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-6">

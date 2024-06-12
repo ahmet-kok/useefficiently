@@ -16,21 +16,21 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Türkiye Girişimcilik Vakfı",
+      "company": "Vestel",
       "customer": "John Doe",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
     },
     "2": {
-      "company": "PublicSquare",
+      "company": "Trendyol",
       "customer": "Jane Smith",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "Kesinlikle harika bir deneyimdi! Ekip çok destekleyiciydi ve ürün kalitesi beklentilerimi aştı."
     },
     "3": {
-      "company": "YetGen",
+      "company": "LC Waikiki",
       "customer": "Alice Johnson",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",

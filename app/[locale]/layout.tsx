@@ -9,7 +9,7 @@ const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   robots: "index, follow",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
   title: "UseEfficiently - Your Airtable Service Partner",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",

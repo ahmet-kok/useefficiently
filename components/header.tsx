@@ -47,13 +47,14 @@ export default function Header() {
   return (
     <header
       className="w-full xl:top-4 xl:z-50  xl:sticky lg:px-6"
+      
+    >
+      <div className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
       style={
         {
           WebkitBackdropFilter: "blur(10px)",
         } as React.CSSProperties
-      }
-    >
-      <div className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md">
+      }>
         <div className="flex items-center">
           <Link href="#" className="flex items-center " prefetch={false}>
             <MountainIcon className="h-8 w-8 mr-2" />

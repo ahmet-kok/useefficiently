@@ -9,7 +9,7 @@ export default function DotPatternDemo() {
     <section className="w-full h-[150px] container px-4 md:px-6 2xl:px-0  mb-6 md:mb-12 lg:mb-16 xl:mb-20">
       {/*       overflow-hidden  p-10 md:shadow-xl container  mx-auto mx-4 px-4 md:px-6 2xl:px-0
        */}{" "}
-      <div className="relative flex px-3 sm:px-10 h-full text-[2rem]  sm:text-5xl rounded-lg border  bg-background md:shadow-xl gap-3 ">
+      <div className="relative flex px-3 sm:px-10 h-full text-[2rem]  sm:text-5xl rounded-lg overflow-hidden border md:shadow-xl gap-3 ">
         <div className="self-center flex w-full max-w-[600px] mx-auto h-full py-5 ">
           <p className="z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter text-black self-center  p-1  dark:text-white border-bottom text-end w-[50%] sm:text-end sm:w-full">
             Use

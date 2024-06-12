@@ -16,21 +16,21 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Global Entrepreneurship Foundation",
+      "company": "Vestel",
       "customer": "John Doe",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "Der Kundenservice, den ich erhalten habe, war außergewöhnlich. Das Support-Team hat alles getan, um meine Bedenken auszuräumen."
     },
     "2": {
-      "company": "PublicSquare",
+      "company": "Trendyol",
       "customer": "Jane Smith",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
       "text": "Absolut erstaunliche Erfahrung! Das Team war sehr unterstützend und die Produktqualität übertraf meine Erwartungen."
     },
     "3": {
-      "company": "YetGen",
+      "company": "LC Waikiki",
       "customer": "Alice Johnson",
       "logo": "/placeholder.svg",
       "avatar": "/placeholder.svg",
