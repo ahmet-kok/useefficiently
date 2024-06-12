@@ -16,24 +16,24 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Vestel",
-      "customer": "John Doe",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "company": "Google",
+      "customer": "Beyza Sunay Güler",
+      "logo": "https://github.com/google.png",
+      "avatar": "https://github.com/Beyzasunayguler.png",
       "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns."
     },
     "2": {
       "company": "Trendyol",
-      "customer": "Jane Smith",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "customer": "Cansu Yılmaz",
+      "logo": "https://github.com/trendyol.png",
+      "avatar": "https://github.com/miaa.png",
       "text": "Absolutely amazing experience! The team was very supportive and the product quality exceeded my expectations."
     },
     "3": {
-      "company": "LC Waikiki",
-      "customer": "Alice Johnson",
-      "logo": "/placeholder.svg",
-      "avatar": "/placeholder.svg",
+      "company": "Arçelik",
+      "customer": "İbrahim Ethem",
+      "logo": "https://github.com/arcelik.png",
+      "avatar": "https://github.com/demir.png",
       "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch."
     },
     "ClientTestimonials": {
