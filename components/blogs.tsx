@@ -21,15 +21,13 @@ export default function Blogs({
       title: "ReDoMusic",
       url: "https://raw.githubusercontent.com/ahmet-kok/ReDoMusic/main/README.md",
       text: "ReDoMusic is a music player that allows you to listen to music from YouTube and SoundCloud. It is a web application that is built with React and Next.js. It is a project that I have been working on for a while and I am very proud of it.",
-      thumbnail:
-        "https://picsum.photos/200",
+      thumbnail: "https://picsum.photos/200",
     },
     {
       title: "Login Page",
       url: "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md",
       text: "This is a simple login page that I have created using HTML, CSS, and JavaScript. It is a project that I have been working on for a while and I am very proud of it.",
-      thumbnail:
-        "https://picsum.photos/300",
+      thumbnail: "https://picsum.photos/300",
     },
   ]);
   /*   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,7 +78,9 @@ const Blog = ({ blog, t, setIsDrawerOpen, setContent }: any) => (
   <Link
     href={blog.url}
     className="rounded-lg  border flex h-[180px] gap-3 p-3 shadow-lg hover:shadow-xl lg:hover:scale-105 transition-all  duration-300 ease-in-out cursor-pointer"
-    onClick={() => {
+    onClick={(event) => {
+      event.preventDefault(); // prevent default navigation behavior
+
       setIsDrawerOpen(true);
       setContent(
         "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md"
