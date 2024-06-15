@@ -6,7 +6,8 @@
     "language": "Language",
     "theme": "Theme",
     "dark": "Dark Mode",
-    "light": "Light Mode"
+    "light": "Light Mode",
+    "system": "System"
   },
   "Hero": {
     "heroTitle": "Your Airtable Service Partner",
@@ -17,10 +18,10 @@
   "Testimonials": {
     "1": {
       "company": "Google",
-      "customer": "Beyza Sunay Güler",
+      "customer": "Ali Sunay",
       "logo": "https://github.com/google.png",
-      "avatar": "https://github.com/Beyzasunayguler.png",
-      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns."
+      "avatar": "https://github.com/ali.png",
+      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns. The customer service I received was exceptional. The support team went above and beyond to address my concerns."
     },
     "2": {
       "company": "Trendyol",
@@ -46,5 +47,10 @@
     "title": "Our Joyful Team",
     "subtitle": "Meet the Experts Behind the Magic",
     "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!"
+  },
+  "Blogs": {
+    "title": "Our Latest Blogs",
+    "subtitle": "Stay Updated with Our Latest Insights",
+    "description": "Explore our latest blogs to stay informed about the latest trends and insights in the no-code industry."
   }
 }

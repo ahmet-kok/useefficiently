@@ -6,7 +6,8 @@
     "language": "Sprache",
     "theme": "Thema",
     "dark": "Dunkler Modus",
-    "light": "Heller Modus"
+    "light": "Heller Modus",
+    "system": "System"
   },
   "Hero": {
     "heroTitle": "Ihr Airtable-Servicepartner",
@@ -17,9 +18,9 @@
   "Testimonials": {
     "1": {
       "company": "Google",
-      "customer": "Beyza Sunay Güler",
+      "customer": "Ali Sunay",
       "logo": "https://github.com/google.png",
-      "avatar": "https://github.com/Beyzasunayguler.png",
+      "avatar": "https://github.com/ali.png",
       "text": "Der Kundenservice, den ich erhalten habe, war außergewöhnlich. Das Support-Team hat alles getan, um meine Bedenken auszuräumen."
     },
     "2": {
@@ -46,5 +47,10 @@
     "title": "Unser fröhliches Team",
     "subtitle": "Lernen Sie die Experten hinter der Magie kennen",
     "description": "Unser talentiertes Team von No-Code-Experten widmet sich der Transformation von Unternehmen mit innovativen Lösungen. Lernen Sie die Gesichter hinter der Magie kennen!"
+  },
+  "Blogs": {
+    "title": "Unsere neuesten Blogs",
+    "subtitle": "Bleiben Sie auf dem Laufenden mit unseren neuesten Erkenntnissen",
+    "description": "Erkunden Sie unsere neuesten Blogs, um über die neuesten Trends und Erkenntnisse in der No-Code-Branche informiert zu bleiben."
   }
 }

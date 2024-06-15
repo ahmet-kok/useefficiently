@@ -1,0 +1,141 @@
+"use client";
+import { useState, useEffect } from "react";
+import { BlogPost } from "@/components/blog-post";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useMessages, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { Icons } from "@/components/orbitingCircles";
+export default function Blogs({
+  contentUrl,
+  open,
+}: {
+  contentUrl: string;
+  open: boolean;
+}) {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(open);
+  const [content, setContent] = useState(contentUrl);
+  const [contentList, setContentList] = useState([
+    {
+      title: "ReDoMusic",
+      url: "https://raw.githubusercontent.com/ahmet-kok/ReDoMusic/main/README.md",
+      text: "ReDoMusic is a music player that allows you to listen to music from YouTube and SoundCloud. It is a web application that is built with React and Next.js. It is a project that I have been working on for a while and I am very proud of it.",
+      thumbnail:
+        "https://picsum.photos/200",
+    },
+    {
+      title: "Login Page",
+      url: "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md",
+      text: "This is a simple login page that I have created using HTML, CSS, and JavaScript. It is a project that I have been working on for a while and I am very proud of it.",
+      thumbnail:
+        "https://picsum.photos/300",
+    },
+  ]);
+  /*   const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    fetch("api/blogs")
+      .then((res) => res.json())
+      .then((json) => setContentList(json))
+      .then(() => setIsLoaded(true));
+  }, []); */
+
+  const t = useTranslations("Blogs");
+  const messages = useMessages();
+  const blogs = Object.keys(messages["Testimonials"]);
+  blogs.pop();
+
+  return (
+    <section className="w-full py-6 md:py-12 lg:py-16 xl:py-20">
+      <div className="space-y-4 container px-4md:px-6   2xl:px-0 pb-8 lg:gap-8">
+        <Badge variant="outline">{t("title")}</Badge>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t("subtitle")}
+        </h2>
+        <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          {t("description")}
+        </p>
+      </div>
+      <div className="container grid grid-cols-1 gap-8 px-4 lg:grid-cols-2 md:px-6  mx-auto 2xl:px-0  lg:gap-8">
+        {contentList.map((blog) => (
+          <Blog
+            key={blog}
+            blog={blog}
+            t={t}
+            setIsDrawerOpen={setIsDrawerOpen}
+            setContent={setContent}
+          />
+        ))}
+      </div>
+      <BlogPost
+        contentUrl={content ? content : ""}
+        open={isDrawerOpen}
+        setOpen={setIsDrawerOpen}
+      />
+    </section>
+  );
+}
+
+const Blog = ({ blog, t, setIsDrawerOpen, setContent }: any) => (
+  <Link
+    href={blog.url}
+    className="rounded-lg  border flex h-[180px] gap-3 p-3 shadow-lg hover:shadow-xl lg:hover:scale-105 transition-all  duration-300 ease-in-out cursor-pointer"
+    onClick={() => {
+      setIsDrawerOpen(true);
+      setContent(
+        "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md"
+      );
+    }}
+  >
+    <Image
+      src={blog.thumbnail}
+      width={150}
+      height={150}
+      /*       ${t(`${blog}.company`)}
+       */ alt={` Logo`}
+      className="h-[100%] rounded-lg object-cover"
+    />
+    <div className=" h-full grid w-full">
+      <div className="flex justify-between self-start items-center">
+        <Link href={"https://github.com/ahmet-kok"}>@leo</Link>
+        <div className="flex gap-2">
+          <Icons.notion className="h-10 w-10" />
+          <Icons.airtable className="h-10 w-10" />
+        </div>
+      </div>
+      <h3 className="text-xl line-clamp-2 self-end font-semibold ">
+        {"The title of the blog"}
+      </h3>
+      {/* <p className="text-sm  leading-relaxed text-gray-500 dark:text-gray-400 text-ellipsis">
+        The customer service I received was exceptional. The support team went
+        above and beyond to address my concerns. The customer service I received
+        was exceptional. The support team went above and beyond to address my
+        concerns.
+      </p> */}
+      {/* <p className="mt-4 text-sm text-ellipsis bg-orange-400 leading-relaxed text-gray-500 dark:text-gray-400">
+        &quot;{t(`${blog}.text`)}&quot;
+      </p> */}
+      {/* <div className="flex items-center justify-between">
+        <Image
+          src={t(`${blog}.logo`)}
+          width={100}
+          height={50}
+          alt={`${t(`${blog}.company`)} Logo`}
+          className="h-8 w-auto"
+        />
+        <div className="flex items-center gap-2">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            {t(`${blog}.customer`)}
+          </p>
+          <Image
+            src={t(`${blog}.avatar`)}
+            width={40}
+            height={40}
+            alt={`${t(`${blog}.customer`)} Avatar`}
+            className="h-10 w-10 rounded-full"
+          />
+        </div>
+      </div> */}
+    </div>
+  </Link>
+);

@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import {
   DropdownMenuTrigger,
@@ -11,8 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { applySystemTheme } from "@/app/utils/theme";
-import { toggleTheme } from "@/app/utils/theme";
 import {
   SunIcon,
   MoonIcon,
@@ -34,27 +31,23 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./theme-toggle";
 export default function Header() {
   const t = useTranslations("Header");
 
   const router = useRouter();
   const localActive = useLocale();
 
-  useEffect(() => {
-    applySystemTheme();
-  }, []);
-
   return (
-    <header
-      className="w-full xl:top-4 xl:z-50  xl:sticky lg:px-6"
-      
-    >
-      <div className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
-      style={
-        {
-          WebkitBackdropFilter: "blur(10px)",
-        } as React.CSSProperties
-      }>
+    <header className="w-full xl:top-4 xl:z-50  xl:sticky lg:px-6">
+      <div
+        className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+        style={
+          {
+            WebkitBackdropFilter: "blur(10px)",
+          } as React.CSSProperties
+        }
+      >
         <div className="flex items-center">
           <Link href="#" className="flex items-center " prefetch={false}>
             <MountainIcon className="h-8 w-8 mr-2" />
@@ -119,13 +112,7 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
             <NavigationMenuItem>
-              <button
-                onClick={toggleTheme}
-                className="   focus:bg-gray-100  dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-              >
-                <SunIcon className="h-5 w-5 min-w-[16px] min-h-[16px] dark:hidden" />
-                <MoonIcon className="h-5 w-5 min-w-[16px] min-h-[16px] hidden dark:inline-block" />
-              </button>
+              <ModeToggle />
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -186,7 +173,7 @@ export default function Header() {
                     </span>
                     <ChevronRightIcon className="h-4 w-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
+                  <DropdownMenuContent align="center">
                     <DropdownMenuItem
                       className="flex items-center gap-2"
                       onClick={(e) => router.replace("/en")}
@@ -204,14 +191,12 @@ export default function Header() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={toggleTheme}
-                className="flex items-center gap-2"
-              >
-                <SunIcon className="h-5 w-5 dark:hidden" />
+              <DropdownMenuItem className="flex items-center gap-2">
+                <ModeToggle />
+                {/* 
                 <span className="dark:hidden">{t("light")}</span>
-                <MoonIcon className="h-5 w-5 hidden dark:inline-block" />
                 <span className=" hidden dark:inline-block">{t("dark")}</span>
+ */}{" "}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

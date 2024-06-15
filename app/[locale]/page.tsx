@@ -6,14 +6,19 @@ import Testimonials from "@/components/testimonials";
 import Team from "@/components/team";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Blogs from "@/components/blogs";
 
-export default function Index() {
+export default function Home({ contentUrl, open }: any) {
   return (
     <>
       <Header />
       <Hero />
       <DotPattern />
       <Testimonials />
+      <Blogs
+        contentUrl={contentUrl ? contentUrl : contentUrl}
+        open={open ? open : false}
+      />
       <Team />
       <Footer />
     </>

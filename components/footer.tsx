@@ -1,30 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
-import {
-  DropdownMenuTrigger,
-  DropdownMenuItem,
-  DropdownMenuContent,
-  DropdownMenu,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+
 import { useLocale, useTranslations } from "next-intl";
-import { applySystemTheme } from "@/app/utils/theme";
-import { toggleTheme } from "@/app/utils/theme";
-import {
-  SunIcon,
-  LinkedinIcon,
-  MenuIcon,
-  GlobeIcon,
-  FlagIcon,
-  ChevronRightIcon,
-  HomeIcon,
-  InfoIcon,
-  PhoneIcon,
-  MountainIcon,
-} from "@/components/icons";
+
 import information from "@/information.json";
 import {
   NavigationMenu,
@@ -35,18 +13,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { info } from "console";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 export default function Header() {
   const t = useTranslations("Header");
 
-  const router = useRouter();
   const localActive = useLocale();
-
-  useEffect(() => {
-    applySystemTheme();
-  }, []);
-
   return (
     <footer
       className="w-full mb-5 lg:px-6 border-t xl:border-t-0"

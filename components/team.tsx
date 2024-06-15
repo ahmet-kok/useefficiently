@@ -20,7 +20,7 @@ export default function Team() {
           <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
             {t("description")}
           </p>
-          
+
           <Link href="mailto:hello@useefficiently.com">
             <ShinyButton text="hello@useefficienly.com" />
           </Link>
@@ -48,7 +48,11 @@ interface TeamMemberProps {
 const TeamMember = ({ member }: TeamMemberProps) => (
   <div className="flex flex-col items-center gap-4">
     <Avatar className="w-24 h-24 bg-background text-6xl">
-      <AvatarImage src={member.avatar} alt={`@${member.name}`} />
+      <AvatarImage
+        src={member.avatar}
+        alt={`@${member.name}`}
+        className="object-cover"
+      />
       <AvatarFallback>
         {member.name[0]}
         {member.name.split(" ")[1][0]}

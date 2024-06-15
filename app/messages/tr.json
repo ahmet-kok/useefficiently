@@ -6,7 +6,8 @@
     "language": "Dil",
     "theme": "Tema",
     "dark": "Karanlık Mod",
-    "light": "Aydınlık Mod"
+    "light": "Aydınlık Mod",
+    "system": "Sistem"
   },
   "Hero": {
     "heroTitle": "Airtable Hizmet Ortağınız",
@@ -17,9 +18,9 @@
   "Testimonials": {
     "1": {
       "company": "Google",
-      "customer": "Beyza Sunay Güler",
+      "customer": "Ali Sunay",
       "logo": "https://github.com/google.png",
-      "avatar": "https://github.com/Beyzasunayguler.png",
+      "avatar": "https://github.com/ali.png",
       "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
     },
     "2": {
@@ -46,5 +47,10 @@
     "title": "Neşeli Ekibimiz",
     "subtitle": "Sihir Arkasındaki Uzmanlarla Tanışın",
     "description": "Yetkin kodsuz çözümler uzmanı ekibimiz, yenilikçi çözümlerle işletmeleri dönüştürmeye adanmıştır. Sihir arkasındaki yüzlerle tanışın!"
+  },
+  "Blogs": {
+    "title": "En Son Bloglarımız",
+    "subtitle": "En Son İçgörülerimizle Güncel Kalın",
+    "description": "Kodsuz endüstrisindeki en son trendler ve içgörüler hakkında bilgi sahibi olmak için en son bloglarımızı keşfedin."
   }
 }

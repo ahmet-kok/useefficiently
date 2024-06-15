@@ -21,6 +21,13 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/marquee.tsxc", "components/testimonials.tsxc"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/marquee.tsxc",
+    "components/testimonials.tsxc"
+  ],
   "exclude": ["node_modules"]
 }

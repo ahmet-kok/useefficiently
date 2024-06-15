@@ -30,7 +30,7 @@ export default function Testimonials() {
 }
 
 const Testimonial = ({ testimonial, t }: any) => (
-  <div className="rounded-lg border bg-background p-6 shadow-lg">
+  <div className="rounded-lg border bg-background p-6 shadow-lg hover:shadow-xl  transition-shadow duration-300 ease-in-out">
     <div className="flex items-center justify-between">
       <Image
         src={t(`${testimonial}.logo`)}
