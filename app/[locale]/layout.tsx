@@ -6,7 +6,6 @@ import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
-
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
@@ -53,16 +52,10 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
-  //  theme mode for body         "min-h-screen font-sans antialiased dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900",
-
+  // dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900
   return (
     <html lang={locale} className="scroll-smooth">
-      <body
-        className={cn(
-          "min-h-screen font-sans antialiased dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900",
-          fontSans.variable
-        )}
-      >
+      <body className={cn("min-h-screen font-sans ", fontSans.variable)}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"

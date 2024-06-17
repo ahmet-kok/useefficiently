@@ -120,7 +120,8 @@ export function BlogPost({
             {postContent ? (
               <div
                 className="prose lg:prose-xl mx-auto"
-                dangerouslySetInnerHTML={renderContent(postContent)}
+                /*                 dangerouslySetInnerHTML={renderContent(postContent)}
+                 */
               />
             ) : (
               <p>No content available.</p>

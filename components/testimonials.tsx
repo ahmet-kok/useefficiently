@@ -59,28 +59,3 @@ const Testimonial = ({ testimonial, t }: any) => (
   </div>
 );
 
-/* 
-const testimonials = [
-  {
-    company: "Turkish Entrepreneurship Foundation",
-    customer: "John Doe",
-    logo: "/placeholder.svg",
-    avatar: "/placeholder.svg",
-    text: "The customer service I received was exceptional. The support team went above and beyond to address my concerns.",
-  },
-  {
-    company: "PublicSquare",
-    customer: "Jane Smith",
-    logo: "/placeholder.svg",
-    avatar: "/placeholder.svg",
-    text: "Absolutely amazing experience! The team was very supportive and the product quality exceeded my expectations.",
-  },
-  {
-    company: "YetGen",
-    customer: "Alice Johnson",
-    logo: "/placeholder.svg",
-    avatar: "/placeholder.svg",
-    text: "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch. ",
-  },
-];
- */

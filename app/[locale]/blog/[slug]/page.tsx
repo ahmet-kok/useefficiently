@@ -9,8 +9,10 @@ export default function BlogRedirect() {
     "blog/",
     ""
   )}.md`;
-  blogUrl = "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md";
-  blogUrl = "https://raw.githubusercontent.com" + pathname.replace("/en/blog", "");
+  blogUrl =
+    "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md";
+  blogUrl =
+    "https://raw.githubusercontent.com" + pathname.replace("/en/blog", "");
   console.log(blogUrl);
 
   return <Home contentUrl={blogUrl} open={true} />;
