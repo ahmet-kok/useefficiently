@@ -60,4 +60,5 @@ const StepButtonContainer = ({
 	);
 };
 
+StepButtonContainer.displayName = "StepButtonContainer";
 export { StepButtonContainer };

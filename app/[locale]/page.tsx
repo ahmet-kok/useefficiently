@@ -9,12 +9,11 @@ import Footer from "@/components/footer";
 import Blogs from "@/components/blogs";
 import Faq from "@/components/faq";
 import StepperSteps from "@/components/stepper-clickable-steps";
-import { FloatingNav } from "@/components/floating-header";
 
 export default function Home({ contentUrl, open }: any) {
   return (
     <>
-     {/*  <Header />
+      <Header />
       <Hero />
       <DotPattern />
       <Testimonials />
@@ -25,7 +24,7 @@ export default function Home({ contentUrl, open }: any) {
         open={open ? open : false}
       />
       <Team />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

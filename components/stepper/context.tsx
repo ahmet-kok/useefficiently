@@ -74,5 +74,5 @@ const StepperProvider = ({ value, children }: StepperContextProviderProps) => {
     </StepperContext.Provider>
   )
 }
-
+StepperContext.displayName = "StepperContext"
 export { StepperContext, StepperProvider }

@@ -294,7 +294,7 @@ export default function Faq() {
           <div>
             <p className="mb-3 text-lg font-semibold">Still have questions?</p>
             <p className="text-muted-foreground">
-              Can't find the answer you're looking for? Please chat to our
+              Can&apos;t find the answer you&apos;re looking for? Please chat to our
               friendly team.
             </p>
           </div>
@@ -331,7 +331,7 @@ export default function Faq() {
           <AccordionItem value="item-3">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
+              Yes. It&apos;s animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>

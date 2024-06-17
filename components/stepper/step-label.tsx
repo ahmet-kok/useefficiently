@@ -86,5 +86,5 @@ const StepLabel = ({
 		</div>
 	) : null;
 };
-
+StepLabel.displayName = "StepLabel";
 export { StepLabel };
