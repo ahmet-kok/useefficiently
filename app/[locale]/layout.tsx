@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google";
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -58,7 +59,7 @@ export default async function LocaleLayout({
     <html lang={locale} className="scroll-smooth">
       <body
         className={cn(
-          "min-h-screen suppressHydrationWarning font-sans antialiased dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900",
+          "min-h-screen font-sans antialiased dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900",
           fontSans.variable
         )}
       >
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

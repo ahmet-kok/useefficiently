@@ -19,24 +19,26 @@ export default function Blogs({
   const [contentList, setContentList] = useState([
     {
       title: "ReDoMusic",
-      url: "https://raw.githubusercontent.com/ahmet-kok/ReDoMusic/main/README.md",
+      slug: "https://raw.githubusercontent.com/ahmet-kok/ReDoMusic/main/README.md",
       text: "ReDoMusic is a music player that allows you to listen to music from YouTube and SoundCloud. It is a web application that is built with React and Next.js. It is a project that I have been working on for a while and I am very proud of it.",
       thumbnail: "https://picsum.photos/200",
+      id: 1,
     },
     {
       title: "Login Page",
-      url: "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md",
+      slug: "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md",
       text: "This is a simple login page that I have created using HTML, CSS, and JavaScript. It is a project that I have been working on for a while and I am very proud of it.",
       thumbnail: "https://picsum.photos/300",
+      id: 2,
     },
   ]);
-  /*   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     fetch("api/blogs")
       .then((res) => res.json())
       .then((json) => setContentList(json))
       .then(() => setIsLoaded(true));
-  }, []); */
+  }, []);
 
   const t = useTranslations("Blogs");
   const messages = useMessages();
@@ -57,7 +59,7 @@ export default function Blogs({
       <div className="container grid grid-cols-1 gap-8 px-4 lg:grid-cols-2 md:px-6  mx-auto 2xl:px-0  lg:gap-8">
         {contentList.map((blog) => (
           <Blog
-            key={blog}
+            key={blog.id}
             blog={blog}
             t={t}
             setIsDrawerOpen={setIsDrawerOpen}
@@ -75,16 +77,13 @@ export default function Blogs({
 }
 
 const Blog = ({ blog, t, setIsDrawerOpen, setContent }: any) => (
-  <Link
-    href={blog.url}
-    className="rounded-lg  border flex h-[180px] gap-3 p-3 shadow-lg hover:shadow-xl lg:hover:scale-105 transition-all  duration-300 ease-in-out cursor-pointer"
+  <div
+    className="rounded-lg  border flex h-[150px] gap-3 p-3 shadow-lg hover:shadow-xl lg:hover:scale-105 transition-all  duration-300 ease-in-out cursor-pointer"
     onClick={(event) => {
       event.preventDefault(); // prevent default navigation behavior
 
       setIsDrawerOpen(true);
-      setContent(
-        "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md"
-      );
+      setContent(blog.url);
     }}
   >
     <Image
@@ -137,5 +136,5 @@ const Blog = ({ blog, t, setIsDrawerOpen, setContent }: any) => (
         </div>
       </div> */}
     </div>
-  </Link>
+  </div>
 );
