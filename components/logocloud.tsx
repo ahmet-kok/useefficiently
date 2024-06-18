@@ -34,22 +34,22 @@ const logos = [
 export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
   return (
     <>
-      <div className="w-full py-12 hidden sm:block">
-        <div className="flex w-full flex-col items-center justify-center px-4 md:px-8">
+      <div className="w-full py-12 hidden md:block">
+        <div className="w-full px-4 md:px-8">
           {/* grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6  */}
-          <div className=" grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6  gap-x-6 ">
+          <div className=" flex justify-center gap-x-5 ">
             {logos.map((logo, key) => (
               <img
                 key={key}
                 src={logo.url}
-                className="h-10 w-28 px-2 brightness-0  dark:invert"
+                className="h-10 px-2 brightness-0  dark:invert"
                 alt={`${logo.name}`}
               />
             ))}
           </div>
         </div>
       </div>
-      <div className="w-full pb-6 sm:hidden ">
+      <div className="w-full pb-6 md:hidden ">
         <div className="mx-auto w-full px-4 md:px-8 ">
           <div
             className="group relative  flex gap-6 overflow-hidden p-2"

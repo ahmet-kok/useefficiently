@@ -1,14 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerFooter } from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
 
@@ -115,9 +108,8 @@ export function BlogPost({
           <div className="w-full md:max-w-3xl" ref={contentRef}>
             {postContent ? (
               <div
-                className="prose lg:prose-xl mx-auto"
-                /*                 dangerouslySetInnerHTML={renderContent(postContent)}
-                 */
+                className="prose mx-auto"
+                dangerouslySetInnerHTML={renderContent(postContent)}
               />
             ) : (
               <p>No content available.</p>

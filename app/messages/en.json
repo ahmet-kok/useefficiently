@@ -22,7 +22,9 @@
       "customer": "Ali Sunay",
       "logo": "https://github.com/google.png",
       "avatar": "https://github.com/ali.png",
-      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns. The customer service I received was exceptional. The support team went above and beyond to address my concerns."
+      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns. The customer service I received was exceptional. The support team went above and beyond to address my concerns.",
+      "story": "true",
+      "slug": "https://raw.githubusercontent.com/nazlicansahin/Login-Page/main/README.md"
     },
     "2": {
       "company": "Trendyol",
@@ -36,7 +38,9 @@
       "customer": "İbrahim Ethem",
       "logo": "https://github.com/arcelik.png",
       "avatar": "https://github.com/demir.png",
-      "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch."
+      "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch.",
+      "story": "true",
+      "slug": "https://raw.githubusercontent.com/ahmet-kok/ReDoMusic/main/README.md"
     },
     "ClientTestimonials": {
       "title": "Client Testimonials",

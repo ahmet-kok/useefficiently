@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { BlogPost } from "@/components/blog-post";
+import { BlogPost } from "@/components/portfolio-post";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useMessages, useTranslations } from "next-intl";

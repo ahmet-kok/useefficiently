@@ -25,7 +25,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts", "app/[locale]/layout.tsz", "config.tss", "i18n.tx",
+    ".next/types/**/*.ts",
+    "app/[locale]/layout.tsz",
+    "config.tss",
+    "i18n.tx"
   ],
   "exclude": ["node_modules"]
 }

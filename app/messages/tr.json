@@ -10,7 +10,8 @@
     "system": "Sistem"
   },
   "Hero": {
-    "heroTitle": "Airtable Hizmet Ortağınız",
+    "heroTitleStart": "",
+    "heroTitleEnd": "Hizmet Ortağınız",
     "heroText": "Türkiye'deki ilk ve tek Airtable partneri olarak, UseEfficiently ekibi Airtable konusunda uzmanlaşmıştır. Airtable'ı etkili bir şekilde kullanmanız ve tüm ihtiyaçlarınızı karşılamanız için buradayız.",
     "scheduleConsultation": "Danışma Planlayın",
     "learnMore": "Daha Fazla Bilgi Edinin"
