@@ -25,6 +25,7 @@ export default function Home({ contentUrl, open }: any) {
       />
       <Team />
       <Footer />
+
     </>
   );
 }

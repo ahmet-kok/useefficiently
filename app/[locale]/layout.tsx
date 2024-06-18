@@ -1,13 +1,13 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
 import "@/app/globals.css";
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import { cn } from "@/lib/utils";
+import { Inter as FontSans } from "next/font/google";
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
-
+import type { Metadata } from "next";
 export const metadata: Metadata = {
   robots: "index, follow",
   icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
@@ -41,32 +41,39 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "UseEfficiently Team", url: "https://useefficiently.com" }],
 };
-
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
-  // dark:bg-gray-950 dark:text-gray-50 bg-white text-gray-900
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body className={cn("min-h-screen font-sans ", fontSans.variable)}>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <>
+      <html lang={locale}>
+        <head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+        </head>
+        <body className={cn("min-h-screen font-sans ", fontSans.variable)}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
+          <Analytics />
+          <SpeedInsights />
+        </body>
+      </html>
+    </>
   );
 }

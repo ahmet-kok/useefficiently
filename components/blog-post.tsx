@@ -11,11 +11,7 @@ import {
 } from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
-import {
-  Cross1Icon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-} from "@radix-ui/react-icons";
+
 export function BlogPost({
   contentUrl,
   open,
