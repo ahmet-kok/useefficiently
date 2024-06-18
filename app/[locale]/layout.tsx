@@ -58,7 +58,7 @@ export default async function RootLayout({
             content="width=device-width, initial-scale=1.0"
           />
         </head>
-        <body className={cn("min-h-screen font-sans ", fontSans.variable)}>
+        <body className={cn("min-h-screen font-sans scroll-smooth ", fontSans.variable)}>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ThemeProvider
               attribute="class"

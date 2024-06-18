@@ -107,8 +107,8 @@ export function BlogPost({
         <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
           <div className="w-full md:max-w-3xl" ref={contentRef}>
             {postContent ? (
-              <div
-                className="prose mx-auto"
+              <article
+                className="prose dark:prose-invert prose-img:rounded-xl  prose-a:text-blue-600 mx-auto"
                 dangerouslySetInnerHTML={renderContent(postContent)}
               />
             ) : (

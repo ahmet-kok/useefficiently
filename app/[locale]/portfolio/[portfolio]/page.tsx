@@ -1,4 +1,4 @@
-import Home from "../page";
+import Home from "../../page";
 
 export default function Portfolio({
   params: { portfolio },
