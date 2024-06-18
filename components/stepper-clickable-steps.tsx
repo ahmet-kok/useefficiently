@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Step, type StepItem, Stepper, useStepper } from "@/components/stepper";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,6 @@ export default function StepperSteps() {
             initialStep={0}
             steps={steps}
             onClickStep={(step, setStep) => {
-              alert(`Step ${step + 1} clicked`);
               setStep(step);
             }}
           >

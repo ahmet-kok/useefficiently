@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Console } from "console";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
+import AnimatedLogoCloud from "./logocloud";
+import { Button } from "./ui/button";
 export default function Testimonials() {
   const t = useTranslations("Testimonials");
   const messages = useMessages();
@@ -9,17 +11,20 @@ export default function Testimonials() {
   testimonials.pop();
 
   return (
-    <section className="w-full py-6 md:py-12 lg:py-16 xl:py-20">
-      <div className="space-y-4 container px-4md:px-6   2xl:px-0 pb-8 lg:gap-8">
-        <Badge variant="outline">{t("ClientTestimonials.title")}</Badge>
+    <section id="team" className="w-full py-12 md:py-24 lg:py-32 xl:py-40">
+      <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
+        <div className="space-y-4">
+          <Badge variant="outline">{t("ClientTestimonials.title")}</Badge>
 
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          {t("ClientTestimonials.subtitle")}
-        </h2>
-        <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          {t("ClientTestimonials.description")}
-        </p>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t("ClientTestimonials.subtitle")}
+          </h2>
+          <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
+            {t("ClientTestimonials.description")}
+          </p>
+        </div>
       </div>
+      <AnimatedLogoCloud animated={false} />
       <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-6  mx-auto 2xl:px-0  lg:gap-8">
         {testimonials.map((testimonial) => (
           <Testimonial key={testimonial} testimonial={testimonial} t={t} />
@@ -56,6 +61,9 @@ const Testimonial = ({ testimonial, t }: any) => (
     <p className="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
       &quot;{t(`${testimonial}.text`)}&quot;
     </p>
+    <div className="flex justify-between">
+      <div></div>
+      <Button className="mt-4 justify-self-end ">Read More</Button>
+    </div>
   </div>
 );
-

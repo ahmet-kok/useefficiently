@@ -70,7 +70,7 @@ export default function Header() {
     <>
       <header className="w-full xl:mt-4 xl:z-50  lg:px-6">
         <div
-          className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+          className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
           style={
             {
               WebkitBackdropFilter: "blur(10px)",
@@ -260,7 +260,7 @@ export default function Header() {
         >
           <header className="w-full">
             <div
-              className="flex backdrop-blur h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+              className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
               style={
                 {
                   WebkitBackdropFilter: "blur(10px)",
