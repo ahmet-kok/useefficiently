@@ -10,7 +10,8 @@
     "system": "System"
   },
   "Hero": {
-    "heroTitle": "Your Airtable Service Partner",
+    "heroTitleStart": "Your",
+    "heroTitleEnd": "Service Partner",
     "heroText": "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
     "scheduleConsultation": "Schedule a Consultation",
     "learnMore": "Learn More"
@@ -47,6 +48,12 @@
     "title": "Our Joyful Team",
     "subtitle": "Meet the Experts Behind the Magic",
     "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!"
+  },
+  "Stepper": {
+    "title": "Our Process",
+    "subtitle": "How We Work",
+    "description": "Our process is designed to provide you with the best no-code solutions tailored to your needs. We work closely with you to ensure that you get the most out of our services.",
+    "step": "Step"
   },
   "Blogs": {
     "title": "Our Latest Blogs",

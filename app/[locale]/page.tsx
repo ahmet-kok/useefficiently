@@ -19,13 +19,12 @@ export default function Home({ contentUrl, open }: any) {
       <Testimonials />
       <Faq />
       <StepperSteps />
-      <Blogs
+      {/*       <Blogs
         contentUrl={contentUrl ? contentUrl : contentUrl}
         open={open ? open : false}
-      />
+      /> */}
       <Team />
       <Footer />
-
     </>
   );
 }

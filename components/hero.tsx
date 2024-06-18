@@ -11,7 +11,12 @@ export default function HeroSection() {
       <div className="container items-center mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
-            {t("heroTitle")}
+            {t("heroTitleStart")}
+            <span className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 bg-clip-text  text-transparent">
+              {" Airtable "}
+             
+            </span>
+            {t("heroTitleEnd")}
           </h1>
           <p className="max-w-[600px] text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">
             {t("heroText")}

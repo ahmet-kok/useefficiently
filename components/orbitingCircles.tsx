@@ -1,28 +1,26 @@
+"use client";
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
 export function OrbitingCircle() {
+  const [screenSize, setScreenSize] = useState(800);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+    });
+  }, []);
   return (
-    <div className="relative flex h-[450px] w-full items-center justify-center rounded-lg border md:shadow-xl">
+    <div className="relative flex aspect-square max-h-[450px]	 w-full items-center justify-center rounded-lg border md:shadow-xl">
       <span className="z-40 py-2 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center sm:text-7xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
         UseEfficiently
       </span>
 
-      {/* Inner Circles */}
-      {/* <OrbitingCircles
-        className="h-[30px] w-[30px] border-none bg-transparent"
-        duration={20}
-        delay={20}
-        radius={80}
-      >
-        <Icons.whatsapp />
-      </OrbitingCircles> */}
       <OrbitingCircles
         className="h-[60px] w-[60px] border-none bg-transparent block"
         duration={20}
         delay={10}
-        radius={80}
+        radius={screenSize > 640 ? 90 : 70}
       >
         <Icons.airtable />
       </OrbitingCircles>
@@ -31,7 +29,7 @@ export function OrbitingCircle() {
       <OrbitingCircles
         className="h-[60px] w-[60px] border-none bg-transparent"
         reverse
-        radius={190}
+        radius={screenSize > 640 ? 180 : 140}
         duration={20}
       >
         <Image
@@ -44,7 +42,7 @@ export function OrbitingCircle() {
       <OrbitingCircles
         className="h-[40px] w-[40px] border-none bg-transparent block"
         reverse
-        radius={190}
+        radius={screenSize > 640 ? 180 : 140}
         duration={20}
         delay={20}
       >

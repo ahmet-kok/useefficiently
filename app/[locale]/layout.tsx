@@ -10,7 +10,7 @@ const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   robots: "index, follow",
-  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
+  icons: { icon: "favicon.ico", apple: "favicon.ico" },
   title: "UseEfficiently - Your Airtable Service Partner",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
@@ -57,7 +57,6 @@ export default async function RootLayout({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Document</title>
         </head>
         <body className={cn("min-h-screen font-sans ", fontSans.variable)}>
           <NextIntlClientProvider locale={locale} messages={messages}>
