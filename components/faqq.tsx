@@ -63,6 +63,9 @@ export default function Faq() {
             {t("description")}
           </p>
           <div className="gap-3 flex flex-wrap">
+            <Link href="mailto:hello@useefficiently.com">
+              <ShinyButton text="hello@useefficienly.com" />
+            </Link>
             <MultiStepLoaderDemo
               states={[
                 {
@@ -91,9 +94,6 @@ export default function Faq() {
                 },
               ]}
             />
-            <Link href="mailto:hello@useefficiently.com">
-              <ShinyButton text="hello@useefficienly.com" />
-            </Link>
           </div>
         </div>
 

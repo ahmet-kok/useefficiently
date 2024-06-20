@@ -22,7 +22,7 @@ export function MultiStepLoaderDemo({
       {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
       <LessShinyButton
         onClick={() => setLoading(true)}
-        text="See our process now!" /* onClick={() => setLoading(true)}  */
+        text="Our process" /* onClick={() => setLoading(true)}  */
       />
 
       {loading && (
