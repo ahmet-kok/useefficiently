@@ -69,7 +69,9 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             prefetch={false}
           >
             <TwitterIcon className="w-5 h-5" />
-            <span className="sr-only">Twitter</span>
+            <span className="sr-only">
+              {member.name} {" - "}Twitter
+            </span>
           </Link>
         )}
         {member.linkedin && (
@@ -79,7 +81,9 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             prefetch={false}
           >
             <LinkedinIcon className="w-5 h-5" />
-            <span className="sr-only">LinkedIn</span>
+            <span className="sr-only">
+              {member.name} {" - "}LinkedIn
+            </span>
           </Link>
         )}
         {member.github && (
@@ -89,7 +93,9 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             prefetch={false}
           >
             <GithubIcon className="w-5 h-5" />
-            <span className="sr-only">GitHub</span>
+            <span className="sr-only">
+              {member.name} {" - "}GitHub
+            </span>
           </Link>
         )}
       </div>

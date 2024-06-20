@@ -15,7 +15,7 @@ export default function StepperDemo() {
 					return (
 						<Step key={stepProps.label} {...stepProps}>
 							<div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
-								<h1 className="text-xl">Step {index + 1}</h1>
+								<p className="text-xl">Step {index + 1}</p>
 							</div>
 						</Step>
 					);
@@ -40,7 +40,7 @@ const Footer = () => {
 		<>
 			{hasCompletedAllSteps && (
 				<div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
-					<h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
+					<p className="text-xl">Woohoo! All steps completed! 🎉</ğp>
 				</div>
 			)}
 			<div className="w-full flex justify-end gap-2">

@@ -95,14 +95,14 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="#" className="flex items-center " prefetch={false}>
                 <MountainIcon className="h-8 w-8 mr-2" />
-                <h1
+                <h2
                   className="
              font-semibold text-3xl from-text-black to-white
             "
                 >
                   Use
                   <span className="text-3xl text-orange-500">Efficiently</span>
-                </h1>{" "}
+                </h2>{" "}
               </Link>
             </div>
             <NavigationMenu className="ml-auto items-center hidden md:flex">

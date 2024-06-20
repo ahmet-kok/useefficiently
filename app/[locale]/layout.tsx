@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   icons: { icon: "favicon.ico", apple: "favicon.ico" },
   title: "UseEfficiently - Your Airtable Service Partner",
   description:
-    "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
+    "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
   keywords:
     "Airtable, No-Code Solutions, Airtable Partner, UseEfficiently, Business Solutions, Client Testimonials, Expert Team",
   openGraph: {
     title: "UseEfficiently - Your Airtable Service Partner",
     description:
-      "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
+      "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     url: "https://useefficiently.com",
     type: "website",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     site: "@useefficiently",
     title: "UseEfficiently - Your Airtable Service Partner",
     description:
-      "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions.",
+      "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     images: "https://useefficiently.com/logo.png",
   },
   authors: [{ name: "UseEfficiently Team", url: "https://useefficiently.com" }],
@@ -58,7 +58,12 @@ export default async function RootLayout({
             content="width=device-width, initial-scale=1.0"
           />
         </head>
-        <body className={cn("min-h-screen font-sans scroll-smooth ", fontSans.variable)}>
+        <body
+          className={cn(
+            "min-h-screen font-sans scroll-smooth ",
+            fontSans.variable
+          )}
+        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ThemeProvider
               attribute="class"
