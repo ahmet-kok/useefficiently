@@ -68,16 +68,9 @@ export default function Testimonials({
 }
 
 const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
-  <div className="rounded-lg border bg-background p-6 shadow-lg hover:shadow-xl grid transition-shadow duration-300 ease-in-out">
+  <div className="rounded-lg border bg-background p-3 pt-0 lg:p-6 shadow-lg hover:shadow-xl grid transition-shadow duration-300 ease-in-out">
     <div>
-      <div className="flex row-1 items-center justify-between">
-        <Image
-          src={t(`${testimonial}.logo`)}
-          width={100}
-          height={50}
-          alt={`${t(`${testimonial}.company`)} Logo`}
-          className="h-8 w-auto"
-        />
+      <div className="flex relative items-center justify-between my-3">
         <Image
           src={t(`${testimonial}.avatar`)}
           width={40}
@@ -85,9 +78,15 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           alt={`${t(`${testimonial}.customer`)} Avatar`}
           className="h-10 w-10 rounded-full"
         />
+        <Image
+          src={t(`${testimonial}.logo`)}
+          width={300}
+          height={300}
+          alt={`${t(`${testimonial}.company`)} Logo`}
+          className="w-28 absolute right-0 aspect-square object-contain"
+        />
       </div>
-      <div className="mt-4">
-        <h3 className="text-lg font-semibold">{t(`${testimonial}.company`)}</h3>
+      <div>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           {t(`${testimonial}.customer`)}
         </p>

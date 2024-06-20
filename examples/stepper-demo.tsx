@@ -40,7 +40,7 @@ const Footer = () => {
 		<>
 			{hasCompletedAllSteps && (
 				<div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
-					<p className="text-xl">Woohoo! All steps completed! 🎉</ğp>
+					<p className="text-xl">Woohoo! All steps completed! 🎉</p>
 				</div>
 			)}
 			<div className="w-full flex justify-end gap-2">

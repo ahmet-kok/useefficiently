@@ -18,9 +18,9 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Google",
+      "company": "YetGen",
       "customer": "Ali Sunay",
-      "logo": "https://github.com/google.png",
+      "logo": "/logos/yetkingencler.svg",
       "avatar": "https://github.com/ali.png",
       "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
     },

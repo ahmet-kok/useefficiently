@@ -19,9 +19,9 @@
   },
   "Testimonials": {
     "1": {
-      "company": "Google",
+      "company": "YetGen",
       "customer": "Ali Sunay",
-      "logo": "https://github.com/google.png",
+      "logo": "/logos/yetkingencler.svg",
       "avatar": "https://github.com/ali.png",
       "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns. The customer service I received was exceptional. The support team went above and beyond to address my concerns.",
       "story": "true",
@@ -30,14 +30,14 @@
     "2": {
       "company": "Trendyol",
       "customer": "Cansu Yılmaz",
-      "logo": "https://github.com/trendyol.png",
+      "logo": "/logos/PublicSquare.png",
       "avatar": "https://github.com/miaa.png",
       "text": "Absolutely amazing experience! The team was very supportive and the product quality exceeded my expectations."
     },
     "3": {
       "company": "Arçelik",
       "customer": "İbrahim Ethem",
-      "logo": "https://github.com/arcelik.png",
+      "logo": "/logos/TurkishEntrepreneurshipFoundation.svg",
       "avatar": "https://github.com/demir.png",
       "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch.",
       "story": "true",
