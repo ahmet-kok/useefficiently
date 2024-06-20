@@ -13,7 +13,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+  DiscordLogoIcon,
+} from "@radix-ui/react-icons";
+
 export default function Header() {
   const t = useTranslations("Header");
 
@@ -54,27 +59,24 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href={information.instagram} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent p-3")}
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent p-3"
+                  )}
                 >
-                  <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
+                  <DiscordLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="ml-2 hidden md:block">Discord</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+
             <NavigationMenuItem>
               <Link href={information.instagram} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent p-3")}
-                >
-                  <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 hidden md:block">Youtube</span>
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href={information.instagram} legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent p-3")}
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent p-3"
+                  )}
                 >
                   <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="ml-2 hidden md:block">Instagram</span>
@@ -85,7 +87,10 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href={information.linkedin} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent p-3")}
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent p-3"
+                  )}
                 >
                   <LinkedInLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="ml-2 hidden md:block">Linkedin</span>

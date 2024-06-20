@@ -57,7 +57,7 @@ const FinalStep = () => {
 	return (
 		<>
 			<div className="h-40 flex items-center justify-center border bg-secondary text-primary rounded-md">
-				<p className="text-xl">Woohoo! All steps completed! 🎉</*>
+				<p className="text-xl">Woohoo! All steps completed! 🎉</p>
 			</div>
 			<div className="w-full flex justify-end gap-2">
 				<Button size="sm" onClick={resetSteps}>
