@@ -33,7 +33,7 @@ const LessShinyButton = ({
     <motion.button
       onClick={onClick}
       {...animationProps}
-      className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow bg-primary text-primary-foreground"
+      className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl text-nowrap transition-[box-shadow] duration-300 ease-in-out hover:shadow bg-primary text-primary-foreground"
     >
       <span
         className="relative block h-full w-full text-sm tracking-wide"

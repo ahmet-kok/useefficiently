@@ -53,5 +53,10 @@
     "title": "En Son Bloglarımız",
     "subtitle": "En Son İçgörülerimizle Güncel Kalın",
     "description": "Kodsuz endüstrisindeki en son trendler ve içgörüler hakkında bilgi sahibi olmak için en son bloglarımızı keşfedin."
+  },
+  "Faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Sorularınızı Yanıtlıyoruz",
+    "description": "Sıkça sorulan sorularımızı inceleyin veya bizimle iletişime geçin."
   }
 }

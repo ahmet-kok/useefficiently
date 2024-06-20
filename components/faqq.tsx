@@ -49,7 +49,7 @@ const FAQList: FAQProps[] = [
 ];
 
 export default function Faq() {
-  const t = useTranslations("Team");
+  const t = useTranslations("Faq");
   return (
     <section id="faq" className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
@@ -62,7 +62,7 @@ export default function Faq() {
           <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
             {t("description")}
           </p>
-          <div className="gap-3 flex">
+          <div className="gap-3 flex flex-wrap">
             <MultiStepLoaderDemo
               states={[
                 {

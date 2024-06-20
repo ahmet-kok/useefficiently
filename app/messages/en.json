@@ -64,5 +64,10 @@
     "title": "Our Latest Blogs",
     "subtitle": "Stay Updated with Our Latest Insights",
     "description": "Explore our latest blogs to stay informed about the latest trends and insights in the no-code industry."
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Got Questions? We Have Answers!",
+    "description": "Find answers to some of the most frequently asked questions about our services and solutions."
   }
 }
