@@ -6,7 +6,7 @@ import Image from "next/image";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 export default function DotPatternDemo() {
   return (
-    <section className="w-full h-[150px] container px-4 md:px-6 2xl:px-0  mb-6 md:mb-12 lg:mb-16 xl:mb-20">
+    <section className="w-full h-[150px] container px-4 md:px-6 2xl:px-0 my-4 md:my-8">
       {/*       overflow-hidden  p-10 md:shadow-xl container  mx-auto mx-4 px-4 md:px-6 2xl:px-0
        */}{" "}
       <div className="relative flex px-3 sm:px-10 h-full text-[2rem]  sm:text-5xl rounded-lg overflow-hidden border md:shadow-xl gap-3 ">

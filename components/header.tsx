@@ -44,15 +44,13 @@ export default function Header() {
   const t = useTranslations("Header");
   const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      let direction = current - scrollYProgress.getPrevious()!;
       if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
+        setVisible(true); // Show header when at the top
       } else {
         if (direction < 0) {
           setVisible(true);
@@ -67,373 +65,198 @@ export default function Header() {
   const localActive = useLocale();
 
   return (
-    <>
-      <header className="w-full xl:mt-4 xl:z-50  lg:px-6">
-        <div
-          className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
-          style={
-            {
-              WebkitBackdropFilter: "blur(10px)",
-            } as React.CSSProperties
-          }
-        >
-          <div className="flex items-center">
-            <Link href="#" className="flex items-center " prefetch={false}>
-              <MountainIcon className="h-8 w-8 mr-2" />
-              <h1
-                className="
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.2,
+        }}
+        className={cn(
+          "w-full flex top-0 xl:px-6 fixed xl:top-4 inset-x-0 z-[50] "
+        )}
+      >
+        <header className="w-full">
+          <div
+            className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+            style={
+              {
+                WebkitBackdropFilter: "blur(10px)",
+              } as React.CSSProperties
+            }
+          >
+            <div className="flex items-center">
+              <Link href="#" className="flex items-center " prefetch={false}>
+                <MountainIcon className="h-8 w-8 mr-2" />
+                <h1
+                  className="
              font-semibold text-3xl from-text-black to-white
             "
-              >
-                Use
-                <span className="text-3xl text-orange-500">Efficiently</span>
-              </h1>{" "}
-            </Link>
-          </div>
-          <NavigationMenu className="ml-auto items-center hidden md:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent"
-                    )}
-                  >
-                    {t("home")}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent"
-                    )}
-                  >
-                    {t("about")}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#team" legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent"
-                    )}
-                  >
-                    {t("contact")}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <DropdownMenu>
-                <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                  <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="center">
-                  <DropdownMenuItem
-                    className="flex items-center gap-2"
-                    onClick={(e) => router.replace("/en")}
-                  >
-                    <FlagIcon className="h-5 w-5" />
-                    <span>English</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    className="flex items-center gap-2"
-                    onClick={(e) => router.replace("/de")}
-                  >
-                    <FlagIcon className="h-5 w-5" />
-                    <span>Deutsch</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              <NavigationMenuItem>
-                <ModeToggle />
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <div className="ml-auto flex items-center gap-4 md:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full bg-background hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
                 >
-                  <MenuIcon className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation menu</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-[200px]">
-                <DropdownMenuItem>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2"
-                    prefetch={false}
-                  >
-                    <HomeIcon className="h-5 w-5" />
-                    <span>{t("home")}</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2"
-                    prefetch={false}
-                  >
-                    <InfoIcon className="h-5 w-5" />
-                    <span>{t("about")}</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2"
-                    prefetch={false}
-                  >
-                    <PhoneIcon className="h-5 w-5" />
-                    <span>{t("contact")}</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger className="flex items-center gap-2">
-                      <GlobeIcon className="h-5 w-5" />
-                      <span>
-                        {localActive === "en"
-                          ? "English"
-                          : localActive === "de"
-                          ? "Deutsch"
-                          : "Türkçe"}
-                      </span>
-                      <ChevronRightIcon className="h-4 w-4" />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                      <DropdownMenuItem
-                        className="flex items-center gap-2"
-                        onClick={(e) => router.replace("/en")}
-                      >
-                        <FlagIcon className="h-5 w-5" />
-                        <span>English</span>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        className="flex items-center gap-2"
-                        onClick={(e) => router.replace("/de")}
-                      >
-                        <FlagIcon className="h-5 w-5" />
-                        <span>Deutsch</span>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="flex items-center gap-2">
-                  <ModeToggle />
-                  {/* 
-                <span className="dark:hidden">{t("light")}</span>
-                <span className=" hidden dark:inline-block">{t("dark")}</span>
- */}{" "}
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-        </div>
-      </header>
-      <AnimatePresence mode="wait">
-        <motion.div
-          initial={{
-            opacity: 1,
-            y: -100,
-          }}
-          animate={{
-            y: visible ? 0 : -100,
-            opacity: visible ? 1 : 0,
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-          className={cn(
-            "w-full flex top-0 xl:px-6 fixed xl:top-4 inset-x-0 z-[50] "
-          )}
-        >
-          <header className="w-full">
-            <div
-              className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
-              style={
-                {
-                  WebkitBackdropFilter: "blur(10px)",
-                } as React.CSSProperties
-              }
-            >
-              <div className="flex items-center">
-                <Link href="#" className="flex items-center " prefetch={false}>
-                  <MountainIcon className="h-8 w-8 mr-2" />
-                  <h1
-                    className="
-             font-semibold text-3xl from-text-black to-white
-            "
-                  >
-                    Use
-                    <span className="text-3xl text-orange-500">
-                      Efficiently
-                    </span>
-                  </h1>{" "}
-                </Link>
-              </div>
-              <NavigationMenu className="ml-auto items-center hidden md:flex">
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <Link href="/" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("home")}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="/" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("about")}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#team" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("contact")}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                      <DropdownMenuItem
-                        className="flex items-center gap-2"
-                        onClick={(e) => router.replace("/en")}
-                      >
-                        <FlagIcon className="h-5 w-5" />
-                        <span>English</span>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem
-                        className="flex items-center gap-2"
-                        onClick={(e) => router.replace("/de")}
-                      >
-                        <FlagIcon className="h-5 w-5" />
-                        <span>Deutsch</span>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                  <NavigationMenuItem>
-                    <ModeToggle />
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-              <div className="ml-auto flex items-center gap-4 md:hidden">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full bg-background hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
+                  Use
+                  <span className="text-3xl text-orange-500">Efficiently</span>
+                </h1>{" "}
+              </Link>
+            </div>
+            <NavigationMenu className="ml-auto items-center hidden md:flex">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
                     >
-                      <MenuIcon className="h-6 w-6" />
-                      <span className="sr-only">Toggle navigation menu</span>
-                    </Button>
+                      {t("home")}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/faq" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("about")}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#team" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("contact")}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-[200px]">
-                    <DropdownMenuItem>
-                      <Link
-                        href="#"
-                        className="flex items-center gap-2"
-                        prefetch={false}
-                      >
-                        <HomeIcon className="h-5 w-5" />
-                        <span>{t("home")}</span>
-                      </Link>
+                  <DropdownMenuContent align="center">
+                    <DropdownMenuItem
+                      className="flex items-center gap-2"
+                      onClick={(e) => router.replace("/en")}
+                    >
+                      <FlagIcon className="h-5 w-5" />
+                      <span>English</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link
-                        href="#"
-                        className="flex items-center gap-2"
-                        prefetch={false}
-                      >
-                        <InfoIcon className="h-5 w-5" />
-                        <span>{t("about")}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link
-                        href="#"
-                        className="flex items-center gap-2"
-                        prefetch={false}
-                      >
-                        <PhoneIcon className="h-5 w-5" />
-                        <span>{t("contact")}</span>
-                      </Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                      <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center gap-2">
-                          <GlobeIcon className="h-5 w-5" />
-                          <span>
-                            {localActive === "en"
-                              ? "English"
-                              : localActive === "de"
-                              ? "Deutsch"
-                              : "Türkçe"}
-                          </span>
-                          <ChevronRightIcon className="h-4 w-4" />
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center">
-                          <DropdownMenuItem
-                            className="flex items-center gap-2"
-                            onClick={(e) => router.replace("/en")}
-                          >
-                            <FlagIcon className="h-5 w-5" />
-                            <span>English</span>
-                          </DropdownMenuItem>
-                          <DropdownMenuItem
-                            className="flex items-center gap-2"
-                            onClick={(e) => router.replace("/de")}
-                          >
-                            <FlagIcon className="h-5 w-5" />
-                            <span>Deutsch</span>
-                          </DropdownMenuItem>
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="flex items-center gap-2">
-                      <ModeToggle />
-                      {/* 
-                <span className="dark:hidden">{t("light")}</span>
-                <span className=" hidden dark:inline-block">{t("dark")}</span>
- */}{" "}
+                    <DropdownMenuItem
+                      className="flex items-center gap-2"
+                      onClick={(e) => router.replace("/de")}
+                    >
+                      <FlagIcon className="h-5 w-5" />
+                      <span>Deutsch</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-              </div>
+                <NavigationMenuItem>
+                  <ModeToggle />
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <div className="ml-auto flex items-center gap-4 md:hidden">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full bg-background hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
+                  >
+                    <MenuIcon className="h-6 w-6" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-[200px]">
+                  <DropdownMenuItem>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-2"
+                      prefetch={false}
+                    >
+                      <HomeIcon className="h-5 w-5" />
+                      <span>{t("home")}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-2"
+                      prefetch={false}
+                    >
+                      <InfoIcon className="h-5 w-5" />
+                      <span>{t("about")}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-2"
+                      prefetch={false}
+                    >
+                      <PhoneIcon className="h-5 w-5" />
+                      <span>{t("contact")}</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="flex items-center gap-2">
+                        <GlobeIcon className="h-5 w-5" />
+                        <span>
+                          {localActive === "en"
+                            ? "English"
+                            : localActive === "de"
+                            ? "Deutsch"
+                            : "Türkçe"}
+                        </span>
+                        <ChevronRightIcon className="h-4 w-4" />
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="center">
+                        <DropdownMenuItem
+                          className="flex items-center gap-2"
+                          onClick={(e) => router.replace("/en")}
+                        >
+                          <FlagIcon className="h-5 w-5" />
+                          <span>English</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          className="flex items-center gap-2"
+                          onClick={(e) => router.replace("/de")}
+                        >
+                          <FlagIcon className="h-5 w-5" />
+                          <span>Deutsch</span>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="flex items-center gap-2">
+                    <ModeToggle />
+                    {/* 
+                <span className="dark:hidden">{t("light")}</span>
+                <span className=" hidden dark:inline-block">{t("dark")}</span>
+ */}{" "}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
-          </header>
-          {/*           {navItems.map((navItem: any, idx: number) => (
+          </div>
+        </header>
+        {/*           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
@@ -446,8 +269,7 @@ export default function Header() {
             </Link>
           ))} 
           <Header /> */}
-        </motion.div>
-      </AnimatePresence>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 }

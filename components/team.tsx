@@ -9,7 +9,7 @@ import ShinyButton from "@/components/magicui/shiny-button";
 export default function Team() {
   const t = useTranslations("Team");
   return (
-    <section id="team" className="w-full py-12 md:py-24 lg:py-32 xl:py-40">
+    <section id="team" className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
           <Badge variant="outline">{t("title")}</Badge>

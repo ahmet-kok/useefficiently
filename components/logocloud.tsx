@@ -11,38 +11,40 @@
 //    animation: {
 //      'logo-cloud': 'logo-cloud 30s linear infinite', // Adjust duration and timing as needed for your design.
 //    }
-
+import Image from "next/image";
 const logos = [
   {
-    name: "Vercel",
-    url: "https://res.cloudinary.com/dfhp33ufc/image/upload/v1715881430/vercel_wordmark_dark_mhv8u8.svg",
+    name: "Yetkin Gencler",
+    url: "/logos/YetkinGencler.svg",
   },
   {
-    name: "Nextjs",
-    url: "https://res.cloudinary.com/dfhp33ufc/image/upload/v1715881475/nextjs_logo_dark_gfkf8m.svg",
+    name: "Turkish Entrepreneurship Foundation",
+    url: "/logos/TurkishEntrepreneurshipFoundation.svg",
   },
   {
-    name: "Prime",
-    url: "https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/t2awrrfzdvmg1chnzyfr.svg",
+    name: "PublicSquare",
+    url: "/logos/PublicSquare.png",
   },
   {
-    name: "Trustpilot",
-    url: "https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/tkfspxqmjflfllbuqxsi.svg",
+    name: "Genclig Foundation",
+    url: "/logos/GencligFoundation.svg",
   },
 ];
 
 export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
   return (
     <>
-      <div className="w-full py-12 hidden md:block">
-        <div className="w-full px-4 md:px-8">
+      <div className="w-full py-12 hidden md:block overflow-hidden">
+        <div className="w-full">
           {/* grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6  */}
-          <div className=" flex justify-center gap-x-5 ">
+          <div className=" flex justify-center items-center gap-x-8 ">
             {logos.map((logo, key) => (
-              <img
+              <Image
                 key={key}
+                width={300}
+                height={200}
                 src={logo.url}
-                className="h-10 px-2 brightness-0  dark:invert"
+                className=" w-[180px] h-fit max-h-[100px] brightness-0  dark:invert hover:brightness-100 transition-all duration-300 ease-in-out"
                 alt={`${logo.name}`}
               />
             ))}
@@ -63,15 +65,17 @@ export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
               .map((index) => (
                 <div
                   key={index}
-                  className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
+                  className="flex shrink-0 items-center animate-logo-cloud flex-row justify-around gap-8"
                 >
                   {logos.map((logo, key) => (
-                    <img
+                    <Image
+                      width={300}
+                      height={200}
                       key={key}
                       src={logo.url}
-                      className="h-10 w-28 px-2 brightness-0  dark:invert"
+                      className="h-fit w-[140px] brightness-0  dark:invert hover:brightness-100 transition-all duration-300 ease-in-out"
                       alt={`${logo.name}`}
-                    />
+                    ></Image>
                   ))}
                 </div>
               ))}
