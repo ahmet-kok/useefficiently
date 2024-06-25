@@ -5,7 +5,7 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimatedLogoCloud from "./logocloud";
 import { Button } from "./ui/button";
-import { BlogPost } from "./portfolio-post";
+import { PortfolioPost } from "./portfolio-post";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 export default function Testimonials({
@@ -58,8 +58,8 @@ export default function Testimonials({
           ))}
         </div>
       </section>
-      <BlogPost
-        contentUrl={content ? content : ""}
+      <PortfolioPost
+        slug={content ? content : ""}
         open={isDrawerOpen ? true : false}
         setOpen={setIsDrawerOpen}
       />

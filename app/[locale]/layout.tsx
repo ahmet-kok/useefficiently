@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   robots: "index, follow",
@@ -44,9 +46,11 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params: { locale },
+  modal,
 }: {
   children: React.ReactNode;
   params: { locale: string };
+  modal: React.ReactNode;
 }) {
   const messages = await getMessages();
   return (
@@ -60,7 +64,7 @@ export default async function RootLayout({
         </head>
         <body
           className={cn(
-            "min-h-screen font-sans scroll-smooth ",
+            "font-sans min-h-screen scroll-smooth ",
             fontSans.variable
           )}
         >
@@ -71,7 +75,10 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              {children}
+              <Header />
+              <main className="">{children}</main>
+              {modal}
+              <Footer />
             </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />

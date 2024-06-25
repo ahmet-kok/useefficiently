@@ -132,14 +132,14 @@ export default function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#team" legacyBehavior passHref>
+                  <Link href="/portfolio" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
                         "bg-transparent"
                       )}
                     >
-                      {t("contact")}
+                      {t("portfolio")}
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -204,12 +204,12 @@ export default function Header() {
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link
-                      href="#"
+                      href="/portfolio"
                       className="flex items-center gap-2"
                       prefetch={false}
                     >
                       <PhoneIcon className="h-5 w-5" />
-                      <span>{t("contact")}</span>
+                      <span>{t("portfolio")}</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />

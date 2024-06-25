@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "YetGen",
+    "author": "@leo",
+    "slug": "yetgen",
+    "tags": ["no-code", "airtable"]
+  },
+  {
+    "id": 2,
+    "title": "Girisimcilik Vakfi",
+    "author": "@lukas",
+    "slug": "girvak",
+    "tags": ["brevo", "softr"]
+  },
+  {
+    "id": 3,
+    "title": "Kodluyoruz",
+    "author": "@leo",
+    "slug": "kodluyoruz",
+    "tags": ["no-code", "airtable"]
+  }
+]

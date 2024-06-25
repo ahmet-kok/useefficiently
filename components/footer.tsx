@@ -25,7 +25,7 @@ export default function Header() {
   const localActive = useLocale();
   return (
     <footer
-      className="w-full mb-5 lg:px-6 border-t xl:border-t-0"
+      className="w-full pb-4 lg:px-6 border-t xl:border-t-0"
       style={
         {
           WebkitBackdropFilter: "blur(10px)",

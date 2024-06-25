@@ -26,7 +26,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/layout.tsz",
     "config.tss",
     "i18n.tx"
   ],

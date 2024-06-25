@@ -8,7 +8,7 @@ import LessShinyButton from "./magicui/less-shiny-button";
 export default function HeroSection() {
   const t = useTranslations("Hero");
   return (
-    <section className="w-full mt-20 py-12 md:py-24 ">
+    <section className="w-full py-12 mt-20 md:py-24 ">
       <div className="container items-center mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
           <h1 className="font-bold tracking-tighter text-4xl md:text-5xl lg:text-6xl leading-tight">

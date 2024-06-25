@@ -3,23 +3,26 @@
 import { Button } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerFooter } from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
+import { ElementRef } from "react";
+import { useRouter } from "next/navigation";
 import { marked } from "marked";
-
-export function BlogPost({
-  contentUrl,
+export function PortfolioPost({
+  slug,
   open,
   setOpen,
 }: {
-  contentUrl: string;
+  slug: string;
   open: boolean;
   setOpen: (open: boolean) => void;
 }) {
+  const router = useRouter();
   const [postContent, setPostContent] = useState("");
   const contentRef = useRef<HTMLDivElement | null>(null);
+  const dialogRef = useRef<ElementRef<"dialog">>(null);
 
   useEffect(() => {
     if (open) {
-      fetch(contentUrl)
+      fetch(`/contents/portfolio/${slug}.md`)
         .then((response) => response.text())
         .then((data) => {
           const htmlContent: any = marked(data); // Convert markdown to HTML
@@ -27,7 +30,8 @@ export function BlogPost({
         })
         .catch((error) => console.error("Error fetching post content:", error));
     }
-  }, [open, contentUrl]);
+    console.log("open");
+  }, [open, slug]);
 
   useEffect(() => {
     if (!contentRef.current) return;

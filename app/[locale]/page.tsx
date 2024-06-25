@@ -11,18 +11,12 @@ import CalCom from "@/components/ui/calcom";
 export default function Home({ contentUrl, open }: any) {
   return (
     <>
-      <Header />
       <Hero />
-      <DotPattern />
       <Testimonials contentSlug={contentUrl} open={open} />
-      {/*       <Faq />
-       */}{" "}
-      {/*       <StepperSteps />
-       */}{" "}
+      <DotPattern />
       <Faq />
       <Team />
-      <Footer />
-       <CalCom />
+      <CalCom />
     </>
   );
 }
