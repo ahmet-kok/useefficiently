@@ -54,18 +54,20 @@ export default function Header() {
       return;
     }
     if (typeof current === "number") {
-      let direction;
-      direction = current - scrollYProgress.getPrevious();
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else if (window.scrollY + windowHeight >= pageHeight - 1) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
+      let direction: number | undefined;
+      direction = scrollYProgress.getPrevious();
+      if (typeof direction === "number") {
+        direction = current - direction;
+        if (scrollYProgress.get() < 0.05) {
           setVisible(true);
-        } else {
+        } else if (window.scrollY + windowHeight >= pageHeight - 1) {
           setVisible(false);
+        } else {
+          if (direction < 0) {
+            setVisible(true);
+          } else {
+            setVisible(false);
+          }
         }
       }
     }
