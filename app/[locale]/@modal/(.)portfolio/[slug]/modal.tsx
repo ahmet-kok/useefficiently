@@ -1,3 +1,4 @@
+"use client";
 import { createPortal } from "react-dom";
 import { PortfolioPost } from "@/components/portfolio-post";
 import { useEffect, useState } from "react";

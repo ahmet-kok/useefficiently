@@ -1,7 +1,9 @@
+import { PortfolioText } from "@/components/portfolio-text-render";
+
 export default function PhotoPage({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  return <div className="card">{slug}</div>;
+  return <PortfolioText slug={slug} />;
 }

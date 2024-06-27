@@ -25,14 +25,14 @@ export default function Header() {
   const localActive = useLocale();
   return (
     <footer
-      className="w-full pb-4 lg:px-6 border-t xl:border-t-0"
+      className="w-full h-[10vh] pb-4 lg:px-6 border-t xl:border-t-0"
       style={
         {
           WebkitBackdropFilter: "blur(10px)",
         } as React.CSSProperties
       }
     >
-      <div className="flex  h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
+      <div className="flex  h-20 shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
         <div className="flex items-center">
           <Link href="#" className="flex items-center " prefetch={false}>
             <h2
@@ -41,7 +41,7 @@ export default function Header() {
             "
             >
               Use
-              <span className="text-2xl text-orange-500">Efficiently</span>
+              <span className="text-2xl text-red-700">Efficiently</span>
             </h2>{" "}
           </Link>
         </div>
@@ -65,7 +65,9 @@ export default function Header() {
                   )}
                 >
                   <DiscordLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 hidden md:block">Discord</span>
+                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                    Discord
+                  </span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -79,7 +81,9 @@ export default function Header() {
                   )}
                 >
                   <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 hidden md:block">Instagram</span>
+                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                    Instagram
+                  </span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -93,7 +97,9 @@ export default function Header() {
                   )}
                 >
                   <LinkedInLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 hidden md:block">Linkedin</span>
+                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                    Linkedin
+                  </span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

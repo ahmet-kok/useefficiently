@@ -1,41 +1,20 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-} from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
-import { PortfolioText } from "./portfolio-text-render";
-export function PortfolioPost({
-  slug,
-  open,
-  setOpen,
-}: {
-  slug: string;
-  open: boolean;
-  setOpen: (open: boolean) => void;
-}) {
+export function PortfolioText({ slug }: { slug: string }) {
   const [postContent, setPostContent] = useState("");
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (open) {
-      fetch(`/contents/portfolio/${slug}.md`)
-        .then((response) => response.text())
-        .then((data) => {
-          const htmlContent: any = marked(data); // Convert markdown to HTML
-          setPostContent(htmlContent);
-        })
-        .catch((error) => console.error("Error fetching post content:", error));
-    }
-  }, [open, slug]);
+    fetch(`/contents/portfolio/${slug}.md`)
+      .then((response) => response.text())
+      .then((data) => {
+        const htmlContent: any = marked(data); // Convert markdown to HTML
+        setPostContent(htmlContent);
+      })
+      .catch((error) => console.error("Error fetching post content:", error));
+  }, [slug]);
 
   useEffect(() => {
     if (!contentRef.current) return;
@@ -110,31 +89,17 @@ export function PortfolioPost({
   };
 
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerContent className="h-[95%] flex flex-col">
-        {/*  <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
-          <div className="w-full md:max-w-3xl" ref={contentRef}>
-            {postContent ? (
-              <article
-                className="prose dark:prose-invert prose-img:rounded-xl  prose-a:text-blue-600 mx-auto"
-                dangerouslySetInnerHTML={renderContent(postContent)}
-              />
-            ) : (
-              <p>No content available.</p>
-            )}
-          </div>
-        </div>
- */}
-        <PortfolioText slug={slug} />
-        <DrawerFooter className="flex justify-between items-center pt-2">
-          <div className="gap-2 flex ">
-            <Button variant="outline">Read more</Button>
-            <DrawerClose>
-              <Button variant="outline">Close</Button>
-            </DrawerClose>
-          </div>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+    <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
+      <div className="w-full md:max-w-3xl" ref={contentRef}>
+        {postContent ? (
+          <article
+            className="prose dark:prose-invert prose-img:rounded-xl  prose-a:text-blue-600 mx-auto"
+            dangerouslySetInnerHTML={renderContent(postContent)}
+          />
+        ) : (
+          <p>No content available.</p>
+        )}
+      </div>
+    </div>
   );
 }

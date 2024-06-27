@@ -1,4 +1,3 @@
-"use client";
 import { Modal } from "./modal";
 /* import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; */

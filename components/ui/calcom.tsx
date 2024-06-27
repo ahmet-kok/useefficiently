@@ -6,8 +6,8 @@ import { Calendar } from "lucide-react";
 import { type AnimationProps, motion } from "framer-motion";
 
 const animationProps = {
-  initial: { "--x": "100%", scale: 0.8 },
-  animate: { "--x": "-100%", scale: 1 },
+/*   initial: { "--x": "100%", scale: 0.8 },
+ */  animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,

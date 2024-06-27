@@ -12,7 +12,25 @@ import Header from "@/components/header";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   robots: "index, follow",
-  icons: { icon: "favicon.ico", apple: "favicon.ico" },
+  icons: [
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      sizes: "32x32",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/favicon.ico",
+    },
+  ],
   title: "UseEfficiently - Your Airtable Service Partner",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
@@ -64,7 +82,7 @@ export default async function RootLayout({
         </head>
         <body
           className={cn(
-            "font-sans min-h-screen scroll-smooth ",
+            "font-sans min-h-screen scroll-smooth hide-scrollbar ",
             fontSans.variable
           )}
         >
