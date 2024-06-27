@@ -54,7 +54,8 @@ export default function Header() {
       return;
     }
     if (typeof current === "number") {
-      let direction = current - scrollYProgress.getPrevious();
+      let direction;
+      direction = current - scrollYProgress.getPrevious();
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
