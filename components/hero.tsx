@@ -13,9 +13,11 @@ export default function HeroSection() {
         <div className="space-y-4">
           <h1 className="font-bold tracking-tighter text-4xl md:text-5xl lg:text-6xl leading-tight">
             {t("heroTitleStart")}
-            <span className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-sky-500 bg-clip-text text-transparent">
-              {" Airtable "}
-            </span>
+            {/*             <span className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-sky-500 bg-clip-text text-transparent">
+             */}{" "}
+            {" Airtable "}
+            {/*             </span>
+             */}{" "}
             {t("heroTitleEnd")}
           </h1>
           <p className="max-w-[600px] text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">

@@ -124,8 +124,9 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           setContent(t(`${testimonial}.slug`));
         }}
       >
-        <Link href={t(`${testimonial}.slug`)}>
+        <Link href={t(`/portfolio/${testimonial}.slug`)}>
           {"Learn more"}
+          <span className="sr-only">about {t(`${testimonial}.company}`)}</span>
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </Link>
       </Button>

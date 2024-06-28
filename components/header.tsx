@@ -200,7 +200,7 @@ export default function Header() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-[200px]">
-                    <DropdownMenuItem>
+                    <DropdownMenuItem key={1}>
                       <Link
                         href="#"
                         className="flex items-center gap-2"
@@ -210,7 +210,7 @@ export default function Header() {
                         <span>{t("home")}</span>
                       </Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem key={2}>
                       <Link
                         href="#"
                         className="flex items-center gap-2"
@@ -220,7 +220,7 @@ export default function Header() {
                         <span>{t("about")}</span>
                       </Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem key={3}>
                       <Link
                         href="/portfolio"
                         className="flex items-center gap-2"
@@ -231,7 +231,7 @@ export default function Header() {
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>
+                    <DropdownMenuItem key={4}>
                       <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center gap-2">
                           <GlobeIcon className="h-5 w-5" />
@@ -246,6 +246,7 @@ export default function Header() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="center">
                           <DropdownMenuItem
+                            key={1}
                             className="flex items-center gap-2"
                             onClick={(e) => router.replace("/en")}
                           >
@@ -253,6 +254,7 @@ export default function Header() {
                             <span>English</span>
                           </DropdownMenuItem>
                           <DropdownMenuItem
+                            key={2}
                             className="flex items-center gap-2"
                             onClick={(e) => router.replace("/de")}
                           >
@@ -262,7 +264,10 @@ export default function Header() {
                         </DropdownMenuContent>
                       </DropdownMenu>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="flex items-center gap-2">
+                    <DropdownMenuItem
+                      className="flex items-center gap-2"
+                      key={5}
+                    >
                       <ModeToggle />
                       <span className="sr-only">{t("theme")}</span>
                       {/* 

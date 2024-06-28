@@ -65,7 +65,10 @@ export default function Header() {
                   )}
                 >
                   <DiscordLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                  <span className="sr-only">
+                    Discord
+                  </span>
+                  <span className="ml-1 hidden md:block">
                     Discord
                   </span>
                 </NavigationMenuLink>
@@ -81,7 +84,10 @@ export default function Header() {
                   )}
                 >
                   <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                  <span className="sr-only">
+                    Instagram
+                  </span>
+                  <span className="ml-1 hidden md:block">
                     Instagram
                   </span>
                 </NavigationMenuLink>
@@ -97,7 +103,10 @@ export default function Header() {
                   )}
                 >
                   <LinkedInLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="ml-2 sr-only md:not-sr-only md:block">
+                  <span className="sr-only">
+                    Linkedin
+                  </span>
+                  <span className="ml-1 hidden md:block">
                     Linkedin
                   </span>
                 </NavigationMenuLink>
