@@ -34,7 +34,7 @@ export default function Header() {
     >
       <div className="flex  h-20 shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
         <div className="flex items-center">
-          <Link href="#" className="flex items-center " prefetch={false}>
+          <Link href={`/${localActive}`} className="flex items-center " prefetch={false}>
             <h2
               className="
              font-semibold text-2xl from-text-black to-white

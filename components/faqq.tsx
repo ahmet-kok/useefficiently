@@ -62,10 +62,10 @@ const FAQList: FAQProps[] = [
   },
 ];
 
-export default function Faq() {
+export default function Faq({id}: {id: string}) {
   const t = useTranslations("Faq");
   return (
-    <section id="faq" className="w-full  py-12 md:py-24">
+    <section id={id} className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
           <Badge variant="outline">{t("title")}</Badge>

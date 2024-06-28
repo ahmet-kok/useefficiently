@@ -13,9 +13,11 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 export default function Testimonials({
+  id,
   contentSlug,
   open,
 }: {
+  id: string;
   contentSlug: string | undefined;
   open: boolean | undefined;
 }) {
@@ -124,7 +126,7 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           setContent(t(`${testimonial}.slug`));
         }}
       >
-        <Link href={t(`/portfolio/${testimonial}.slug`)}>
+        <Link href={`/portfolio/${t(`${testimonial}.slug`)}`}>
           {"Learn more"}
           <span className="sr-only">about {t(`${testimonial}.company}`)}</span>
           <ArrowRightIcon className="ml-2 h-4 w-4" />
