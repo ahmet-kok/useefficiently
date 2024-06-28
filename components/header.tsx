@@ -158,7 +158,7 @@ export default function Header() {
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
-                  <DropdownMenu>
+                  {/* <DropdownMenu>
                     <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                       <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                       <span className="sr-only">{t("language")}</span>
@@ -179,7 +179,7 @@ export default function Header() {
                         <span>Deutsch</span>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
-                  </DropdownMenu>
+                  </DropdownMenu> */}
                   <NavigationMenuItem>
                     <ModeToggle />
                     <span className="sr-only">{t("theme")}</span>
@@ -230,7 +230,7 @@ export default function Header() {
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem key={4}>
+                    {/* <DropdownMenuItem key={4}>
                       <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center gap-2">
                           <GlobeIcon className="h-5 w-5" />
@@ -262,10 +262,10 @@ export default function Header() {
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
                     <DropdownMenuItem
                       className="flex items-center gap-2"
-                      key={5}
+                      key={4}
                     >
                       <ModeToggle />
                       <span className="sr-only">{t("theme")}</span>
