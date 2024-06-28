@@ -94,18 +94,19 @@ export default async function RootLayout({
           )}
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <Header />
-              <main className="">{children}</main>
-              {modal}
-              <Footer />
-              <CalCom />
-            </ThemeProvider>
+          
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+              <Header /> 
+            <main className="">{children}</main>
+            {modal}
+            <Footer />
+          <CalCom />
+          </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />
           <SpeedInsights />

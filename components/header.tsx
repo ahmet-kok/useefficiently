@@ -135,7 +135,7 @@ export default function Header() {
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="/faq" legacyBehavior passHref>
+                    <Link href="#faq" legacyBehavior passHref>
                       <NavigationMenuLink
                         className={cn(
                           navigationMenuTriggerStyle(),
@@ -155,6 +155,18 @@ export default function Header() {
                         )}
                       >
                         {t("portfolio")}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="/team" legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "bg-transparent"
+                        )}
+                      >
+                        {t("team")}
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
@@ -201,7 +213,7 @@ export default function Header() {
                   <DropdownMenuContent align="end" className="w-[200px]">
                     <DropdownMenuItem key={1}>
                       <Link
-                        href="#"
+                        href="/"
                         className="flex items-center gap-2"
                         prefetch={false}
                       >
@@ -227,6 +239,16 @@ export default function Header() {
                       >
                         <PhoneIcon className="h-5 w-5" />
                         <span>{t("portfolio")}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem key={2}>
+                      <Link
+                        href="/team"
+                        className="flex items-center gap-2"
+                        prefetch={false}
+                      >
+                        <InfoIcon className="h-5 w-5" />
+                        <span>{t("team")}</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />

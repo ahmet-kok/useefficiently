@@ -83,7 +83,7 @@ export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
                       width={0}
                       height={0}
                       src={logo.url}
-                      className="h-[50px] w-auto brightness-0  dark:invert dark:hover:invert-0 hover:brightness-100 transition-all duration-300 ease-in-out"
+                      className="h-[40px] w-auto brightness-0  dark:invert dark:hover:invert-0 hover:brightness-100 transition-all duration-300 ease-in-out"
                       alt={`${logo.name} - ${logo.site}`}
                     ></Image>
                   ))}

@@ -9,7 +9,9 @@
     "light": "Light Mode",
     "system": "System",
     "portfolio": "Portfolio",
-    "menu": "Menu"
+    "menu": "Menu",
+    "team": "Team",
+    "blogs": "Blogs"
   },
   "Hero": {
     "heroTitleStart": "Your",

@@ -105,7 +105,7 @@ const config = {
         },
       },
       animation: {
-        "logo-cloud": "logo-cloud 30s linear infinite",
+        "logo-cloud": "logo-cloud 20s linear infinite",
         textGradient: "textGradient 5s ease infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

@@ -5,9 +5,7 @@ import dynamic from "next/dynamic";
 const Faq = dynamic(() => import("@/components/faqq"), {
   ssr: false,
 });
-const Team = dynamic(() => import("@/components/team"), {
-  ssr: false,
-});
+
 export default function Home({ contentUrl, open }: any) {
   return (
     <>
@@ -15,7 +13,6 @@ export default function Home({ contentUrl, open }: any) {
       <Testimonials id="testimonials" contentSlug={contentUrl} open={open} />
       <DotPattern />
       <Faq id="faq" />
-      <Team />
     </>
   );
 }

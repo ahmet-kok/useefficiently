@@ -1,40 +1,29 @@
 "use client";
 import Link from "next/link";
 
-import { useLocale, useTranslations } from "next-intl";
-
 import information from "@/information.json";
+
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+
 import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
   DiscordLogoIcon,
 } from "@radix-ui/react-icons";
 
-export default function Header() {
-  const t = useTranslations("Header");
-
-  const localActive = useLocale();
+export default function Footer() {
   return (
-    <footer
-      className="w-full h-[10vh] pb-4 lg:px-6 border-t xl:border-t-0"
-      style={
-        {
-          WebkitBackdropFilter: "blur(10px)",
-        } as React.CSSProperties
-      }
-    >
+    <footer className=" h-[10vh] pb-4 lg:px-6 border-t xl:border-t-0">
       <div className="flex  h-20 shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
         <div className="flex items-center">
-          <Link href={`/${localActive}`} className="flex items-center " prefetch={false}>
+          <Link href={`/`} className="flex items-center " prefetch={false}>
             <h2
               className="
              font-semibold text-2xl from-text-black to-white
@@ -47,17 +36,8 @@ export default function Header() {
         </div>
         <NavigationMenu className="ml-auto items-center flex">
           <NavigationMenuList>
-            {/* <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
-                >
-                  {t("home")}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem> */}
             <NavigationMenuItem>
-              <Link href={information.instagram} legacyBehavior passHref>
+              <Link href={information.instagram} legacyBehavior passHref prefetch={false}>
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -65,18 +45,14 @@ export default function Header() {
                   )}
                 >
                   <DiscordLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="sr-only">
-                    Discord
-                  </span>
-                  <span className="ml-1 hidden md:block">
-                    Discord
-                  </span>
+                  <span className="sr-only">Discord</span>
+                  <span className="ml-1 hidden md:block">Discord</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href={information.instagram} legacyBehavior passHref>
+              <Link href={information.instagram} legacyBehavior passHref prefetch={false}>
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -84,18 +60,14 @@ export default function Header() {
                   )}
                 >
                   <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="sr-only">
-                    Instagram
-                  </span>
-                  <span className="ml-1 hidden md:block">
-                    Instagram
-                  </span>
+                  <span className="sr-only">Instagram</span>
+                  <span className="ml-1 hidden md:block">Instagram</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href={information.linkedin} legacyBehavior passHref>
+              <Link href={information.linkedin} legacyBehavior passHref prefetch={false}>
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
@@ -103,12 +75,8 @@ export default function Header() {
                   )}
                 >
                   <LinkedInLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
-                  <span className="sr-only">
-                    Linkedin
-                  </span>
-                  <span className="ml-1 hidden md:block">
-                    Linkedin
-                  </span>
+                  <span className="sr-only">Linkedin</span>
+                  <span className="ml-1 hidden md:block">Linkedin</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
