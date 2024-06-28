@@ -32,8 +32,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./theme-toggle";
-
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   motion,
   AnimatePresence,

@@ -1,5 +1,3 @@
-"use client";
-
 import { Step, type StepItem, Stepper, useStepper } from "@/components/stepper";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

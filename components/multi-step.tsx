@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";

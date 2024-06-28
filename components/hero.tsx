@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { OrbitingCircle } from "./orbitingCircles";
 import ShinyButton from "@/components/magicui/shiny-button";
-import { Button } from "./ui/button";
 import { useTranslations } from "next-intl";
 import LessShinyButton from "./magicui/less-shiny-button";
 
