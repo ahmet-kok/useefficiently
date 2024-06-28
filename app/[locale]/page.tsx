@@ -1,20 +1,20 @@
 import Hero from "@/components/hero";
 import DotPattern from "@/components/dot-pattern";
 import Testimonials from "@/components/testimonials";
-import Team from "@/components/team";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import StepperSteps from "@/components/stepper-clickable-steps";
-import Faq from "@/components/faqq";
-import CalCom from "@/components/ui/calcom";
-
+import dynamic from "next/dynamic";
+const Faq = dynamic(() => import("@/components/faqq"), {
+  ssr: false,
+});
+const Team = dynamic(() => import("@/components/team"), {
+  ssr: false,
+});
 export default function Home({ contentUrl, open }: any) {
   return (
     <>
-      <Hero id="hero"/>
+      <Hero id="hero" />
       <Testimonials id="testimonials" contentSlug={contentUrl} open={open} />
       <DotPattern />
-      <Faq id="faq"/>
+      <Faq id="faq" />
       <Team />
     </>
   );

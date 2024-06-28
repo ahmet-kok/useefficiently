@@ -89,7 +89,7 @@ const LoaderCore = ({
   );
 };
 
-export const MultiStepLoader = ({
+export default function MultiStepLoader({
   loadingStates,
   loading,
   duration = 2000,
@@ -99,7 +99,7 @@ export const MultiStepLoader = ({
   loading?: boolean;
   duration?: number;
   loop?: boolean;
-}) => {
+}) {
   const [currentState, setCurrentState] = useState(0);
 
   useEffect(() => {
@@ -148,4 +148,4 @@ export const MultiStepLoader = ({
       )}
     </AnimatePresence>
   );
-};
+}

@@ -7,10 +7,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
-import Footer from "@/components/footer";
 import Header from "@/components/header";
 import type { Metadata } from "next";
-import CalCom from "@/components/ui/calcom";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("@/components/footer"), {
+  ssr: false,
+});
+const CalCom = dynamic(() => import("@/components/ui/calcom"), {
+  ssr: false,
+});
+
 export const metadata: Metadata = {
   robots: "index, follow",
   icons: [

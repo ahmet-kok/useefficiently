@@ -10,7 +10,7 @@ import HighlightComponent from "./herohighlight";
 import Link from "next/link";
 import ShinyButton from "./magicui/shiny-button";
 import { useTranslations } from "next-intl";
-import { MultiStepLoaderDemo } from "./multi-step";
+import MultiStep from "./multi-step";
 interface FAQProps {
   question: string;
   answer: string;
@@ -62,7 +62,7 @@ const FAQList: FAQProps[] = [
   },
 ];
 
-export default function Faq({id}: {id: string}) {
+export default function Faq({ id }: { id: string }) {
   const t = useTranslations("Faq");
   return (
     <section id={id} className="w-full  py-12 md:py-24">
@@ -80,7 +80,7 @@ export default function Faq({id}: {id: string}) {
             <Link href="mailto:hello@useefficiently.com">
               <ShinyButton text="hello@useefficienly.com" />
             </Link>
-            <MultiStepLoaderDemo
+            <MultiStep
               states={[
                 {
                   text: "Initial Consultation",

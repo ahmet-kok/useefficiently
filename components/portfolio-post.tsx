@@ -13,7 +13,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
 import { PortfolioText } from "./portfolio-text-render";
-export function PortfolioPost({
+export default  function PortfolioPost({
   slug,
   open,
   setOpen,

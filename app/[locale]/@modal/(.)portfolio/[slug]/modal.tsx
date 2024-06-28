@@ -1,6 +1,6 @@
 "use client";
 import { createPortal } from "react-dom";
-import { PortfolioPost } from "@/components/portfolio-post";
+import PortfolioPost from "@/components/portfolio-post";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 export function Modal({

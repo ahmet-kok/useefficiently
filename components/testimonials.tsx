@@ -5,11 +5,14 @@ import { useLocale, useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimatedLogoCloud from "./logocloud";
 import { Button } from "./ui/button";
-import { PortfolioPost } from "./portfolio-post";
-import { useEffect, useState } from "react";
+/* import { PortfolioPost } from "./portfolio-post";
+ */ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-
+import dynamic from "next/dynamic";
+const PortfolioPost = dynamic(() => import("@/components/portfolio-post"), {
+  ssr: false,
+});
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 export default function Testimonials({
@@ -17,11 +20,12 @@ export default function Testimonials({
   contentSlug,
   open,
 }: {
-  id: string;
+  id?: string;
   contentSlug: string | undefined;
   open: boolean | undefined;
 }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(open);
+  const [isDrawerDownloaded, setDrawerDownloaded] = useState(false);
   const [content, setContent] = useState(contentSlug);
   const t = useTranslations("Testimonials");
   const messages = useMessages();
@@ -30,6 +34,7 @@ export default function Testimonials({
   const router = useRouter();
   const locale = useLocale();
   useEffect(() => {
+    setDrawerDownloaded(true);
     if (!isDrawerOpen && open) {
       console.log("Drawer is closed");
       router.replace(`/${locale}`);
@@ -64,11 +69,13 @@ export default function Testimonials({
           ))}
         </div>
       </section>
-      <PortfolioPost
-        slug={content ? content : ""}
-        open={isDrawerOpen ? true : false}
-        setOpen={setIsDrawerOpen}
-      />
+      {isDrawerDownloaded && (
+        <PortfolioPost
+          slug={content ? content : ""}
+          open={isDrawerOpen ? true : false}
+          setOpen={setIsDrawerOpen}
+        />
+      )}
     </>
   );
 }
