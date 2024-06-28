@@ -5,7 +5,6 @@ import Link from "next/link";
 import info from "@/information.json";
 import { useTranslations } from "next-intl";
 import ShinyButton from "@/components/magicui/shiny-button";
-import { XIcon } from "lucide-react";
 
 export default function Team() {
   const t = useTranslations("Team");
@@ -69,7 +68,7 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             className="dark:text-gray-200 text-gray-700  "
             prefetch={false}
           >
-            <XIcon className="w-5 h-5 hover:fill-gray-700" />
+            <TwitterIcon className="w-5 h-5 hover:fill-gray-700" />
             <span className="sr-only">
               {member.name} {" - "}Twitter
             </span>
