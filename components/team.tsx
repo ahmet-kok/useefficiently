@@ -5,6 +5,7 @@ import Link from "next/link";
 import info from "@/information.json";
 import { useTranslations } from "next-intl";
 import ShinyButton from "@/components/magicui/shiny-button";
+import { XIcon } from "lucide-react";
 
 export default function Team() {
   const t = useTranslations("Team");
@@ -65,10 +66,10 @@ const TeamMember = ({ member }: TeamMemberProps) => (
         {member.twitter && (
           <Link
             href={member.twitter}
-            className="dark:text-gray-200 text-gray-700 hover:text-white"
+            className="dark:text-gray-200 text-gray-700  "
             prefetch={false}
           >
-            <TwitterIcon className="w-5 h-5" />
+            <XIcon className="w-5 h-5 hover:fill-gray-700" />
             <span className="sr-only">
               {member.name} {" - "}Twitter
             </span>
@@ -77,10 +78,10 @@ const TeamMember = ({ member }: TeamMemberProps) => (
         {member.linkedin && (
           <Link
             href={member.linkedin}
-            className="dark:text-gray-200 text-gray-700 hover:text-white"
+            className="dark:text-gray-200 text-gray-700 "
             prefetch={false}
           >
-            <LinkedinIcon className="w-5 h-5" />
+            <LinkedinIcon className="w-5 h-5 hover:fill-gray-700 " />
             <span className="sr-only">
               {member.name} {" - "}LinkedIn
             </span>
@@ -89,10 +90,10 @@ const TeamMember = ({ member }: TeamMemberProps) => (
         {member.github && (
           <Link
             href={member.github}
-            className="dark:text-gray-200 text-gray-700 hover:text-white"
+            className="dark:text-gray-200 text-gray-700 "
             prefetch={false}
           >
-            <GithubIcon className="w-5 h-5" />
+            <GithubIcon className="w-5 h-5 hover:fill-gray-700" />
             <span className="sr-only">
               {member.name} {" - "}GitHub
             </span>

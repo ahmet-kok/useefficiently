@@ -13,7 +13,7 @@ export default function HeroSection() {
         <div className="space-y-4">
           <h1 className="font-bold tracking-tighter text-4xl md:text-5xl lg:text-6xl leading-tight">
             {t("heroTitleStart")}
-            <span className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 bg-clip-text  text-transparent">
+            <span className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-sky-500 bg-clip-text text-transparent">
               {" Airtable "}
             </span>
             {t("heroTitleEnd")}
@@ -36,7 +36,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <div className="rounded-xl w-full h-full">
+          <div className="rounded-lg w-full h-full">
             <OrbitingCircle />
           </div>
         </div>

@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { Badge } from "./ui/badge";
+import { cn } from "@/lib/utils";
 import HighlightComponent from "./herohighlight";
 import Link from "next/link";
 import ShinyButton from "./magicui/shiny-button";
@@ -18,33 +19,46 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free Shadcn/Vue template.",
+    question: "What is a no-code platform?",
+    answer:
+      "A no-code platform allows users to build applications without writing any code. It uses visual development tools to create and manage applications.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "How can no-code solutions benefit my business?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "No-code solutions can significantly reduce development time and costs, allowing for rapid prototyping and deployment. They enable business users to create and modify applications without needing technical expertise.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+    question: "What services do you offer?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      "We offer a range of services including consultancy, solution design, development, testing, deployment, user training, and ongoing support for no-code platforms.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "Which no-code platforms do you work with?",
+    answer:
+      "We work with a variety of no-code platforms including Airtable, Zapier, Bubble, Adalo, and more.",
     value: "item-4",
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+    question: "How secure are no-code applications?",
+    answer:
+      "No-code platforms typically follow industry-standard security practices. We also ensure that security is a top priority in all our development projects, including data encryption, access control, and regular security audits.",
     value: "item-5",
+  },
+  {
+    question: "Can you integrate no-code solutions with existing systems?",
+    answer:
+      "Yes, we can integrate no-code solutions with existing systems using APIs and other integration tools to ensure seamless data flow and functionality.",
+    value: "item-6",
+  },
+  {
+    question: "Do you provide training for using no-code platforms?",
+    answer:
+      "Absolutely. We offer comprehensive training sessions for your team to ensure they can effectively use and manage the no-code solutions we develop for you.",
+    value: "item-7",
   },
 ];
 
@@ -69,28 +83,28 @@ export default function Faq() {
             <MultiStepLoaderDemo
               states={[
                 {
-                  text: "Buying a condo",
+                  text: "Initial Consultation",
                 },
                 {
-                  text: "Travelling in a flight",
+                  text: "Requirement Analysis",
                 },
                 {
-                  text: "Meeting Tyler Durden",
+                  text: "Solution Design",
                 },
                 {
-                  text: "He makes soap",
+                  text: "Development and Testing",
                 },
                 {
-                  text: "We goto a bar",
+                  text: "Deployment",
                 },
                 {
-                  text: "Start a fight",
+                  text: "User Training",
                 },
                 {
-                  text: "We like it",
+                  text: "Ongoing Support",
                 },
                 {
-                  text: "Welcome to F**** C***",
+                  text: "Continuous Improvement",
                 },
               ]}
             />
@@ -98,16 +112,28 @@ export default function Faq() {
         </div>
 
         <Accordion type="single" collapsible className="AccordionRoot">
-          {FAQList.map(({ question, answer, value }) => (
+          {FAQList.map(({ question, answer, value }, key) => (
             <AccordionItem
-              key={value}
+              key={key}
               value={value}
-              className=" px-4 mb-3 rounded-lg border bg-background p-3 shadow-lg hover:shadow-xl grid transition-shadow duration-300 ease-in-out"
+              /*               className=
+               */ className={cn(
+                " px-4 mb-3 p-3  grid",
+                "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+                // dark styles
+                "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+                "group     overflow-hidden rounded-lg",
+                // light styles
+                "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+                // dark styles
+                "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+              )}
             >
               <AccordionTrigger className="text-left  hover:no-underline">
                 {question}
               </AccordionTrigger>
-              <AccordionContent className="">{answer}</AccordionContent>
+              <AccordionContent>{answer}</AccordionContent>
+              <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
             </AccordionItem>
           ))}
         </Accordion>

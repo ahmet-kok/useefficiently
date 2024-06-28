@@ -8,6 +8,10 @@ import { Button } from "./ui/button";
 import { PortfolioPost } from "./portfolio-post";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 export default function Testimonials({
   contentSlug,
   open,
@@ -47,9 +51,9 @@ export default function Testimonials({
         </div>
         <AnimatedLogoCloud animated={false} />
         <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-6  mx-auto 2xl:px-0  lg:gap-8">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial, key) => (
             <Testimonial
-              key={testimonial}
+              key={key}
               testimonial={testimonial}
               t={t}
               setIsDrawerOpen={setIsDrawerOpen}
@@ -68,36 +72,51 @@ export default function Testimonials({
 }
 
 const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
-  <div className="rounded-lg border bg-background p-3 pt-0 lg:p-6 shadow-lg hover:shadow-xl grid transition-shadow duration-300 ease-in-out">
+  <div
+    className={cn(
+      " p-3 pt-0 lg:p-6 grid",
+      "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+      // dark styles
+      "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+      "group     overflow-hidden rounded-lg",
+      // light styles
+      "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+      // dark styles
+      "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+    )}
+  >
     <div>
-      <div className="flex relative items-center justify-between my-3">
+      <div className="flex relative items-center justify-between my-4">
         <Image
           src={t(`${testimonial}.avatar`)}
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt={`${t(`${testimonial}.customer`)} Avatar`}
-          className="h-10 w-10 rounded-full"
+          className="h-10 w-auto rounded-full"
         />
         <Image
           src={t(`${testimonial}.logo`)}
-          width={300}
-          height={300}
+          width={0}
+          height={0}
           alt={`${t(`${testimonial}.company`)} Logo`}
-          className="w-28 absolute right-0 aspect-square object-contain"
+          className="max-h-10 max-w-40 w-auto right-0 "
         />
       </div>
-      <div>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          {t(`${testimonial}.customer`)}
-        </p>
-      </div>
-      <p className="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+
+      <p className="text-lg font-semibold text-neutral-700 dark:text-neutral-300">
+        {t(`${testimonial}.customer`)}
+      </p>
+
+      <p className="mt-4 text-sm leading-relaxed  text-neutral-600 dark:text-neutral-200 ">
         &quot;{t(`${testimonial}.text`)}&quot;
       </p>
     </div>
     {t(`${testimonial}.story`) == "true" && (
       <Button
-        className="mt-4 justify-self-end self-end"
+        variant="ghost"
+        asChild
+        size="sm"
+        className="pointer-events-auto mt-4 justify-self-end self-end"
         onClick={(event) => {
           event.preventDefault(); // prevent default navigation behavior
 
@@ -105,8 +124,12 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           setContent(t(`${testimonial}.slug`));
         }}
       >
-        Read more
+        <Link href={t(`${testimonial}.slug`)}>
+          {"Learn more"}
+          <ArrowRightIcon className="ml-2 h-4 w-4" />
+        </Link>
       </Button>
     )}
+    <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>
 );

@@ -23,7 +23,7 @@
     "1": {
       "company": "YetGen",
       "customer": "Ali Sunay",
-      "logo": "/logos/yetkingencler.svg",
+      "logo": "/logos/YetkinGencler.svg",
       "avatar": "https://github.com/ali.png",
       "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns. The customer service I received was exceptional. The support team went above and beyond to address my concerns.",
       "story": "true",
@@ -32,8 +32,9 @@
     "2": {
       "company": "Trendyol",
       "customer": "Cansu Yılmaz",
-      "logo": "/logos/PublicSquare.png",
+      "logo": "/logos/PublicSquare.svg",
       "avatar": "https://github.com/miaa.png",
+      "story": "false",
       "text": "Absolutely amazing experience! The team was very supportive and the product quality exceeded my expectations."
     },
     "3": {

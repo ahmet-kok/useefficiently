@@ -15,7 +15,7 @@ export default function StepperCustomIcons() {
 			<Stepper initialStep={0} steps={steps}>
 				{steps.map((stepProps, index) => {
 					return (
-						<Step key={stepProps.label} {...stepProps}>
+						<Step key={index} {...stepProps}>
 							<div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
 								<p className="text-xl">Step {index + 1}</p>
 							</div>

@@ -116,7 +116,7 @@ export function PortfolioPost({
           <div className="w-full md:max-w-3xl" ref={contentRef}>
             {postContent ? (
               <article
-                className="prose dark:prose-invert prose-img:rounded-xl  prose-a:text-blue-600 mx-auto"
+                className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"
                 dangerouslySetInnerHTML={renderContent(postContent)}
               />
             ) : (

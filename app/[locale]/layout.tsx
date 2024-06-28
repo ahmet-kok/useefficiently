@@ -10,6 +10,7 @@ const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import type { Metadata } from "next";
+import CalCom from "@/components/ui/calcom";
 export const metadata: Metadata = {
   robots: "index, follow",
   icons: [
@@ -73,7 +74,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <>
-      <html lang={locale} className="scroll-smooth">
+      <html lang={locale} className="scroll-smooth light">
         <head>
           <meta
             name="viewport"
@@ -82,7 +83,7 @@ export default async function RootLayout({
         </head>
         <body
           className={cn(
-            "font-sans min-h-screen scroll-smooth hide-scrollbar ",
+            "font-sans min-h-screen dark:bg-black",
             fontSans.variable
           )}
         >
@@ -97,6 +98,7 @@ export default async function RootLayout({
               <main className="">{children}</main>
               {modal}
               <Footer />
+              <CalCom />
             </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />

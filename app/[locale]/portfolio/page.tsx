@@ -5,8 +5,7 @@ export default function Page() {
   return (
     <section className=" min-h-[80vh] w-full py-12">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0">
-
-      {/* {contents.map((content) => (
+        {/* {contents.map((content) => (
         <Link
           className="card"
           key={content.id}
@@ -16,7 +15,7 @@ export default function Page() {
           {content.title}
         </Link>
       ))} */}
-      <PortfolioBento contents={contents}/>
+        <PortfolioBento contents={contents} />
       </div>
     </section>
   );

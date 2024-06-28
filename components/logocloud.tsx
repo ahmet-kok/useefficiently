@@ -11,30 +11,40 @@
 //    animation: {
 //      'logo-cloud': 'logo-cloud 30s linear infinite', // Adjust duration and timing as needed for your design.
 //    }
+import Link from "next/link";
 import Image from "next/image";
 const logos = [
   {
     name: "Yetkin Gencler",
     url: "/logos/YetkinGencler.svg",
+    site: "https://yetkingencler.com",
   },
   {
     name: "Turkish Entrepreneurship Foundation",
     url: "/logos/TurkishEntrepreneurshipFoundation.svg",
+    site: "https://girisimcilikvakfi.org",
   },
   {
     name: "PublicSquare",
-    url: "/logos/PublicSquare.png",
+    url: "/logos/PublicSquare.svg",
+    site: "https://publicsquare.com.au",
+  },
+  {
+    name: "Google Game and Application academy",
+    url: "/logos/GoogleGameandApplicationAcademy.svg",
+    site: "https://oyunveuygulamaakademisi.com",
   },
   {
     name: "Genclig Foundation",
     url: "/logos/GencligFoundation.svg",
+    site: "https://gencligvakfi.org",
   },
 ];
 
 export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
   return (
     <>
-      <div className="w-full py-12 hidden md:block overflow-hidden">
+      <div className="w-full py-12 hidden lg:block overflow-hidden">
         <div className="w-full">
           {/* grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6  */}
           <div className=" flex justify-center items-center gap-x-8 ">
@@ -44,14 +54,14 @@ export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
                 width={300}
                 height={200}
                 src={logo.url}
-                className=" w-[180px] h-fit max-h-[100px] brightness-0  dark:invert hover:brightness-100 transition-all duration-300 ease-in-out"
+                className=" w-[180px] h-fit max-h-[100px] brightness-0  dark:invert dark:hover:invert-0 hover:brightness-100 transition-all duration-300 ease-in-out"
                 alt={`${logo.name}`}
               />
             ))}
           </div>
         </div>
       </div>
-      <div className="w-full pb-6 md:hidden ">
+      <div className="w-full pb-6 lg:hidden ">
         <div className="mx-auto w-full px-4 md:px-8 ">
           <div
             className="group relative  flex gap-6 overflow-hidden p-2"
@@ -62,19 +72,19 @@ export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
           >
             {Array(5)
               .fill(null)
-              .map((index) => (
+              .map((index,key) => (
                 <div
-                  key={index}
+                  key={key}
                   className="flex shrink-0 items-center animate-logo-cloud flex-row justify-around gap-8"
                 >
                   {logos.map((logo, key) => (
                     <Image
-                      width={300}
-                      height={200}
                       key={key}
+                      width={0}
+                      height={0}
                       src={logo.url}
-                      className="h-fit w-[140px] brightness-0  dark:invert hover:brightness-100 transition-all duration-300 ease-in-out"
-                      alt={`${logo.name}`}
+                      className="h-[50px] w-auto brightness-0  dark:invert dark:hover:invert-0 hover:brightness-100 transition-all duration-300 ease-in-out"
+                      alt={`${logo.name} - ${logo.site}`}
                     ></Image>
                   ))}
                 </div>

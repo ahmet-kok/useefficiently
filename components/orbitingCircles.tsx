@@ -11,7 +11,7 @@ export function OrbitingCircle() {
     });
   }, []);
   return (
-    <div className="relative flex aspect-square max-h-[450px]	 w-full items-center justify-center rounded-lg border md:shadow-xl">
+    <div className="relative flex aspect-square max-h-[450px]	 w-full items-center justify-center rounded-lg border shadow-xl">
       <span className="z-40 py-2 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center sm:text-7xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
         UseEfficiently
       </span>

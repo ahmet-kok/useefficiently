@@ -16,7 +16,6 @@ export default function Home({ contentUrl, open }: any) {
       <DotPattern />
       <Faq />
       <Team />
-      <CalCom />
     </>
   );
 }
