@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://useefficiently.com/logo.png",
+        url: "https://useefficiently.com/favicon.ico",
         width: 800,
         height: 600,
         alt: "UseEfficiently Logo",

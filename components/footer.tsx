@@ -12,11 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-import {
-  InstagramLogoIcon,
-  LinkedInLogoIcon,
-  DiscordLogoIcon,
-} from "@radix-ui/react-icons";
+import { InstagramIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 
 export default function Footer() {
   return (
@@ -37,14 +33,19 @@ export default function Footer() {
         <NavigationMenu className="ml-auto items-center flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href={information.instagram} legacyBehavior passHref prefetch={false}>
+              <Link
+                href={information.instagram}
+                legacyBehavior
+                passHref
+                prefetch={false}
+              >
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "bg-transparent p-3"
                   )}
                 >
-                  <DiscordLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
+                  <DiscordIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="sr-only">Discord</span>
                   <span className="ml-1 hidden md:block">Discord</span>
                 </NavigationMenuLink>
@@ -52,14 +53,19 @@ export default function Footer() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href={information.instagram} legacyBehavior passHref prefetch={false}>
+              <Link
+                href={information.instagram}
+                legacyBehavior
+                passHref
+                prefetch={false}
+              >
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "bg-transparent p-3"
                   )}
                 >
-                  <InstagramLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
+                  <InstagramIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="sr-only">Instagram</span>
                   <span className="ml-1 hidden md:block">Instagram</span>
                 </NavigationMenuLink>
@@ -67,14 +73,19 @@ export default function Footer() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href={information.linkedin} legacyBehavior passHref prefetch={false}>
+              <Link
+                href={information.linkedin}
+                legacyBehavior
+                passHref
+                prefetch={false}
+              >
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "bg-transparent p-3"
                   )}
                 >
-                  <LinkedInLogoIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
+                  <LinkedinIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                   <span className="sr-only">Linkedin</span>
                   <span className="ml-1 hidden md:block">Linkedin</span>
                 </NavigationMenuLink>

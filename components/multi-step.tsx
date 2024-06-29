@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { X } from "lucide-react";
 import LessShinyButton from "@/components/magicui/less-shiny-button";
+import { Cross2Icon } from "@/components/icons";
+
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 const MultiStepLoader = dynamic(
@@ -45,7 +46,7 @@ export default function MultiStep({
               className="fixed top-4  right-4 z-[120]"
               onClick={() => setLoading(false)}
             >
-              <X />
+              <Cross2Icon className="w-6 h-6"/>
             </Button>
           )}
         </>

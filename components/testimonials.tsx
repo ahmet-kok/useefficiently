@@ -8,7 +8,8 @@ import { Button } from "./ui/button";
 /* import { PortfolioPost } from "./portfolio-post";
  */ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@/components/icons";
+
 import dynamic from "next/dynamic";
 const PortfolioPost = dynamic(() => import("@/components/portfolio-post"), {
   ssr: false,
@@ -46,7 +47,9 @@ export default function Testimonials({
       <section id="team" className="w-full  py-12 md:py-24">
         <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
           <div className="space-y-4">
-            <Badge className="text-sm font-light" variant="outline" >{t("ClientTestimonials.title")}</Badge>
+            <Badge className="text-sm font-light" variant="outline">
+              {t("ClientTestimonials.title")}
+            </Badge>
 
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               {t("ClientTestimonials.subtitle")}

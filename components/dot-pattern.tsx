@@ -3,7 +3,7 @@ import DotPattern from "@/components/magicui/dot-pattern";
 import WordRotate from "@/components/magicui/word-rotate";
 import Image from "next/image";
 
-import { IconProps } from "@radix-ui/react-icons/dist/types";
+import { IconProps } from "@/components/icons/dist/types";
 export default function DotPatternDemo() {
   return (
     <section className="w-full h-[150px] container px-4 md:px-6 2xl:px-0 my-4 md:my-8">

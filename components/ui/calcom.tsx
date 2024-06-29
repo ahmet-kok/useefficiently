@@ -2,12 +2,12 @@
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Calendar } from "lucide-react";
+import { CalendarIcon } from "@/components/icons";
 import { type AnimationProps, motion } from "framer-motion";
 
 const animationProps = {
-/*   initial: { "--x": "100%", scale: 0.8 },
- */  animate: { "--x": "-100%", scale: 1 },
+  /*   initial: { "--x": "100%", scale: 0.8 },
+   */ animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,
@@ -90,7 +90,7 @@ export default function CalCom() {
               "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))",
           }}
         >
-          <Calendar />
+          <CalendarIcon className="w-7 h-7"/>
 
           {t("bookACall")}
         </span>
