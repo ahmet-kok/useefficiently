@@ -5,14 +5,21 @@ import { getMessages } from "next-intl/server";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import { Inter as FontSans } from "next/font/google";
-const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+import { locales } from "@/config";
+import { Roboto as FontSans } from "next/font/google";
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: "400",
+});
+//FontSans({ subsets: ["latin"], variable: "--font-sans" });
 import Header from "@/components/header";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-const Footer = dynamic(() => import("@/components/footer"), {
+/* const Footer = dynamic(() => import("@/components/footer"), {
   ssr: false,
-});
+  }); */
+import Footer from "@/components/footer";
 const CalCom = dynamic(() => import("@/components/ui/calcom"), {
   ssr: false,
 });
@@ -89,24 +96,23 @@ export default async function RootLayout({
         </head>
         <body
           className={cn(
-            "font-sans min-h-screen dark:bg-black",
+            "font-sans  min-h-screen dark:bg-zinc-900",
             fontSans.variable
           )}
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-          
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-              <Header /> 
-            <main className="">{children}</main>
-            {modal}
-            <Footer />
-          <CalCom />
-          </ThemeProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              <main className="">{children}</main>
+              {modal}
+              <Footer />
+              <CalCom />
+            </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />
           <SpeedInsights />

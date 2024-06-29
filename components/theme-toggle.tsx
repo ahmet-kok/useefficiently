@@ -4,7 +4,6 @@ import * as React from "react";
 import { MoonIcon, SunIcon, ChevronRightIcon } from "@/components/icons";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -79,17 +78,26 @@ export function ModeToggle() {
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem className="flex items-center gap-2" onClick={() => setTheme("light")}>
+            <DropdownMenuItem
+              className="flex items-center gap-2"
+              onClick={() => setTheme("light")}
+            >
               <SunIcon className="h-5 w-5" />
 
               {t("light")}
             </DropdownMenuItem>
-            <DropdownMenuItem className="flex items-center gap-2" onClick={() => setTheme("dark")}>
+            <DropdownMenuItem
+              className="flex items-center gap-2"
+              onClick={() => setTheme("dark")}
+            >
               <MoonIcon className="h-5 w-5" />
 
               {t("dark")}
             </DropdownMenuItem>
-            <DropdownMenuItem className="flex items-center gap-2" onClick={() => setTheme("system")}>
+            <DropdownMenuItem
+              className="flex items-center gap-2"
+              onClick={() => setTheme("system")}
+            >
               {systemTheme === "dark" ? (
                 <MoonIcon className="h-5 w-5" />
               ) : (

@@ -1,26 +1,25 @@
 import createMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
+import {
+  localePrefix,
+  defaultLocale,
+  locales,
+  pathnames,
+  alternateLinks,
+  localeDetection,
+} from "./config";
 
 const nextIntlMiddleware = createMiddleware({
-  locales: ["en", "de", "tr"],
-  defaultLocale: "en",
-  pathnames: {
-    en: "/en",
-    de: "/de",
-    tr: "/tr",
-  },
-  localePrefix: "as-needed",
-
-  alternateLinks: false,
-  localeDetection: false,
+  locales,
+  defaultLocale,
+  pathnames,
+  localePrefix,
+  alternateLinks,
+  localeDetection,
 });
 
 export const config = {
-  matcher: [
-    "/",
-    `/(en|fr|es|pt|ja|ru|ko)/:path*`,
-    "/((?!api|_next|_vercel|.*\\..*).*)",
-  ],
+  matcher: ["/", `/(en|tr|de)/:path*`, "/((?!api|_next|_vercel|.*\\..*).*)"],
 };
 export default (request: NextRequest) => {
   return nextIntlMiddleware(request);

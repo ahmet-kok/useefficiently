@@ -4,16 +4,13 @@ import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
-  DrawerTitle,
-  DrawerDescription,
   DrawerContent,
   DrawerFooter,
-  DrawerHeader,
 } from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
 import { PortfolioText } from "./portfolio-text-render";
-export default  function PortfolioPost({
+export default function PortfolioPost({
   slug,
   open,
   setOpen,

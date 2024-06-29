@@ -8,15 +8,9 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import {
-  SunIcon,
-  MoonIcon,
   MenuIcon,
-  GlobeIcon,
-  FlagIcon,
-  ChevronRightIcon,
   HomeIcon,
   InfoIcon,
   PhoneIcon,
@@ -24,7 +18,6 @@ import {
 } from "@/components/icons";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -71,9 +64,7 @@ export default function Header() {
       }
     }
   });
-  const router = useRouter();
   const localActive = useLocale();
-
   return (
     <>
       <AnimatePresence mode="wait">
@@ -123,52 +114,48 @@ export default function Header() {
               <NavigationMenu className="ml-auto items-center hidden md:flex">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <Link href="/" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("home")}
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      href="/"
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("home")}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#faq" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("about")}
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      href="/#faq"
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("about")}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="/portfolio" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("portfolio")}
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      href="/portfolio"
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("portfolio")}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="/team" legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t("team")}
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      href="/team"
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent"
+                      )}
+                    >
+                      {t("team")}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   {/* <DropdownMenu>
                     <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
