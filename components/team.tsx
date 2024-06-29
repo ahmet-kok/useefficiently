@@ -12,7 +12,7 @@ export default function Team() {
     <section id="team" className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
-          <Badge variant="outline">{t("title")}</Badge>
+          <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
 
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}

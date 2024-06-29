@@ -48,7 +48,7 @@ export default function Blogs({
   return (
     <section className="w-full py-6 md:py-12 lg:py-16 xl:py-20">
       <div className="space-y-4 container px-4md:px-6   2xl:px-0 pb-8 lg:gap-8">
-        <Badge variant="outline">{t("title")}</Badge>
+        <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           {t("subtitle")}
         </h2>

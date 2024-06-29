@@ -34,7 +34,7 @@ export function ModeToggle() {
               <ChevronRightIcon className="h-4 w-4" />
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="end" className="dark:bg-zinc-900">
             <DropdownMenuItem
               className="flex items-center gap-2"
               onClick={() => setTheme("light")}
@@ -68,7 +68,7 @@ export function ModeToggle() {
       <div className="hidden md:inline-block">
         <DropdownMenu>
           <DropdownMenuTrigger
-            className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+            className="focus:bg-zinc-100 dark:hover:bg-zinc-800 dark:focus:bg-zinc-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
             asChild
           >
             <button>

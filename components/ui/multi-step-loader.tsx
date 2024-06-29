@@ -35,9 +35,7 @@ const CheckFilled = ({ className }: { className?: string }) => {
   );
 };
 
-type LoadingState = {
-  text: string;
-};
+type LoadingState = string;
 
 const LoaderCore = ({
   loadingStates,
@@ -80,7 +78,7 @@ const LoaderCore = ({
                 value === index && "text-black dark:text-lime-500 opacity-100"
               )}
             >
-              {loadingState.text}
+              {loadingState}
             </span>
           </motion.div>
         );

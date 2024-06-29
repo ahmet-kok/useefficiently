@@ -8,17 +8,22 @@ export const pathnames = {
   // If all locales use the same pathname, a single
   // external path can be used for all locales
   "/": "/",
-  "/blog": "/blog",
+  /*   "/blog": "/blog",*/
   en: "/en",
   de: "/de",
   tr: "/tr",
-
+  "/#faq": "/#faq",
   // If locales use different paths, you can
   // specify each external path per locale
-  "/about": {
+  /*   "/about": {
     en: "/about",
     tr: "/hakkimizda",
     de: "/ueber-uns",
+  }, */
+  "/portfolio": {
+    en: "/portfolio",
+    de: "/portfolio",
+    tr: "/portfolyo",
   },
   "/team": {
     en: "/team",

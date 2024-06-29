@@ -5,7 +5,6 @@ import { getMessages } from "next-intl/server";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import { locales } from "@/config";
 import { Roboto as FontSans } from "next/font/google";
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -15,14 +14,10 @@ const fontSans = FontSans({
 //FontSans({ subsets: ["latin"], variable: "--font-sans" });
 import Header from "@/components/header";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 /* const Footer = dynamic(() => import("@/components/footer"), {
   ssr: false,
   }); */
 import Footer from "@/components/footer";
-const CalCom = dynamic(() => import("@/components/ui/calcom"), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   robots: "index, follow",
@@ -87,7 +82,7 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <>
-      <html lang={locale} className="scroll-smooth light">
+      <html lang={locale} className="scroll-smooth">
         <head>
           <meta
             name="viewport"
@@ -111,7 +106,6 @@ export default async function RootLayout({
               <main className="">{children}</main>
               {modal}
               <Footer />
-              <CalCom />
             </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />

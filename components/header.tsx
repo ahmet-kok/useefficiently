@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import { pathnames, locales } from "@/config";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -65,6 +66,14 @@ export default function Header() {
     }
   });
   const localActive = useLocale();
+
+  const pthnames: any = pathnames;
+  const lcls: any = locales;
+  const usablePathnames = Object.keys(pathnames)
+    .filter((key) => !lcls.includes(key))
+    .map((key) => {
+      return { name: key, slug: pthnames[key] };
+    });
   return (
     <>
       <AnimatePresence mode="wait">
@@ -113,7 +122,40 @@ export default function Header() {
               </div>
               <NavigationMenu className="ml-auto items-center hidden md:flex">
                 <NavigationMenuList>
-                  <NavigationMenuItem>
+                  {usablePathnames.map((path, idx) => (
+                    <NavigationMenuItem key={idx}>
+                      <NavigationMenuLink
+                        href={
+                          (localActive === "en" ? "" : "/" + localActive) +
+                          (path.slug[localActive]
+                            ? path.slug[localActive]
+                            : path.slug)
+                        }
+                        /* (path.slug[localActive]
+                          ? `${
+                              localActive === "en"
+                                ? path.slug[localActive]
+                                : localActive
+                            }${path.slug[localActive]}`
+                          : `${
+                              localActive === "en"
+                                ? path.slug
+                                : localActive + path.slug
+                            }`) */
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "bg-transparent"
+                        )}
+                      >
+                        {t(
+                          path.name === "/"
+                            ? "home"
+                            : path.name.replace("/", "")
+                        )}
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  ))}
+                  {/* <NavigationMenuItem>
                     <NavigationMenuLink
                       href="/"
                       className={cn(
@@ -156,7 +198,7 @@ export default function Header() {
                     >
                       {t("team")}
                     </NavigationMenuLink>
-                  </NavigationMenuItem>
+                  </NavigationMenuItem> */}
                   {/* <DropdownMenu>
                     <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                       <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
@@ -191,13 +233,16 @@ export default function Header() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full bg-background hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
+                      className="rounded-full  hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50"
                     >
                       <MenuIcon className="h-6 w-6" />
                       <span className="sr-only">{t("menu")}</span>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-[200px]">
+                  <DropdownMenuContent
+                    align="end"
+                    className="w-[200px] dark:bg-zinc-900"
+                  >
                     <DropdownMenuItem key={1}>
                       <Link
                         href="/"

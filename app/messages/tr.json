@@ -7,56 +7,121 @@
     "theme": "Tema",
     "dark": "Karanlık Mod",
     "light": "Aydınlık Mod",
-    "system": "Sistem"
+    "system": "Sistem",
+    "portfolio": "Portföy",
+    "menu": "Menü",
+    "team": "Ekip",
+    "blog": "Blog",
+    "#faq": "SSS"
   },
   "Hero": {
     "heroTitleStart": "",
     "heroTitleEnd": "Hizmet Ortağınız",
-    "heroText": "Türkiye'deki ilk ve tek Airtable partneri olarak, UseEfficiently ekibi Airtable konusunda uzmanlaşmıştır. Airtable'ı etkili bir şekilde kullanmanız ve tüm ihtiyaçlarınızı karşılamanız için buradayız.",
+    "heroText": "UseEfficiently'de, uzman ekibimiz Airtable'ı ustalıkla kullanmanıza ve tüm ihtiyaçlarınızı verimli bir şekilde karşılamanıza yardımcı olmak için burada. Size üst düzey destek ve yenilikçi çözümler sunmaya kararlıyız.",
     "scheduleConsultation": "Danışma Planlayın",
-    "learnMore": "Daha Fazla Bilgi Edinin"
+    "learnMore": "Daha Fazla Bilgi Edinin",
+    "bookACall": "Görüşme Planlayın"
   },
   "Testimonials": {
     "1": {
       "company": "YetGen",
       "customer": "Ali Sunay",
-      "logo": "/logos/yetkingencler.svg",
+      "logo": "/logos/YetkinGencler.svg",
       "avatar": "https://github.com/ali.png",
-      "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi, endişelerimi gidermek için olağanüstü çaba sarf etti."
+      "text": "Aldığım müşteri hizmeti olağanüstüydü. Destek ekibi endişelerimi gidermek için ellerinden gelenin fazlasını yaptı.",
+      "story": "true",
+      "slug": "girvak"
     },
     "2": {
       "company": "Trendyol",
       "customer": "Cansu Yılmaz",
-      "logo": "https://github.com/trendyol.png",
+      "logo": "/logos/PublicSquare.svg",
       "avatar": "https://github.com/miaa.png",
-      "text": "Kesinlikle harika bir deneyimdi! Ekip çok destekleyiciydi ve ürün kalitesi beklentilerimi aştı."
+      "story": "false",
+      "text": "Kesinlikle harika bir deneyim! Ekip çok destekleyiciydi ve ürün kalitesi beklentilerimi aştı."
     },
     "3": {
       "company": "Arçelik",
       "customer": "İbrahim Ethem",
-      "logo": "https://github.com/arcelik.png",
+      "logo": "/logos/TurkishEntrepreneurshipFoundation.svg",
       "avatar": "https://github.com/demir.png",
-      "text": "Hizmetten son derece memnunum. Yanıt verme süresi ve profesyonellik üst düzeydeydi."
+      "text": "Hizmetten son derece memnunum. Yanıt verme ve profesyonellik üst düzeydeydi.",
+      "story": "true",
+      "slug": "yetgen"
     },
     "ClientTestimonials": {
       "title": "Müşteri Yorumları",
-      "subtitle": "Önde Gelen Markaların Güvencesi",
-      "description": "Memnun müşterilerimizin, kodsuz çözümlerimizin işletmelerini nasıl dönüştürdüğünü dinleyin."
+      "subtitle": "Önde Gelen Markaların Güvendiği",
+      "description": "No-code çözümlerimizin işletmelerini nasıl dönüştürdüğünü anlatan memnun müşterilerimizden dinleyin."
     }
   },
   "Team": {
     "title": "Neşeli Ekibimiz",
-    "subtitle": "Sihir Arkasındaki Uzmanlarla Tanışın",
-    "description": "Yetkin kodsuz çözümler uzmanı ekibimiz, yenilikçi çözümlerle işletmeleri dönüştürmeye adanmıştır. Sihir arkasındaki yüzlerle tanışın!"
+    "subtitle": "Büyünün Arkasındaki Uzmanlarla Tanışın",
+    "description": "Yetenekli no-code uzman ekibimiz, yenilikçi çözümlerle işletmeleri dönüştürmeye adanmıştır. Büyünün arkasındaki yüzlerle tanışın!"
   },
+  "Stepper": {
+    "title": "Sürecimiz",
+    "subtitle": "Nasıl Çalışıyoruz",
+    "description": "Sürecimiz, ihtiyaçlarınıza göre en iyi no-code çözümleri sunmak için tasarlanmıştır. Hizmetlerimizden en iyi şekilde yararlanmanızı sağlamak için sizinle yakından çalışıyoruz.",
+    "step": "Adım"
+  },
+
   "Blogs": {
     "title": "En Son Bloglarımız",
     "subtitle": "En Son İçgörülerimizle Güncel Kalın",
-    "description": "Kodsuz endüstrisindeki en son trendler ve içgörüler hakkında bilgi sahibi olmak için en son bloglarımızı keşfedin."
+    "description": "No-code endüstrisindeki en son trendler ve içgörüler hakkında bilgi sahibi olmak için en son bloglarımızı keşfedin."
   },
   "Faq": {
     "title": "Sıkça Sorulan Sorular",
-    "subtitle": "Sorularınızı Yanıtlıyoruz",
-    "description": "Sıkça sorulan sorularımızı inceleyin veya bizimle iletişime geçin."
+    "subtitle": "Sorularınız mı var? Cevaplarımız var!",
+    "ourProcess": "Sürecimiz",
+    "description": "Hizmetlerimiz ve çözümlerimizle ilgili en sık sorulan soruların cevaplarını bulun.",
+    "multiStep": [
+      "İlk Danışma",
+      "Gereksinim Analizi",
+      "Çözüm Tasarımı",
+      "Geliştirme ve Test",
+      "Dağıtım",
+      "Kullanıcı Eğitimi",
+      "Sürekli Destek",
+      "Sürekli İyileştirme"
+    ],
+    "questions": [
+      {
+        "question": "No-code platformu nedir?",
+        "answer": "No-code platformu, kullanıcıların herhangi bir kod yazmadan uygulama oluşturmasına olanak tanır. Uygulama oluşturmak ve yönetmek için görsel geliştirme araçları kullanır."
+      },
+      {
+        "question": "No-code çözümler işletmeme nasıl fayda sağlar?",
+        "answer": "No-code çözümler, geliştirme süresini ve maliyetlerini önemli ölçüde azaltarak hızlı prototip oluşturma ve dağıtım sağlar. İşletme kullanıcılarının teknik bilgiye ihtiyaç duymadan uygulama oluşturup değiştirmelerine olanak tanır."
+      },
+      {
+        "question": "Hangi hizmetleri sunuyorsunuz?",
+        "answer": "Danışmanlık, çözüm tasarımı, geliştirme, test, dağıtım, kullanıcı eğitimi ve no-code platformları için sürekli destek dahil olmak üzere çeşitli hizmetler sunuyoruz."
+      },
+      {
+        "question": "Hangi no-code platformlarıyla çalışıyorsunuz?",
+        "answer": "Airtable, Zapier, Bubble, Adalo ve daha birçok no-code platformuyla çalışıyoruz."
+      },
+      {
+        "question": "No-code uygulamalar ne kadar güvenlidir?",
+        "answer": "No-code platformları genellikle endüstri standardı güvenlik uygulamalarını takip eder. Ayrıca tüm geliştirme projelerimizde veri şifreleme, erişim kontrolü ve düzenli güvenlik denetimleri dahil olmak üzere güvenliğin en öncelikli olduğunu sağlıyoruz."
+      },
+      {
+        "question": "No-code çözümleri mevcut sistemlerle entegre edebilir misiniz?",
+        "answer": "Evet, no-code çözümlerini mevcut sistemlerle entegre etmek için API’ler ve diğer entegrasyon araçlarını kullanarak kesintisiz veri akışı ve işlevsellik sağlıyoruz."
+      },
+      {
+        "question": "No-code platformlarını kullanmak için eğitim veriyor musunuz?",
+        "answer": "Kesinlikle. Ekibinizin, geliştirdiğimiz no-code çözümlerini etkili bir şekilde kullanabilmesi ve yönetebilmesi için kapsamlı eğitim oturumları sunuyoruz."
+      }
+    ]
+  },
+  "404": {
+    "title": "Hata! Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya geçici olarak kullanılamıyor olabilir.",
+    "bookACall": "Görüşme Planlayın",
+    "returnHome": "Ana Sayfaya Dön"
   }
 }

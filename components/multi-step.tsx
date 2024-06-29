@@ -14,10 +14,12 @@ const MultiStepLoader = dynamic(
 
 export default function MultiStep({
   className,
+  text,
   states,
 }: {
+  text: string;
   className?: string;
-  states: { text: string }[];
+  states: [];
 }) {
   const [isMultiStepDownloaded, setMultiStepDownloaded] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -29,10 +31,7 @@ export default function MultiStep({
       {/* Core MultiStepLoader Modal */}
 
       {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
-      <LessShinyButton
-        onClick={() => setLoading(true)}
-        text="Our process" /* onClick={() => setLoading(true)}  */
-      />
+      <LessShinyButton onClick={() => setLoading(true)} text={text} />
       {isMultiStepDownloaded && (
         <>
           <MultiStepLoader

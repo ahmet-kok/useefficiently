@@ -9,7 +9,7 @@ export default function Main() {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-40">
         <div className="container  mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
           <div className="space-y-4">
-            <Badge variant="outline">No-Code Benefits</Badge>
+            <Badge className="text-sm font-light" variant="outline">No-Code Benefits</Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Build Faster, Innovate Quicker
             </h2>
@@ -48,7 +48,7 @@ export default function Main() {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-40">
         <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
           <div className="space-y-4">
-            <Badge variant="outline">Client Testimonials</Badge>
+            <Badge className="text-sm font-light" variant="outline">Client Testimonials</Badge>
 
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Trusted by Leading Brands

@@ -10,6 +10,7 @@ import HighlightComponent from "./herohighlight";
 import Link from "next/link";
 import ShinyButton from "./magicui/shiny-button";
 import { useTranslations } from "next-intl";
+import { useMessages } from "next-intl";
 import MultiStep from "./multi-step";
 interface FAQProps {
   question: string;
@@ -64,11 +65,19 @@ const FAQList: FAQProps[] = [
 
 export default function Faq({ id }: { id: string }) {
   const t = useTranslations("Faq");
+  const messages: any = useMessages();
+  const multiStep = messages.Faq.multiStep;
+  const questions: [{ question: string; answer: string }] =
+    messages.Faq.questions;
+  /*   const multiStep = Object.keys(messages.Faq.multiStep).map((key) => {
+    return messages.Faq.multiStep[key];
+  });
+  console.log(messages.Faq.questions); */
   return (
     <section id={id} className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
-          <Badge variant="outline">{t("title")}</Badge>
+          <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
 
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}
@@ -80,42 +89,15 @@ export default function Faq({ id }: { id: string }) {
             <Link href="mailto:hello@useefficiently.com">
               <ShinyButton text="hello@useefficienly.com" />
             </Link>
-            <MultiStep
-              states={[
-                {
-                  text: "Initial Consultation",
-                },
-                {
-                  text: "Requirement Analysis",
-                },
-                {
-                  text: "Solution Design",
-                },
-                {
-                  text: "Development and Testing",
-                },
-                {
-                  text: "Deployment",
-                },
-                {
-                  text: "User Training",
-                },
-                {
-                  text: "Ongoing Support",
-                },
-                {
-                  text: "Continuous Improvement",
-                },
-              ]}
-            />
+            <MultiStep text={t("ourProcess")} states={multiStep} />
           </div>
         </div>
 
         <Accordion type="single" collapsible className="AccordionRoot">
-          {FAQList.map(({ question, answer, value }, key) => (
+          {questions.map(({ question, answer }, key) => (
             <AccordionItem
               key={key}
-              value={value}
+              value={question}
               /*               className=
                */ className={cn(
                 " px-4 mb-3 p-3  grid",
@@ -124,7 +106,7 @@ export default function Faq({ id }: { id: string }) {
                 "transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
                 "group     overflow-hidden rounded-lg",
                 // light styles
-                "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+                "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
               )}
             >
               <AccordionTrigger className="text-left  hover:no-underline">
