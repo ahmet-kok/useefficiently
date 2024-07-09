@@ -96,7 +96,7 @@ export default function Header() {
         >
           <header className="w-full ">
             <div
-              className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+              className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center xl:border dark:xl:border-none px-4 md:px-6  container xl:rounded-lg xl:box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] xl:transform-gpu xl:dark:[border:1px_solid_rgba(255,255,255,.1)] xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
               style={
                 {
                   WebkitBackdropFilter: "blur(10px)",

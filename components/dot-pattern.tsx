@@ -8,7 +8,7 @@ export default function DotPatternDemo() {
     <section className="w-full h-[150px] my-4 md:my-8">
       {/*       overflow-hidden  p-10 md:shadow-xl container  mx-auto mx-4 px-4 md:px-6 2xl:px-0
        */}{" "}
-      <div className="relative flex px-3 sm:px-10 h-full text-[2rem]  sm:text-5xl rounded-lg overflow-hidden border md:shadow-xl gap-3 ">
+      <div className="relative flex px-3 sm:px-10 h-full text-[2rem]  sm:text-5xl rounded-lg overflow-hidden [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] border dark:border-none  dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset] md:shadow-xl gap-3 ">
         <div className="self-center flex w-full max-w-[600px] mx-auto h-full py-5 ">
           <p className="z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter text-black self-center  p-1  dark:text-white border-bottom text-end w-[50%] sm:text-end sm:w-full">
             Use

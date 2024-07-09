@@ -20,7 +20,7 @@ export function ModeToggle() {
     <>
       <div className="block md:hidden ">
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center gap-2" asChild>
+          <DropdownMenuTrigger className="flex items-center gap-2 " asChild>
             <button>
               <SunIcon className="h-5 w-5 dark:hidden " />
               <MoonIcon className="h-5 w-5 hidden dark:inline-block " />
@@ -34,7 +34,7 @@ export function ModeToggle() {
               <ChevronRightIcon className="h-4 w-4" />
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="dark:bg-zinc-900">
+          <DropdownMenuContent align="end" className="dark:bg-zinc-900 ">
             <DropdownMenuItem
               className="flex items-center gap-2"
               onClick={() => setTheme("light")}
@@ -77,7 +77,7 @@ export function ModeToggle() {
               <span className="sr-only">{t("theme")}</span>
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
+          <DropdownMenuContent align="end" className="dark:bg-zinc-900">
             <DropdownMenuItem
               className="flex items-center gap-2"
               onClick={() => setTheme("light")}

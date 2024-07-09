@@ -25,7 +25,7 @@ export default function ContactPage() {
   }, []);
   const t = useTranslations("Contact");
   return (
-    <section className=" min-h-[80vh]  ">
+    <section className=" min-h-[70vh]  ">
       <div className="container min-h-[80vh] items-center mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4 lg:h-[70vh]">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -48,7 +48,7 @@ export default function ContactPage() {
               data-cal-link="useefficiently/30min"
               data-cal-config='{"layout":"month_view"}'
             >
-              <LessShinyButton text={t("scheduleConsultation")} greenIcon/>
+              <LessShinyButton text={t("scheduleConsultation")} greenIcon />
             </Link>
           </div>
         </div>

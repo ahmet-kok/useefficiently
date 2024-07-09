@@ -17,7 +17,6 @@ export function Modal({
 
   useEffect(() => {
     if (!isDrawerOpen) {
-      console.log("Drawer is closed");
       // router back after 3 seconds
       setTimeout(() => {
         router.back();

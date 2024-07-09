@@ -78,7 +78,6 @@ export default function Faq({ id }: { id: string }) {
       return { name: key, slug: pthnames[key] };
     });
   const contactPath = usablePathnames.find((item) => item.name === "/contact");
-  console.log(contactPath);
   const questions: [{ question: string; answer: string }] =
     messages.Faq.questions;
   /*   const multiStep = Object.keys(messages.Faq.multiStep).map((key) => {
@@ -127,7 +126,7 @@ export default function Faq({ id }: { id: string }) {
                 " px-4 mb-3 p-3  grid",
                 "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
                 // dark styles
-                "transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+                "transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)]  dark:border-none  dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
                 "group     overflow-hidden rounded-lg"
               )}
             >
