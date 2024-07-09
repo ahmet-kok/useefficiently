@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { FC } from "react";
 
-type IconName = "GitHubIcon" | "TwitterIcon" | "LinkedInIcon";
+type IconName = "GithubIcon" | "TwitterIcon" | "LinkedinIcon";
 
 const iconMapping: Record<IconName, FC<{ className?: string }>> = {
   GithubIcon,
