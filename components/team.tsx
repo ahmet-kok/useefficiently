@@ -1,3 +1,5 @@
+"use client"
+
 import { TwitterIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -5,14 +7,35 @@ import Link from "next/link";
 import info from "@/information.json";
 import { useTranslations } from "next-intl";
 import ShinyButton from "@/components/magicui/shiny-button";
+import { FC } from "react";
 
+type IconName = "GitHubIcon" | "TwitterIcon" | "LinkedInIcon";
+
+const iconMapping: Record<IconName, FC<{ className?: string }>> = {
+  GithubIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  // Add more icons as needed
+};
+interface SocialIconProps {
+  iconName: IconName;
+}
+const SocialIcon: FC<SocialIconProps> = ({ iconName }) => {
+  // Get the component from the mapping
+  const IconComponent = iconMapping[iconName];
+
+  return <IconComponent className="w-5 h-5" />;
+};
 export default function Team() {
   const t = useTranslations("Team");
+
   return (
     <section id="team" className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
-          <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
+          <Badge className="text-sm font-light" variant="outline">
+            {t("title")}
+          </Badge>
 
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}
@@ -42,22 +65,32 @@ interface TeamMemberProps {
     twitter?: string;
     linkedin?: string;
     github?: string;
+    social?: Array<{
+      name: string;
+      url: string;
+      icon: React.ReactNode;
+    }>;
   };
 }
 
 const TeamMember = ({ member }: TeamMemberProps) => (
   <div className="flex flex-col items-center gap-4">
-    <Avatar className="w-24 h-24 bg-background text-6xl">
-      <AvatarImage
-        src={member.avatar}
-        alt={`@${member.name}`}
-        className="object-cover"
-      />
-      <AvatarFallback>
-        {member.name[0]}
-        {member.name.split(" ")[1][0]}
-      </AvatarFallback>
-    </Avatar>
+    <div className="relative">
+      <Avatar className="w-24 h-24 bg-background text-6xl relative">
+        <AvatarImage
+          src={member.avatar}
+          alt={`@${member.name}`}
+          className="object-cover"
+        />
+        {
+          //absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900
+        }{" "}
+        <AvatarFallback>
+          {member.name[0]}
+          {member.name.split(" ")[1][0]}
+        </AvatarFallback>
+      </Avatar>
+    </div>
     <div className="text-center">
       <h3 className="text-xl font-semibold">{member.name}</h3>
       <p className="text-sm dark:text-gray-200 text-gray-700">{member.role}</p>
@@ -68,7 +101,7 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             className="dark:text-gray-200 text-gray-700  "
             prefetch={false}
           >
-            <TwitterIcon className="w-5 h-5 hover:fill-gray-700" />
+            <TwitterIcon className="w-5 h-5" />
             <span className="sr-only">
               {member.name} {" - "}Twitter
             </span>
@@ -77,10 +110,10 @@ const TeamMember = ({ member }: TeamMemberProps) => (
         {member.linkedin && (
           <Link
             href={member.linkedin}
-            className="dark:text-gray-200 text-gray-700 "
+            className="dark:text-gray-200 text-gray-700"
             prefetch={false}
           >
-            <LinkedinIcon className="w-5 h-5 hover:fill-gray-700 " />
+            <LinkedinIcon className="w-5 h-5 " />
             <span className="sr-only">
               {member.name} {" - "}LinkedIn
             </span>
@@ -92,12 +125,25 @@ const TeamMember = ({ member }: TeamMemberProps) => (
             className="dark:text-gray-200 text-gray-700 "
             prefetch={false}
           >
-            <GithubIcon className="w-5 h-5 hover:fill-gray-700" />
+            <GithubIcon className="w-5 h-5" />
             <span className="sr-only">
               {member.name} {" - "}GitHub
             </span>
           </Link>
         )}
+        {member.social
+          ? member.social.map((social, index) => (
+              <Link
+                key={index}
+                href={social.url}
+                className="dark:text-gray-200 text-gray-700"
+                prefetch={false}
+              >
+                <SocialIcon iconName={social.icon as IconName} />
+                <span className="sr-only">{social.name}</span>
+              </Link>
+            ))
+          : null}
       </div>
     </div>
   </div>

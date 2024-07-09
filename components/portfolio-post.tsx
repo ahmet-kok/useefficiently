@@ -108,7 +108,7 @@ export default function PortfolioPost({
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerContent className="h-[95%] flex flex-col">
+      <DrawerContent className="h-[95%] flex flex-col dark:bg-zinc-900">
         {/*  <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
           <div className="w-full md:max-w-3xl" ref={contentRef}>
             {postContent ? (

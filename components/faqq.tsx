@@ -6,12 +6,13 @@ import {
 } from "./ui/accordion";
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
-import HighlightComponent from "./herohighlight";
 import Link from "next/link";
 import ShinyButton from "./magicui/shiny-button";
-import { useTranslations } from "next-intl";
 import { useMessages } from "next-intl";
 import MultiStep from "./multi-step";
+import { useLocale, useTranslations } from "next-intl";
+import { pathnames, locales } from "@/config";
+
 interface FAQProps {
   question: string;
   answer: string;
@@ -67,6 +68,17 @@ export default function Faq({ id }: { id: string }) {
   const t = useTranslations("Faq");
   const messages: any = useMessages();
   const multiStep = messages.Faq.multiStep;
+  const localActive = useLocale();
+
+  const pthnames: any = pathnames;
+  const lcls: any = locales;
+  const usablePathnames = Object.keys(pathnames)
+    .filter((key) => !lcls.includes(key))
+    .map((key) => {
+      return { name: key, slug: pthnames[key] };
+    });
+  const contactPath = usablePathnames.find((item) => item.name === "/contact");
+  console.log(contactPath);
   const questions: [{ question: string; answer: string }] =
     messages.Faq.questions;
   /*   const multiStep = Object.keys(messages.Faq.multiStep).map((key) => {
@@ -77,7 +89,9 @@ export default function Faq({ id }: { id: string }) {
     <section id={id} className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
-          <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
+          <Badge className="text-sm font-light" variant="outline">
+            {t("title")}
+          </Badge>
 
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}
@@ -85,11 +99,21 @@ export default function Faq({ id }: { id: string }) {
           <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
             {t("description")}
           </p>
-          <div className="gap-3 flex flex-wrap">
-            <Link href="mailto:hello@useefficiently.com">
-              <ShinyButton text="hello@useefficienly.com" />
+          <div className="flex gap-3 w-full sm:max-w-[500px] ">
+            <Link
+              href={
+                (localActive === "en" ? "" : "/" + localActive) +
+                contactPath?.slug[localActive]
+              }
+              className="shrink w-full"
+            >
+              <ShinyButton text={t(contactPath?.name.replace("/", ""))} />
             </Link>
-            <MultiStep text={t("ourProcess")} states={multiStep} />
+            <MultiStep
+              text={t("ourProcess")}
+              states={multiStep}
+              className="shrink w-full"
+            />
           </div>
         </div>
 
@@ -104,9 +128,7 @@ export default function Faq({ id }: { id: string }) {
                 "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
                 // dark styles
                 "transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-                "group     overflow-hidden rounded-lg",
-                // light styles
-                "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
+                "group     overflow-hidden rounded-lg"
               )}
             >
               <AccordionTrigger className="text-left  hover:no-underline">

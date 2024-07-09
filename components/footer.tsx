@@ -17,7 +17,7 @@ import { InstagramIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 export default function Footer() {
   return (
     <footer className=" h-[10vh] pb-4 lg:px-6 border-t xl:border-t-0">
-      <div className="flex  h-20 shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
+      <div className="flex h-[8vh] shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border  xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md">
         <div className="flex items-center">
           <Link href={`/`} className="flex items-center " prefetch={false}>
             <h2

@@ -14,7 +14,9 @@ export default function Home({ contentUrl, open }: any) {
     <>
       <Hero id="hero" />
       <Testimonials id="testimonials" contentSlug={contentUrl} open={open} />
-      <DotPattern />
+      <div className="  container mx-auto px-4 md:px-6 2xl:px-0">
+        <DotPattern />
+      </div>
       <Faq id="faq" />
       <CalCom />
     </>

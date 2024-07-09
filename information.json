@@ -19,33 +19,90 @@
       "name": "Leo Bennett",
       "role": "Airtable Expert",
       "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2024/02/Ahmet-Kok.webp",
-      "twitter": "https://twitter.com/leobennett",
-      "linkedin": "https://linkedin.com/in/leobennett",
-      "github": "https://github.com/leobennett"
+      "social": [
+        {
+          "name": "Linkedin",
+          "url": "https://www.linkedin.com/in/ahmetkok/",
+          "icon": "LinkedinIcon"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/ahmetkok",
+          "icon": "TwitterIcon"
+        },
+        {
+          "name": "GitHub",
+          "url": "https:// github.com/ahmetkok",
+          "icon": "GithubIcon"
+        }
+      ]
     },
     {
       "name": "Lukas Kaiser",
       "role": "No-Code Expert",
       "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Lukas-Kaiser.webp",
-      "twitter": "https://twitter.com/lukaskaiser",
-      "linkedin": "https://linkedin.com/in/lukaskaiser",
-      "github": "https://github.com/lukaskaiser"
+      "social": [
+        {
+          "name": "Linkedin",
+          "url": "https://www.linkedin.com/in/ahmetkok/",
+          "icon": "LinkedinIcon"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/ahmetkok",
+          "icon": "TwitterIcon"
+        },
+        {
+          "name": "GitHub",
+          "url": "https:// github.com/ahmetkok",
+          "icon": "GithubIcon"
+        }
+      ]
     },
     {
       "name": "Nate Dogan ",
       "role": "Tech Lead",
       "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Nusret-Dogan.webp",
-      "twitter": "https://twitter.com/natedogan",
-      "linkedin": "https://linkedin.com/in/natedogan",
-      "github": "https://github.com/natedogan"
+
+      "social": [
+        {
+          "name": "Linkedin",
+          "url": "https://www.linkedin.com/in/ahmetkok/",
+          "icon": "LinkedinIcon"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/ahmetkok",
+          "icon": "TwitterIcon"
+        },
+        {
+          "name": "GitHub",
+          "url": "https:// github.com/ahmetkok",
+          "icon": "GithubIcon"
+        }
+      ]
     },
     {
       "name": "Ozan Ilter",
       "role": "Airtable & Softr Expert",
       "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Ozan-Halis-Ilter.webp",
-      "twitter": "https://twitter.com/ozanilter",
-      "linkedin": "https://linkedin.com/in/ozanilter",
-      "github": "https://github.com/ozanilter"
+      "social": [
+        {
+          "name": "Linkedin",
+          "url": "https://www.linkedin.com/in/ahmetkok/",
+          "icon": "LinkedinIcon"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/ahmetkok",
+          "icon": "TwitterIcon"
+        },
+        {
+          "name": "GitHub",
+          "url": "https:// github.com/ahmetkok",
+          "icon": "GithubIcon"
+        }
+      ]
     }
   ]
 }

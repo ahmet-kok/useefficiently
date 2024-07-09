@@ -94,9 +94,9 @@ export default function Header() {
             "w-full flex top-0 xl:px-6 fixed xl:top-4 inset-x-0 z-[50]"
           )}
         >
-          <header className="w-full">
+          <header className="w-full ">
             <div
-              className="flex backdrop-blur h-14 sm:h-20  shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+              className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
               style={
                 {
                   WebkitBackdropFilter: "blur(10px)",
@@ -243,7 +243,40 @@ export default function Header() {
                     align="end"
                     className="w-[200px] dark:bg-zinc-900"
                   >
-                    <DropdownMenuItem key={1}>
+                    {usablePathnames.map((path, idx) => (
+                      <DropdownMenuItem key={idx}>
+                        <Link
+                          className="flex items-center gap-2"
+                          prefetch={true}
+                          href={
+                            (localActive === "en" ? "" : "/" + localActive) +
+                            (path.slug[localActive]
+                              ? path.slug[localActive]
+                              : path.slug)
+                          }
+                          /* (path.slug[localActive]
+                          ? `${
+                              localActive === "en"
+                                ? path.slug[localActive]
+                                : localActive
+                            }${path.slug[localActive]}`
+                          : `${
+                              localActive === "en"
+                                ? path.slug
+                                : localActive + path.slug
+                            }`) */
+                        >
+                          <span>
+                            {t(
+                              path.name === "/"
+                                ? "home"
+                                : path.name.replace("/", "")
+                            )}
+                          </span>
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                    {/* <DropdownMenuItem key={1}>
                       <Link
                         href="/"
                         className="flex items-center gap-2"
@@ -282,7 +315,7 @@ export default function Header() {
                         <InfoIcon className="h-5 w-5" />
                         <span>{t("team")}</span>
                       </Link>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
                     <DropdownMenuSeparator />
                     {/* <DropdownMenuItem key={4}>
                       <DropdownMenu>

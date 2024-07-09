@@ -30,6 +30,11 @@ export const pathnames = {
     de: "/mannschaft",
     tr: "/takim",
   },
+  "/contact": {
+    en: "/contact",
+    de: "/kontakt",
+    tr: "/iletisim",
+  },
 
   /*   // Dynamic params are supported via square brackets
   "/news/[articleSlug]-[articleId]": {

@@ -4,7 +4,7 @@ import ShinyButton from "@/components/magicui/shiny-button";
 import { useTranslations } from "next-intl";
 import LessShinyButton from "./magicui/less-shiny-button";
 
-export default function HeroSection({id}: {id: string}) {
+export default function HeroSection({ id }: { id: string }) {
   const t = useTranslations("Hero");
   return (
     <section className="w-full py-12" id={id}>
@@ -22,16 +22,19 @@ export default function HeroSection({id}: {id: string}) {
           <p className="max-w-[600px] text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">
             {t("heroText")}
           </p>
-          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+          <div className="flex gap-3 w-full sm:max-w-[500px] ">
             <Link
+              className="relative shrink w-full"
               href={""}
               data-cal-namespace=""
               data-cal-link="useefficiently/30min"
               data-cal-config='{"layout":"month_view"}'
             >
+              <span className="top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+
               <ShinyButton text={t("scheduleConsultation")} />
             </Link>
-            <Link href="#faq">
+            <Link href="#faq" className="shrink w-full">
               <LessShinyButton text={t("learnMore")} />
             </Link>
           </div>

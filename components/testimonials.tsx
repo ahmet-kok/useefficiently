@@ -106,7 +106,7 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           width={0}
           height={0}
           alt={`${t(`${testimonial}.company`)} Logo`}
-          className="max-h-10 max-w-40 w-auto right-0 "
+          className="max-h-10 max-w-40 w-auto right-0 dark:brightness-0  dark:invert"
         />
       </div>
 

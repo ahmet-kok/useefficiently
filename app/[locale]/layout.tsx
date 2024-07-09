@@ -104,8 +104,8 @@ export default async function RootLayout({
             >
               <Header />
               <main className="">{children}</main>
-              {modal}
               <Footer />
+              {modal}
             </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />

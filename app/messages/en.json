@@ -22,13 +22,14 @@
     "learnMore": "Learn More",
     "bookACall": "Book a Call"
   },
+
   "Testimonials": {
     "1": {
       "company": "YetGen",
-      "customer": "Ali Sunay",
+      "customer": "Erhan Erkut",
       "logo": "/logos/YetkinGencler.svg",
-      "avatar": "https://github.com/ali.png",
-      "text": "The customer service I received was exceptional. The support team went above and beyond to address my concerns.",
+      "avatar": "/images/erhanerkut.png",
+      "text": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field.",
       "story": "true",
       "slug": "girvak"
     },
@@ -115,12 +116,18 @@
         "question": "Do you provide training for using no-code platforms?",
         "answer": "Absolutely. We offer comprehensive training sessions for your team to ensure they can effectively use and manage the no-code solutions we develop for you."
       }
-    ]
+    ],
+    "contact": "Contact with us"
   },
   "404": {
     "title": "Oops! Page Not Found",
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "bookACall": "Book a Call",
     "returnHome": "Return Home"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "description": "Have a question or need more information? Get in touch with us, and we'll be happy to help!",
+    "scheduleConsultation": "Schedule a Consultation"
   }
 }

@@ -2,8 +2,8 @@
 import { type AnimationProps, motion } from "framer-motion";
 
 const animationProps = {
-/*   initial: { "--x": "100%", scale: 0.8 },
- */  animate: { "--x": "-100%", scale: 1 },
+  /*   initial: { "--x": "100%", scale: 0.8 },
+   */ animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,
@@ -24,8 +24,10 @@ const animationProps = {
 
 const LessShinyButton = ({
   text = "shiny-button",
+  greenIcon = false,
   onClick,
 }: {
+  greenIcon?: boolean;
   text?: string;
   onClick?: () => void;
 }) => {
@@ -33,8 +35,12 @@ const LessShinyButton = ({
     <motion.button
       onClick={onClick}
       {...animationProps}
-      className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl text-nowrap transition-[box-shadow] duration-300 ease-in-out hover:shadow bg-primary text-primary-foreground"
+      className="relative rounded-lg  w-full min-w-auto px-2 py-2 font-medium backdrop-blur-xl text-nowrap transition-[box-shadow] duration-300 ease-in-out hover:shadow bg-primary text-primary-foreground"
     >
+      {" "}
+      {greenIcon && (
+        <span className="top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+      )}
       <span
         className="relative block h-full w-full text-sm tracking-wide"
         style={{
