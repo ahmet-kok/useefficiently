@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { CalendarIcon } from "@/components/icons";
 import { type AnimationProps, motion } from "framer-motion";
+import information from "@/information.json";
 
 const animationProps = {
   /*   initial: { "--x": "100%", scale: 0.8 },
@@ -29,12 +30,6 @@ export default function CalCom() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({});
-      /*     cal("floatingButton", {
-        calLink: "useefficiently/30min",
-        config: { layout: "month_view" },
-        hideButtonIcon: false,
-        buttonText: "Book a call",
-      }); */
       cal("ui", {
         styles: { branding: { brandColor: "#000000" } },
         hideEventTypeDetails: false,
@@ -80,7 +75,7 @@ export default function CalCom() {
           } as React.CSSProperties
         }
         data-cal-namespace=""
-        data-cal-link="useefficiently/30min"
+        data-cal-link={information.calendly}
         data-cal-config='{"layout":"month_view"}'
       >
         <span
@@ -90,7 +85,7 @@ export default function CalCom() {
               "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))",
           }}
         >
-          <CalendarIcon className="w-7 h-7"/>
+          <CalendarIcon className="w-7 h-7" />
 
           {t("bookACall")}
         </span>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { TwitterIcon, GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +8,7 @@ import info from "@/information.json";
 import { useTranslations } from "next-intl";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { FC } from "react";
+import information from "@/information.json";
 
 type IconName = "GithubIcon" | "TwitterIcon" | "LinkedinIcon";
 
@@ -44,8 +45,8 @@ export default function Team() {
             {t("description")}
           </p>
 
-          <Link href="mailto:career@useefficiently.com">
-            <ShinyButton text="career@useefficienly.com" />
+          <Link href={"mailto:" + information.careerEmail}>
+            <ShinyButton text={information.careerEmail} />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-6">

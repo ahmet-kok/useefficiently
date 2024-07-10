@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import ShinyButton from "@/components/magicui/shiny-button";
+import information from "@/information.json";
 export default function Faq() {
   const t = useTranslations("Team");
 
@@ -9,7 +10,9 @@ export default function Faq() {
   return (
     <section className="w-full py-6 md:py-12 lg:py-16 xl:py-20">
       <div className="space-y-4 container px-4 md:px-6   2xl:px-0 pb-8 lg:gap-8">
-        <Badge className="text-sm font-light" variant="outline">{t("title")}</Badge>
+        <Badge className="text-sm font-light" variant="outline">
+          {t("title")}
+        </Badge>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           {t("subtitle")}
         </h2>
@@ -294,8 +297,8 @@ export default function Faq() {
           <div>
             <p className="mb-3 text-lg font-semibold">Still have questions?</p>
             <p className="text-muted-foreground">
-              Can&apos;t find the answer you&apos;re looking for? Please chat to our
-              friendly team.
+              Can&apos;t find the answer you&apos;re looking for? Please chat to
+              our friendly team.
             </p>
           </div>
           {/*  <button
@@ -304,8 +307,8 @@ export default function Faq() {
         >
           Get in touch
         </button> */}
-          <Link href="mailto:hello@useefficiently.com">
-            <ShinyButton text="hello@useefficienly.com" />
+          <Link href={"mailto:" + information.email}>
+            <ShinyButton text={information.email} />
           </Link>
         </div>
       </div>

@@ -2,6 +2,7 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import information from "@/information.json";
 export function OrbitingCircle() {
   const [screenSize, setScreenSize] = useState(800);
   useEffect(() => {
@@ -12,7 +13,7 @@ export function OrbitingCircle() {
   return (
     <div className="relative flex aspect-square max-h-[450px]	 w-full items-center justify-center rounded-lg [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] border dark:border-none  dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset] shadow-xl">
       <span className="z-40 py-2 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center sm:text-7xl text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        UseEfficiently
+        {information.company}
       </span>
 
       <OrbitingCircles

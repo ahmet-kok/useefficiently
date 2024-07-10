@@ -4,18 +4,13 @@ import { getCalApi } from "@calcom/embed-react";
 import Link from "next/link";
 import ShinyButton from "@/components/magicui/shiny-button";
 import LessShinyButton from "@/components/magicui/less-shiny-button";
+import information from "@/information.json";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 export default function ContactPage() {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({});
-      /*     cal("floatingButton", {
-        calLink: "useefficiently/30min",
-        config: { layout: "month_view" },
-        hideButtonIcon: false,
-        buttonText: "Book a call",
-      }); */
       cal("ui", {
         styles: { branding: { brandColor: "#000000" } },
         hideEventTypeDetails: false,
@@ -36,16 +31,16 @@ export default function ContactPage() {
           </p>
           <div className="gap-3 flex sm:max-w-[500px]">
             <Link
-              href="mailto:hello@useefficiently.com"
+              href={"mailto:" + information.email}
               className="shrink w-full"
             >
-              <ShinyButton text="hello@useefficienly.com" />
+              <ShinyButton text={information.email} />
             </Link>
             <Link
               className="relative shrink w-full"
               href={""}
               data-cal-namespace=""
-              data-cal-link="useefficiently/30min"
+              data-cal-link={information.calendly}
               data-cal-config='{"layout":"month_view"}'
             >
               <LessShinyButton text={t("scheduleConsultation")} greenIcon />

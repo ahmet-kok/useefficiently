@@ -33,6 +33,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+import information from "@/information.json";
 export default function Header() {
   const t = useTranslations("Header");
   const { scrollYProgress } = useScroll();
@@ -115,8 +116,10 @@ export default function Header() {
              font-semibold text-3xl from-text-black to-white
             "
                   >
-                    Use
-                    <span className="text-3xl text-red-700">Efficiently</span>
+                    {information.firstPart}
+                    <span className="text-3xl text-red-700">
+                      {information.secondPart}
+                    </span>
                   </h2>{" "}
                 </Link>
               </div>

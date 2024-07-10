@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import ShinyButton from "@/components/magicui/shiny-button";
 import LessShinyButton from "@/components/magicui/less-shiny-button";
+import information from "@/information.json";
 
 export default function NotFound() {
   const t = useTranslations("404");
@@ -29,7 +30,7 @@ export default function NotFound() {
               className="relative shrink w-full"
               href={""}
               data-cal-namespace=""
-              data-cal-link="useefficiently/30min"
+              data-cal-link={information.calendly}
               data-cal-config='{"layout":"month_view"}'
             >
               <LessShinyButton text={t("bookACall")} />

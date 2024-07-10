@@ -3,7 +3,7 @@ import { OrbitingCircle } from "./orbitingCircles";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useTranslations } from "next-intl";
 import LessShinyButton from "./magicui/less-shiny-button";
-
+import information from "@/information.json";
 export default function HeroSection({ id }: { id: string }) {
   const t = useTranslations("Hero");
   return (
@@ -27,7 +27,7 @@ export default function HeroSection({ id }: { id: string }) {
               className="relative shrink w-full"
               href={""}
               data-cal-namespace=""
-              data-cal-link="useefficiently/30min"
+              data-cal-link={information.calendly}
               data-cal-config='{"layout":"month_view"}'
             >
               <span className="top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>

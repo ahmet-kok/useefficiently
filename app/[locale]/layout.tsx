@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Roboto as FontSans } from "next/font/google";
+import information from "@/information.json";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -49,26 +50,26 @@ export const metadata: Metadata = {
     title: "UseEfficiently - Your Airtable Service Partner",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    url: "https://useefficiently.com",
+    url: information.website,
     type: "website",
     images: [
       {
-        url: "https://useefficiently.com/favicon.ico",
+        url: information.website + "/favicon.ico",
         width: 800,
         height: 600,
-        alt: "UseEfficiently Logo",
+        alt: information.company + " Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@useefficiently",
+    site: "@" + information.slug,
     title: "UseEfficiently - Your Airtable Service Partner",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    images: "https://useefficiently.com/logo.png",
+    images: information.website + "/favicon.ico",
   },
-  authors: [{ name: "UseEfficiently Team", url: "https://useefficiently.com" }],
+  authors: [{ name: information.company + " Team", url: information.website }],
 };
 export default async function RootLayout({
   children,

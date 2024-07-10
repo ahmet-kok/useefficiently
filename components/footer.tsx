@@ -25,8 +25,10 @@ export default function Footer() {
              font-semibold text-2xl from-text-black to-white
             "
             >
-              Use
-              <span className="text-2xl text-red-700">Efficiently</span>
+              {information.firstPart}
+              <span className="text-2xl text-red-700">
+                {information.secondPart}
+              </span>
             </h2>{" "}
           </Link>
         </div>
@@ -34,7 +36,7 @@ export default function Footer() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link
-                href={information.instagram}
+                href={information.discord}
                 legacyBehavior
                 passHref
                 prefetch={false}

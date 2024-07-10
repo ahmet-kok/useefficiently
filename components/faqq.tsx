@@ -83,7 +83,7 @@ export default function Faq({ id }: { id: string }) {
   /*   const multiStep = Object.keys(messages.Faq.multiStep).map((key) => {
     return messages.Faq.multiStep[key];
   });
-  console.log(messages.Faq.questions); */
+ */
   return (
     <section id={id} className="w-full  py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">

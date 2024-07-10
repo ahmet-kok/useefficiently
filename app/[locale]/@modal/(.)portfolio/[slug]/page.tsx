@@ -6,12 +6,11 @@ export default function PortfolioModal({
 }: {
   params: { slug: string };
 }) {
-/*   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  /*   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     if (!isDrawerOpen) {
-      console.log("Drawer is closed");
       router.back();
     }
   }, [isDrawerOpen, , router]);
@@ -19,7 +18,7 @@ export default function PortfolioModal({
   return (
     <Modal
       slug={slug}
-/*       open={isDrawerOpen ? true : false}
+      /*       open={isDrawerOpen ? true : false}
       setOpen={setIsDrawerOpen} */
     />
   );
