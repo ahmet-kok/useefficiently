@@ -20,6 +20,7 @@ export const pathnames = {
     tr: "/hakkimizda",
     de: "/ueber-uns",
   }, */
+
   "/portfolio": {
     en: "/portfolio",
     de: "/portfolio",
@@ -34,6 +35,11 @@ export const pathnames = {
     en: "/contact",
     de: "/kontakt",
     tr: "/iletisim",
+  },
+  "/resources": {
+    en: "/resources",
+    de: "/ressourcen",
+    tr: "/kaynaklar",
   },
 
   /*   // Dynamic params are supported via square brackets

@@ -44,10 +44,14 @@ export default function Team() {
           <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
             {t("description")}
           </p>
-
-          <Link href={"mailto:" + information.careerEmail}>
-            <ShinyButton text={information.careerEmail} />
-          </Link>
+          <div className="flex w-full sm:max-w-[250px] ">
+            <Link
+              href={"mailto:" + information.careerEmail}
+              className="shrink w-full"
+            >
+              <ShinyButton text={information.careerEmail} />
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-6">
           {info.team.map((member, index) => (
