@@ -7,6 +7,7 @@ import LessShinyButton from "@/components/magicui/less-shiny-button";
 import information from "@/information.json";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 export default function ContactPage() {
   useEffect(() => {
     (async function () {
@@ -20,9 +21,9 @@ export default function ContactPage() {
   }, []);
   const t = useTranslations("Contact");
   return (
-    <section className=" min-h-[70vh]  ">
-      <div className="container min-h-[80vh] items-center mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
-        <div className="space-y-4 lg:h-[70vh]">
+    <section className="w-full  py-12 md:py-24 min-h-[80vh]">
+      <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
+        <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("title")}
           </h2>

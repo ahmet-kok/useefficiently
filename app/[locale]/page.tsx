@@ -17,7 +17,6 @@ export default function Home({ contentUrl, open }: any) {
       <div className="  container mx-auto px-4 md:px-6 2xl:px-0">
         <DotPattern />
       </div>
-      <Faq id="faq" />
       <CalCom />
     </>
   );

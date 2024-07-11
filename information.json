@@ -18,7 +18,7 @@
     {
       "name": "Leo Bennett",
       "role": "Airtable Expert",
-      "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2024/02/Ahmet-Kok.webp",
+      "avatar": "/images/Leo-Bennett.webp",
       "social": [
         {
           "name": "Linkedin",
@@ -40,7 +40,7 @@
     {
       "name": "Lukas Kaiser",
       "role": "No-Code Expert",
-      "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Lukas-Kaiser.webp",
+      "avatar": "/images/Lukas-Kaiser.webp",
       "social": [
         {
           "name": "Linkedin",
@@ -62,7 +62,7 @@
     {
       "name": "Nate Dogan ",
       "role": "Tech Lead",
-      "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Nusret-Dogan.webp",
+      "avatar": "/images/Nate-Dogan.webp",
 
       "social": [
         {
@@ -85,7 +85,7 @@
     {
       "name": "Ozan Ilter",
       "role": "Airtable & Softr Expert",
-      "avatar": "https://nocodecampus.com.tr/wp-content/uploads/2023/10/Ozan-Halis-Ilter.webp",
+      "avatar": "/images/Ozan-Halis-Ilter.webp",
       "social": [
         {
           "name": "Linkedin",

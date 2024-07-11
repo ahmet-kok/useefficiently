@@ -8,11 +8,12 @@
     "dark": "Dark Mode",
     "light": "Light Mode",
     "system": "System",
-    "portfolio": "Portfolio",
+    "use-cases": "Use Cases",
     "menu": "Menu",
     "team": "Team",
     "blog": "Blog",
     "#faq": "FAQ",
+    "faq": "FAQ",
     "resources": "Resources"
   },
   "Hero": {

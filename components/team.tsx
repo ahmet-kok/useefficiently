@@ -31,13 +31,9 @@ export default function Team() {
   const t = useTranslations("Team");
 
   return (
-    <section id="team" className="w-full  py-12 md:py-24">
+    <section className="w-full  py-12 md:py-24 min-h-[80vh]">
       <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
-          <Badge className="text-sm font-light" variant="outline">
-            {t("title")}
-          </Badge>
-
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}
           </h2>
@@ -90,10 +86,10 @@ const TeamMember = ({ member }: TeamMemberProps) => (
         {
           //absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900
         }{" "}
-        <AvatarFallback>
+        {/*        <AvatarFallback>
           {member.name[0]}
           {member.name.split(" ")[1][0]}
-        </AvatarFallback>
+        </AvatarFallback> */}
       </Avatar>
     </div>
     <div className="text-center">

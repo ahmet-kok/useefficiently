@@ -249,7 +249,7 @@ export default function Header() {
                     {usablePathnames.map((path, idx) => (
                       <DropdownMenuItem key={idx}>
                         <Link
-                          className="flex items-center gap-2"
+                          className="flex items-center gap-2 w-full "
                           prefetch={true}
                           href={
                             (localActive === "en" ? "" : "/" + localActive) +
