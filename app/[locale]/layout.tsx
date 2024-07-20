@@ -5,19 +5,18 @@ import { getMessages } from "next-intl/server";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import { Roboto as FontSans } from "next/font/google";
+import { Rubik as FontSans } from "next/font/google";
 import information from "@/information.json";
+import "@/app/globals.css";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: "400",
 });
-//FontSans({ subsets: ["latin"], variable: "--font-sans" });
 import Header from "@/components/header";
 import type { Metadata } from "next";
-/* const Footer = dynamic(() => import("@/components/footer"), {
-  ssr: false,
-  }); */
+
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -92,7 +91,7 @@ export default async function RootLayout({
         </head>
         <body
           className={cn(
-            "font-sans  min-h-screen dark:bg-zinc-900",
+            "font-sans  min-h-screen dark:bg-zinc-900 ",
             fontSans.variable
           )}
         >
@@ -104,7 +103,7 @@ export default async function RootLayout({
               disableTransitionOnChange
             >
               <Header />
-              <main className="">{children}</main>
+              <div className="py-12">{children}</div>
               <Footer />
               {modal}
             </ThemeProvider>

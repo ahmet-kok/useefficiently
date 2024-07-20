@@ -1,13 +1,10 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { useLocale, useMessages, useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 import AnimatedLogoCloud from "./logocloud";
 import { Button } from "./ui/button";
-/* import { PortfolioPost } from "./portfolio-post";
- */ import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { ArrowRightIcon } from "@/components/icons";
 
 import dynamic from "next/dynamic";
@@ -16,61 +13,40 @@ const PortfolioPost = dynamic(() => import("@/components/portfolio-post"), {
 });
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-export default function Testimonials({
-  id,
-  contentSlug,
-  open,
-}: {
-  id?: string;
-  contentSlug: string | undefined;
-  open: boolean | undefined;
-}) {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(open);
+export default function Testimonials({ id }: { id?: string }) {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isDrawerDownloaded, setDrawerDownloaded] = useState(false);
-  const [content, setContent] = useState(contentSlug);
+  const [content, setContent] = useState("");
   const t = useTranslations("Testimonials");
   const messages = useMessages();
   const testimonials = Object.keys(messages["Testimonials"]);
   testimonials.pop();
-  const router = useRouter();
-  const locale = useLocale();
   useEffect(() => {
     setDrawerDownloaded(true);
-    if (!isDrawerOpen && open) {
-      router.replace(`/${locale}`);
-    }
-  }, [isDrawerOpen, open, router, locale]);
+  }, [isDrawerOpen]);
 
   return (
     <>
-      <section id="team" className="w-full  py-12 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
-          <div className="space-y-4">
-            <Badge className="text-sm font-light" variant="outline">
-              {t("ClientTestimonials.title")}
-            </Badge>
-
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {t("ClientTestimonials.subtitle")}
-            </h2>
-            <p className="max-w-[600px] dark:text-gray-200 text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-3">
-              {t("ClientTestimonials.description")}
-            </p>
-          </div>
-        </div>
-        <AnimatedLogoCloud animated={false} />
-        <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-6  mx-auto 2xl:px-0  lg:gap-8">
-          {testimonials.map((testimonial, key) => (
-            <Testimonial
-              key={key}
-              testimonial={testimonial}
-              t={t}
-              setIsDrawerOpen={setIsDrawerOpen}
-              setContent={setContent}
-            />
-          ))}
-        </div>
-      </section>
+      {/*       <div className="text-center space-y-4">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t("ClientTestimonials.subtitle")}
+        </h2>
+        <p className="max-w-[800px] mx-auto  text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">
+          {t("ClientTestimonials.description")}
+        </p>
+      </div> */}
+      <AnimatedLogoCloud animated={false} />
+      <div className=" grid grid-cols-1 gap-8  md:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((testimonial, key) => (
+          <Testimonial
+            key={key}
+            testimonial={testimonial}
+            t={t}
+            setIsDrawerOpen={setIsDrawerOpen}
+            setContent={setContent}
+          />
+        ))}
+      </div>
       {isDrawerDownloaded && (
         <PortfolioPost
           slug={content ? content : ""}

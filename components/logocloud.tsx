@@ -34,11 +34,6 @@ const logos = [
     url: "/logos/GoogleGameandApplicationAcademy.svg",
     site: "https://oyunveuygulamaakademisi.com",
   },
-  {
-    name: "Genclig Foundation",
-    url: "/logos/GencligFoundation.svg",
-    site: "https://gencligvakfi.org",
-  },
 ];
 
 export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
@@ -72,7 +67,7 @@ export default function AnimatedLogoCloud({ animated }: { animated: boolean }) {
           >
             {Array(5)
               .fill(null)
-              .map((index,key) => (
+              .map((index, key) => (
                 <div
                   key={key}
                   className="flex shrink-0 items-center animate-logo-cloud flex-row justify-around gap-8"

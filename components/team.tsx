@@ -31,8 +31,7 @@ export default function Team() {
   const t = useTranslations("Team");
 
   return (
-    <section className="w-full  py-12 md:py-24 min-h-[80vh]">
-      <div className="container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
+      <div className=" w-full  py-12 md:py-24 min-h-[80vh] container mx-auto px-4 md:px-6 2xl:px-0 grid gap-8 lg:grid-cols-2 lg:gap-8">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {t("subtitle")}
@@ -55,7 +54,6 @@ export default function Team() {
           ))}
         </div>
       </div>
-    </section>
   );
 }
 interface TeamMemberProps {
@@ -77,7 +75,7 @@ interface TeamMemberProps {
 const TeamMember = ({ member }: TeamMemberProps) => (
   <div className="flex flex-col items-center gap-4">
     <div className="relative">
-      <Avatar className="w-24 h-24 bg-background text-6xl relative">
+      <Avatar className="w-60 h-60 bg-background text-6xl relative">
         <AvatarImage
           src={member.avatar}
           alt={`@${member.name}`}

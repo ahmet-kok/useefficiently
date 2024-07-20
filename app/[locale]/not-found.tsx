@@ -12,11 +12,11 @@ export default function NotFound() {
   const localActive = useLocale();
   return (
     <div className="flex justify-center items-center container min-h-[80vh]  mx-auto px-4 md:px-6 2xl:px-0 ">
-      <div className="text-center w-full">
-        <h1 className="text-4xl p-2 font-bold dark:text-gray-200">
+      <div className="text-center w-full space-y-5">
+        <h1 className="text-4xl  font-bold dark:text-gray-200">
           {t("title")}
         </h1>
-        <p className="text-2xl p-4 dark:text-gray-400">{t("description")}</p>
+        <p className="text-2xl  dark:text-gray-400">{t("description")}</p>
         <CalCom />
         <div className="flex  justify-center ">
           <div className="flex gap-3 w-full sm:max-w-[500px]">

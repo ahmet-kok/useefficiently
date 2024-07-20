@@ -12,7 +12,6 @@ export const pathnames = {
   en: "/en",
   de: "/de",
   tr: "/tr",
-  "/#faq": "/#faq",
   // If locales use different paths, you can
   // specify each external path per locale
   /*   "/about": {
@@ -35,11 +34,6 @@ export const pathnames = {
     en: "/contact",
     de: "/kontakt",
     tr: "/iletisim",
-  },
-  "/resources": {
-    en: "/resources",
-    de: "/ressourcen",
-    tr: "/kaynaklar",
   },
 
   /*   // Dynamic params are supported via square brackets
