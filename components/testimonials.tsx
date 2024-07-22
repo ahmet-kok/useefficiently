@@ -6,14 +6,16 @@ import AnimatedLogoCloud from "./logocloud";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { ArrowRightIcon } from "@/components/icons";
-
 import dynamic from "next/dynamic";
-const PortfolioPost = dynamic(() => import("@/components/portfolio-post"), {
-  ssr: false,
-});
+const CustomerStoriesPost = dynamic(
+  () => import("@/components/customer-stories-post"),
+  {
+    ssr: false,
+  }
+);
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-export default function Testimonials({ id }: { id?: string }) {
+import Component from "@/components/component";
+export default function Testimonials() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isDrawerDownloaded, setDrawerDownloaded] = useState(false);
   const [content, setContent] = useState("");
@@ -26,17 +28,20 @@ export default function Testimonials({ id }: { id?: string }) {
   }, [isDrawerOpen]);
 
   return (
-    <>
+    <Component 
+    title={t("ClientTestimonials.subtitle")}
+    description={t("ClientTestimonials.description")}
+    >
       {/*       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           {t("ClientTestimonials.subtitle")}
         </h2>
-        <p className="max-w-[800px] mx-auto  text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl">
+        <p className="paragraph">
           {t("ClientTestimonials.description")}
         </p>
       </div> */}
       <AnimatedLogoCloud animated={false} />
-      <div className=" grid grid-cols-1 gap-8  md:grid-cols-2 lg:grid-cols-3">
+      <div className=" grid grid-cols-1 gap-4  md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial, key) => (
           <Testimonial
             key={key}
@@ -48,25 +53,18 @@ export default function Testimonials({ id }: { id?: string }) {
         ))}
       </div>
       {isDrawerDownloaded && (
-        <PortfolioPost
+        <CustomerStoriesPost
           slug={content ? content : ""}
           open={isDrawerOpen ? true : false}
           setOpen={setIsDrawerOpen}
         />
       )}
-    </>
+    </Component>
   );
 }
 
 const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
-  <div
-    className={cn(
-      " p-3 pt-0 lg:p-6 grid",
-      "group overflow-hidden rounded-lg",
-      "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-      "transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)]  dark:border-none  dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
-    )}
-  >
+  <div className={" p-3 pt-0 lg:p-6 grid group cards text-start"}>
     <div>
       <div className="flex relative items-center justify-between my-4">
         <Image
@@ -74,7 +72,7 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           width={30}
           height={30}
           alt={`${t(`${testimonial}.customer`)} Avatar`}
-          className="h-10 w-auto rounded-full"
+          className="h-14 w-max rounded-full"
         />
         <Image
           src={t(`${testimonial}.logo`)}
@@ -85,11 +83,11 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
         />
       </div>
 
-      <p className="text-lg font-semibold text-neutral-700 dark:text-neutral-300">
+      <p className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {t(`${testimonial}.customer`)}
       </p>
 
-      <p className="mt-4 text-sm leading-relaxed  text-neutral-600 dark:text-neutral-200 ">
+      <p className="mt-4 leading-relaxed  dark:text-gray-200 text-gray-700 ">
         &quot;{t(`${testimonial}.text`)}&quot;
       </p>
     </div>
@@ -97,7 +95,6 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
       <Button
         variant="ghost"
         asChild
-        size="sm"
         className="pointer-events-auto mt-4 justify-self-end self-end"
         onClick={(event) => {
           event.preventDefault(); // prevent default navigation behavior
@@ -106,7 +103,7 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
           setContent(t(`${testimonial}.slug`));
         }}
       >
-        <Link href={`/portfolio/${t(`${testimonial}.slug`)}`}>
+        <Link href={`/customer-stories/${t(`${testimonial}.slug`)}`}>
           {"Learn more"}
           <span className="sr-only">about {t(`${testimonial}.company`)}</span>
           <ArrowRightIcon className="ml-2 h-4 w-4" />

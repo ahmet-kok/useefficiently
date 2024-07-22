@@ -80,5 +80,35 @@
 }
 
 .component {
-  
+  @apply pb-4 container  px-4 md:px-6 2xl:px-0 text-center w-full;
+}
+
+.cards {
+  @apply rounded-lg overflow-hidden [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] border dark:border-none  dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset];
+}
+.component > p {
+  @apply max-w-[800px] mx-auto text-gray-700 dark:text-gray-200 md:text-xl leading-relaxed lg:text-lg xl:text-xl;
+}
+
+.component > h2,
+.component > h1 {
+  @apply font-bold leading-tight dark:text-gray-200;
+}
+.component > h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+.component > h1 {
+  @apply text-4xl md:text-5xl lg:text-7xl;
+}
+
+.button-area {
+  @apply flex gap-3 w-full mx-auto sm:max-w-[500px];
+}
+
+.buttons {
+  @apply shrink w-full;
+}
+
+.buttons > span {
+  @apply top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full;
 }

@@ -103,7 +103,7 @@ export default async function RootLayout({
               disableTransitionOnChange
             >
               <Header />
-              <div className="py-12">{children}</div>
+              {children}
               <Footer />
               {modal}
             </ThemeProvider>

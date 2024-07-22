@@ -2,23 +2,23 @@
   "Header": {
     "home": "Home",
     "about": "About",
-    "contact": "Contact",
+    "contact": "Let's Talk",
     "language": "Language",
     "theme": "Theme",
     "dark": "Dark Mode",
     "light": "Light Mode",
     "system": "System",
-    "use-cases": "Use Cases",
+    "customer-stories": "What Our Clients Say",
     "menu": "Menu",
-    "team": "Team",
+    "team": "Who We Are",
     "blog": "Blog",
     "#faq": "FAQ",
     "faq": "FAQ",
     "resources": "Resources"
   },
   "Hero": {
-    "heroTitleStart": "Your",
-    "heroTitleEnd": "Service Partner",
+    "heroTitleStart": "Revolutionize your business with our Airtable solutions",
+    "heroTitleEnd": "",
     "heroText": "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions in the no-code space.",
     "scheduleConsultation": "Schedule a Consultation",
     "learnMore": "Learn More",
@@ -61,7 +61,8 @@
   "Team": {
     "title": "Our Joyful Team",
     "subtitle": "Meet the Experts Behind the Magic",
-    "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!"
+    "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!",
+    "scheduleConsultation": "Schedule a Consultation"
   },
   "Stepper": {
     "title": "Our Process",

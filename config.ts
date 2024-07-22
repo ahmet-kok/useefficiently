@@ -20,9 +20,9 @@ export const pathnames = {
     de: "/ueber-uns",
   }, */
 
-  "/portfolio": {
-    en: "/portfolio",
-    de: "/portfolio",
+  "/customer-stories": {
+    en: "/customer-stories",
+    de: "/customer-stories",
     tr: "/portfolyo",
   },
   "/team": {

@@ -39,7 +39,7 @@ const LessShinyButton = ({
     >
       {" "}
       {greenIcon && (
-        <span className="top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+        <span></span>
       )}
       <span
         className="relative block h-full w-full text-sm tracking-wide"

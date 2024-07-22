@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
-export function PortfolioText({ slug }: { slug: string }) {
+export function CustomerStoriesText({ slug }: { slug: string }) {
   const [postContent, setPostContent] = useState("");
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    fetch(`/contents/portfolio/${slug}.md`)
+    fetch(`/contents/customer-stories/${slug}.md`)
       .then((response) => response.text())
       .then((data) => {
         const htmlContent: any = marked(data); // Convert markdown to HTML

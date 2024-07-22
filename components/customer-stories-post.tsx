@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/drawer";
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
-import { PortfolioText } from "./portfolio-text-render";
-export default function PortfolioPost({
+import { CustomerStoriesText } from "./customer-stories-text-render";
+import Link from "next/link";
+export default function CustomerStoriesPost({
   slug,
   open,
   setOpen,
@@ -24,7 +25,7 @@ export default function PortfolioPost({
 
   useEffect(() => {
     if (open) {
-      fetch(`/contents/portfolio/${slug}.md`)
+      fetch(`/contents/customer-stories/${slug}.md`)
         .then((response) => response.text())
         .then((data) => {
           const htmlContent: any = marked(data); // Convert markdown to HTML
@@ -122,10 +123,12 @@ export default function PortfolioPost({
           </div>
         </div>
  */}
-        <PortfolioText slug={slug} />
+        <CustomerStoriesText slug={slug} />
         <DrawerFooter className="flex justify-between items-center pt-2">
           <div className="gap-2 flex ">
-            <Button variant="outline">Read more</Button>
+            <Link href={`/customer-stories/`}>
+              <Button variant="outline">Read more</Button>
+            </Link>
             <DrawerClose>
               <Button variant="outline">Close</Button>
             </DrawerClose>

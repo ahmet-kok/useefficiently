@@ -10,13 +10,7 @@ import {
 import { pathnames, locales } from "@/config";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
-import {
-  MenuIcon,
-  HomeIcon,
-  InfoIcon,
-  PhoneIcon,
-  MountainIcon,
-} from "@/components/icons";
+import { MenuIcon, MountainIcon } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -26,17 +20,17 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./theme-toggle";
-import { useState } from "react";
+/* import { useState } from "react";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "framer-motion";
+} from "framer-motion"; */
 import information from "@/information.json";
 export default function Header() {
   const t = useTranslations("Header");
-  const { scrollYProgress } = useScroll();
+  /* const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
 
@@ -65,7 +59,7 @@ export default function Header() {
         }
       }
     }
-  });
+  }); */
   const localActive = useLocale();
 
   const pthnames: any = pathnames;
@@ -77,13 +71,12 @@ export default function Header() {
     });
   return (
     <>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         <motion.div
-          /*         initial={{
-          opacity: 1,
-
-          y: -100,
-        }} */
+          //initial={{
+          // opacity: 1,
+          //y: -100,
+          //}}
           animate={{
             y: visible ? 0 : -100,
             opacity: visible ? 1 : 0,
@@ -94,47 +87,47 @@ export default function Header() {
           className={cn(
             "w-full flex top-0 xl:px-6 fixed xl:top-4 inset-x-0 z-[50]"
           )}
+        > */}
+      <header className=" w-full flex top-0 xl:px-6 fixed xl:top-4 inset-x-0 z-[50]">
+        <div
+          className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center xl:border dark:xl:border-none px-4 md:px-6  container xl:rounded-lg xl:box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] xl:transform-gpu xl:dark:[border:1px_solid_rgba(255,255,255,.1)] xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
+          style={
+            {
+              WebkitBackdropFilter: "blur(10px)",
+            } as React.CSSProperties
+          }
         >
-          <header className="w-full ">
-            <div
-              className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center xl:border dark:xl:border-none px-4 md:px-6  container xl:rounded-lg xl:box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] xl:transform-gpu xl:dark:[border:1px_solid_rgba(255,255,255,.1)] xl:bg-opacity-80 xl:backdrop-filter xl:dark:text-gray-50 xl:bg-transparent xl:text-gray-900 xl:shadow-md"
-              style={
-                {
-                  WebkitBackdropFilter: "blur(10px)",
-                } as React.CSSProperties
-              }
+          <div className="flex items-center">
+            <Link
+              href={`/${localActive}`}
+              className="flex items-center "
+              prefetch={false}
             >
-              <div className="flex items-center">
-                <Link
-                  href={`/${localActive}`}
-                  className="flex items-center "
-                  prefetch={false}
-                >
-                  <MountainIcon className="h-8 w-8 mr-2" />
-                  <h2
-                    className="
+              <MountainIcon className="h-8 w-8 mr-2" />
+              <h2
+                className="
              font-semibold text-3xl from-text-black to-white
             "
-                  >
-                    {information.firstPart}
-                    <span className="text-3xl text-red-700">
-                      {information.secondPart}
-                    </span>
-                  </h2>{" "}
-                </Link>
-              </div>
-              <NavigationMenu className="ml-auto items-center hidden md:flex">
-                <NavigationMenuList>
-                  {usablePathnames.map((path, idx) => (
-                    <NavigationMenuItem key={idx}>
-                      <NavigationMenuLink
-                        href={
-                          (localActive === "en" ? "" : "/" + localActive) +
-                          (path.slug[localActive]
-                            ? path.slug[localActive]
-                            : path.slug)
-                        }
-                        /* (path.slug[localActive]
+              >
+                {information.firstPart}
+                <span className="text-3xl text-red-700">
+                  {information.secondPart}
+                </span>
+              </h2>{" "}
+            </Link>
+          </div>
+          <NavigationMenu className="ml-auto items-center hidden md:flex">
+            <NavigationMenuList>
+              {usablePathnames.map((path, idx) => (
+                <NavigationMenuItem key={idx}>
+                  <NavigationMenuLink
+                    href={
+                      (localActive === "en" ? "" : "/" + localActive) +
+                      (path.slug[localActive]
+                        ? path.slug[localActive]
+                        : path.slug)
+                    }
+                    /* (path.slug[localActive]
                           ? `${
                               localActive === "en"
                                 ? path.slug[localActive]
@@ -145,20 +138,16 @@ export default function Header() {
                                 ? path.slug
                                 : localActive + path.slug
                             }`) */
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "bg-transparent"
-                        )}
-                      >
-                        {t(
-                          path.name === "/"
-                            ? "home"
-                            : path.name.replace("/", "")
-                        )}
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  ))}
-                  {/* <NavigationMenuItem>
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "bg-transparent text-lg px-2"
+                    )}
+                  >
+                    {t(path.name === "/" ? "home" : path.name.replace("/", ""))}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+              {/* <NavigationMenuItem>
                     <NavigationMenuLink
                       href="/"
                       className={cn(
@@ -182,13 +171,13 @@ export default function Header() {
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink
-                      href="/portfolio"
+                      href="/customer-stories"
                       className={cn(
                         navigationMenuTriggerStyle(),
                         "bg-transparent"
                       )}
                     >
-                      {t("portfolio")}
+                      {t("customer-stories")}
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
@@ -202,7 +191,7 @@ export default function Header() {
                       {t("team")}
                     </NavigationMenuLink>
                   </NavigationMenuItem> */}
-                  {/* <DropdownMenu>
+              {/* <DropdownMenu>
                     <DropdownMenuTrigger className="focus:bg-gray-100 dark:hover:bg-gray-800 dark:focus:bg-gray-800 group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
                       <GlobeIcon className="h-5 w-5 min-w-[16px] min-h-[16px]" />
                       <span className="sr-only">{t("language")}</span>
@@ -224,40 +213,40 @@ export default function Header() {
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu> */}
-                  <NavigationMenuItem>
-                    <ModeToggle />
-                    <span className="sr-only">{t("theme")}</span>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-              <div className="ml-auto flex items-center gap-4 md:hidden">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full  hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50"
-                    >
-                      <MenuIcon className="h-6 w-6" />
-                      <span className="sr-only">{t("menu")}</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    align="end"
-                    className="w-[200px] dark:bg-zinc-900"
-                  >
-                    {usablePathnames.map((path, idx) => (
-                      <DropdownMenuItem key={idx}>
-                        <Link
-                          className="flex items-center gap-2 w-full "
-                          prefetch={true}
-                          href={
-                            (localActive === "en" ? "" : "/" + localActive) +
-                            (path.slug[localActive]
-                              ? path.slug[localActive]
-                              : path.slug)
-                          }
-                          /* (path.slug[localActive]
+              <NavigationMenuItem>
+                <ModeToggle />
+                <span className="sr-only">{t("theme")}</span>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          <div className="ml-auto flex items-center gap-4 md:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full  hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50"
+                >
+                  <MenuIcon className="h-6 w-6" />
+                  <span className="sr-only">{t("menu")}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="end"
+                className="w-[200px] dark:bg-zinc-900"
+              >
+                {usablePathnames.map((path, idx) => (
+                  <DropdownMenuItem key={idx}>
+                    <Link
+                      className="flex items-center gap-2 w-full "
+                      prefetch={true}
+                      href={
+                        (localActive === "en" ? "" : "/" + localActive) +
+                        (path.slug[localActive]
+                          ? path.slug[localActive]
+                          : path.slug)
+                      }
+                      /* (path.slug[localActive]
                           ? `${
                               localActive === "en"
                                 ? path.slug[localActive]
@@ -268,18 +257,18 @@ export default function Header() {
                                 ? path.slug
                                 : localActive + path.slug
                             }`) */
-                        >
-                          <span>
-                            {t(
-                              path.name === "/"
-                                ? "home"
-                                : path.name.replace("/", "")
-                            )}
-                          </span>
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                    {/* <DropdownMenuItem key={1}>
+                    >
+                      <span>
+                        {t(
+                          path.name === "/"
+                            ? "home"
+                            : path.name.replace("/", "")
+                        )}
+                      </span>
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+                {/* <DropdownMenuItem key={1}>
                       <Link
                         href="/"
                         className="flex items-center gap-2"
@@ -301,12 +290,12 @@ export default function Header() {
                     </DropdownMenuItem>
                     <DropdownMenuItem key={3}>
                       <Link
-                        href="/portfolio"
+                        href="/customer-stories"
                         className="flex items-center gap-2"
                         prefetch={false}
                       >
                         <PhoneIcon className="h-5 w-5" />
-                        <span>{t("portfolio")}</span>
+                        <span>{t("customer-stories")}</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem key={2}>
@@ -319,8 +308,8 @@ export default function Header() {
                         <span>{t("team")}</span>
                       </Link>
                     </DropdownMenuItem> */}
-                    <DropdownMenuSeparator />
-                    {/* <DropdownMenuItem key={4}>
+                <DropdownMenuSeparator />
+                {/* <DropdownMenuItem key={4}>
                       <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center gap-2">
                           <GlobeIcon className="h-5 w-5" />
@@ -353,23 +342,20 @@ export default function Header() {
                         </DropdownMenuContent>
                       </DropdownMenu>
                     </DropdownMenuItem> */}
-                    <DropdownMenuItem
-                      className="flex items-center gap-2"
-                      key={4}
-                    >
-                      <ModeToggle />
-                      <span className="sr-only">{t("theme")}</span>
-                      {/* 
+                <DropdownMenuItem className="flex items-center gap-2" key={4}>
+                  <ModeToggle />
+                  <span className="sr-only">{t("theme")}</span>
+                  {/* 
                 <span className="dark:hidden">{t("light")}</span>
                 <span className=" hidden dark:inline-block">{t("dark")}</span>
  */}{" "}
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-            </div>
-          </header>
-          {/*           {navItems.map((navItem: any, idx: number) => (
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </div>
+      </header>
+      {/*           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
@@ -382,9 +368,9 @@ export default function Header() {
             </Link>
           ))} 
           <Header /> */}
-        </motion.div>
-      </AnimatePresence>
-      <div className="h-[10vh]"></div>
+      {/* </motion.div>
+      </AnimatePresence> */}
+      <div className="h-[15vh]"></div>
     </>
   );
 }
