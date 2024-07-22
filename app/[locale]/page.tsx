@@ -2,20 +2,20 @@ import Hero from "@/components/hero";
 import Testimonials from "@/components/testimonials";
 import dynamic from "next/dynamic";
 import Faq from "@/components/faq";
-import Orbit from "@/components/orbit";
-
+import Features from "@/components/features";
 const CalCom = dynamic(() => import("@/components/ui/calcom"), {
   ssr: false,
 });
 
 export default function Home() {
   return (
-    <div className="space-y-20">
+    <>
       <Hero />
+      <Features />
       <Testimonials />
-      <Orbit />
       <Faq />
+
       <CalCom />
-    </div>
+    </>
   );
 }

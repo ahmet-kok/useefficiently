@@ -20,7 +20,7 @@
     "heroTitleStart": "Revolutionize your business with our Airtable solutions",
     "heroTitleEnd": "",
     "heroText": "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs. We are dedicated to providing top-notch support and innovative solutions in the no-code space.",
-    "scheduleConsultation": "Schedule a Consultation",
+    "scheduleConsultation": "Book 15-Minute Free Call",
     "learnMore": "Learn More",
     "bookACall": "Book a Call"
   },
@@ -62,7 +62,7 @@
     "title": "Our Joyful Team",
     "subtitle": "Meet the Experts Behind the Magic",
     "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!",
-    "scheduleConsultation": "Schedule a Consultation"
+    "scheduleConsultation": "Book 15-Minute Free Call"
   },
   "Stepper": {
     "title": "Our Process",
@@ -125,12 +125,12 @@
   "404": {
     "title": "Oops! Page Not Found",
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
-    "bookACall": "Book a Call",
+    "scheduleConsultation": "Book 15-Minute Free Call",
     "returnHome": "Return Home"
   },
   "Contact": {
     "title": "Contact Us",
     "description": "Have a question or need more information? Get in touch with us, and we'll be happy to help!",
-    "scheduleConsultation": "Schedule a Consultation"
+    "scheduleConsultation": "Book 15-Minute Free Call"
   }
 }

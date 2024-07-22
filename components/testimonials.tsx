@@ -14,7 +14,7 @@ const CustomerStoriesPost = dynamic(
   }
 );
 import Link from "next/link";
-import Component from "@/components/component";
+import Section from "@/components/section";
 export default function Testimonials() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isDrawerDownloaded, setDrawerDownloaded] = useState(false);
@@ -28,9 +28,10 @@ export default function Testimonials() {
   }, [isDrawerOpen]);
 
   return (
-    <Component 
-    title={t("ClientTestimonials.subtitle")}
-    description={t("ClientTestimonials.description")}
+    <Section
+      id="testimonials"
+      title={t("ClientTestimonials.subtitle")}
+      description={t("ClientTestimonials.description")}
     >
       {/*       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -59,12 +60,12 @@ export default function Testimonials() {
           setOpen={setIsDrawerOpen}
         />
       )}
-    </Component>
+    </Section>
   );
 }
 
 const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
-  <div className={" p-3 pt-0 lg:p-6 grid group cards text-start"}>
+  <div className={" p-4 pt-0 lg:p-6 grid group cards text-start"}>
     <div>
       <div className="flex relative items-center justify-between my-4">
         <Image
@@ -83,13 +84,9 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
         />
       </div>
 
-      <p className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-        {t(`${testimonial}.customer`)}
-      </p>
+      <h5 className="text-xl">{t(`${testimonial}.customer`)}</h5>
 
-      <p className="mt-4 leading-relaxed  dark:text-gray-200 text-gray-700 ">
-        &quot;{t(`${testimonial}.text`)}&quot;
-      </p>
+      <p className="mt-4 ">&quot;{t(`${testimonial}.text`)}&quot;</p>
     </div>
     {t(`${testimonial}.story`) == "true" && (
       <Button
@@ -110,6 +107,6 @@ const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
         </Link>
       </Button>
     )}
-    <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
+    <div className="card-hover" />
   </div>
 );

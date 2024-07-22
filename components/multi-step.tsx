@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import LessShinyButton from "@/components/magicui/less-shiny-button";
 import { Cross2Icon } from "@/components/icons";
-
+import ShinyButton from "@/components/magicui/shiny-button";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 const MultiStepLoader = dynamic(
@@ -32,7 +31,7 @@ export default function MultiStep({
       {/* Core MultiStepLoader Modal */}
 
       {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
-      <LessShinyButton onClick={() => setLoading(true)} text={text} />
+      <ShinyButton onClick={() => setLoading(true)} text={text} />
       {isMultiStepDownloaded && (
         <>
           <MultiStepLoader
@@ -46,7 +45,7 @@ export default function MultiStep({
               className="fixed top-4  right-4 z-[120]"
               onClick={() => setLoading(false)}
             >
-              <Cross2Icon className="w-6 h-6"/>
+              <Cross2Icon className="w-6 h-6" />
             </Button>
           )}
         </>

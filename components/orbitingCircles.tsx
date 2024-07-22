@@ -3,7 +3,7 @@ import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import information from "@/information.json";
-export function OrbitingCircle() {
+export default function OrbitingCircle() {
   const [screenSize, setScreenSize] = useState(800);
   useEffect(() => {
     window.addEventListener("resize", () => {

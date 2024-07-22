@@ -42,7 +42,7 @@ export default function CalCom() {
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.querySelector("footer");
-      if (!footer) return;
+      if (!footer) return
 
       const footerRect = footer.getBoundingClientRect();
       const isAbove = footerRect.top > window.innerHeight;

@@ -10,7 +10,7 @@ import { useMessages } from "next-intl";
 import MultiStep from "./multi-step";
 import { useLocale, useTranslations } from "next-intl";
 import { pathnames, locales } from "@/config";
-import Component from "./component";
+import Section from "./section";
 
 export default function Faq() {
   const t = useTranslations("Faq");
@@ -33,7 +33,7 @@ export default function Faq() {
   });
  */
   return (
-    <Component title={t("subtitle")} description={t("description")}>
+    <Section title={t("subtitle")} description={t("description")}>
       <div className="button-area ">
         <Link
           href={
@@ -50,6 +50,8 @@ export default function Faq() {
           className="buttons"
         />
       </div>
+      <div>
+
       <Accordion type="single" collapsible className="max-w-[800px] mx-auto">
         {questions.map(({ question, answer }, key) => (
           <AccordionItem
@@ -57,16 +59,18 @@ export default function Faq() {
             value={question}
             className={"cards px-4 mb-3 p-3 grid  "}
           >
-            <AccordionTrigger className="hover:no-underline text-lg text-start">
-              {question}
+            <AccordionTrigger className="hover:no-underline  ">
+              <h6>{question}</h6>
             </AccordionTrigger>
             <AccordionContent className="text-base text-start">
               {answer}
             </AccordionContent>
-            <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
+            <div className="card-hover" />
           </AccordionItem>
         ))}
       </Accordion>
-    </Component>
+      
+      </div>
+    </Section>
   );
 }

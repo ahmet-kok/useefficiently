@@ -110,19 +110,6 @@ export default function CustomerStoriesPost({
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerContent className="h-[95%] flex flex-col dark:bg-zinc-900">
-        {/*  <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
-          <div className="w-full md:max-w-3xl" ref={contentRef}>
-            {postContent ? (
-              <article
-                className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"
-                dangerouslySetInnerHTML={renderContent(postContent)}
-              />
-            ) : (
-              <p>No content available.</p>
-            )}
-          </div>
-        </div>
- */}
         <CustomerStoriesText slug={slug} />
         <DrawerFooter className="flex justify-between items-center pt-2">
           <div className="gap-2 flex ">

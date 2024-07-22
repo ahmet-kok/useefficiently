@@ -1,10 +1,10 @@
 import contents from "@/public/contents/customer-stories/contents.json";
 import { CustomerStoriesBento } from "@/components/customer-stories-bento";
-import Component from "@/components/component";
+import Section from "@/components/section";
 export default function Page() {
   return (
-    <Component center>
+    <Section center>
       <CustomerStoriesBento contents={contents} />
-    </Component>
+    </Section>
   );
 }

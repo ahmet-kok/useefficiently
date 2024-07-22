@@ -11,8 +11,7 @@ import information from "@/information.json";
 import { Dock, DockIcon } from "./magicui/dock";
 import { useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
-import LessShinyButton from "./magicui/less-shiny-button";
-import Component from "@/components/component";
+import Section from "@/components/section";
 type IconName = "GithubIcon" | "TwitterIcon" | "LinkedinIcon";
 
 const iconMapping: Record<IconName, FC<{ className?: string }>> = {
@@ -43,7 +42,7 @@ export default function Team() {
   const t = useTranslations("Team");
 
   return (
-    <Component title={t("subtitle")} description={t("description")} center>
+    <Section title={t("subtitle")} description={t("description")} center>
       <div className="button-area">
         <Link href={"mailto:" + information.careerEmail} className="buttons">
           <ShinyButton text={information.careerEmail} />
@@ -57,7 +56,7 @@ export default function Team() {
         >
           <span></span>
 
-          <LessShinyButton text={t("scheduleConsultation")} />
+          <ShinyButton text={t("scheduleConsultation")} />
         </Link>
       </div>
       <div className=" grid grid-cols-1 lg:grid-cols-2  items-center justify-center gap-4 ">
@@ -65,7 +64,7 @@ export default function Team() {
           <TeamMember key={index} member={member} />
         ))}
       </div>
-    </Component>
+    </Section>
   );
 }
 interface TeamMemberProps {
@@ -111,7 +110,7 @@ const TeamMember = ({ member }: TeamMemberProps) => (
                   <Link
                     key={index}
                     href={social.url}
-                    className="text-gray-200"
+                    className="text-neutral-200"
                     prefetch={false}
                   >
                     <SocialIcon iconName={social.icon as IconName} />
@@ -125,12 +124,12 @@ const TeamMember = ({ member }: TeamMemberProps) => (
     </div>
     <div className="text-start w-full  m-4 flex flex-wrap">
       <div>
-        <h2 className=" text-3xl font-semibold w-full">{member.name}</h2>
-        <h4 className="text-xl w-full dark:text-gray-200 text-gray-700">
+        <h4 className="w-full">{member.name}</h4>
+        <h6 className="w-full">
           {member.role}
-        </h4>
+        </h6>
       </div>
-      <p className="line-clamp-4 h-auto overflow-scroll  md:line-clamp-3 leading-relaxed w-full dark:text-gray-200 text-gray-700 self-end">
+      <p className="line-clamp-4 h-auto overflow-scroll  md:line-clamp-3  w-full self-end">
         {member.bio ? member.bio : "No bio available"}
       </p>
     </div>

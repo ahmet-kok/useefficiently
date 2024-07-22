@@ -13,12 +13,12 @@ import information from "@/information.json";
 export default function DotPatternDemo() {
   return (
     <>
-      <div className="text-[2rem] h-[150px] sm:text-5xl cards">
+      <div className=" h-[150px]  cards">
         <div className="self-center flex w-full max-w-[600px] mx-auto h-full py-5 ">
-          <p className="z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter text-black self-center  p-1  dark:text-white border-bottom text-end w-[50%] sm:text-end sm:w-full">
+          <p className="text-[2rem] sm:text-5xl z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter self-center  p-1  dark:text-white border-bottom text-end w-[50%] sm:text-end sm:w-full">
             {information.firstPart}
           </p>
-          <div className="z-10  mx-3  whitespace-pre-wrap  font-medium tracking-tighter text-black dark:text-white  self-center text-center w-full">
+          <div className="z-10  mx-3  whitespace-pre-wrap  font-medium tracking-tighter  dark:text-white  self-center text-center w-full">
             <WordRotate
               words={[
                 AirtableIcon({ className: "w-full" }),
@@ -28,7 +28,7 @@ export default function DotPatternDemo() {
               ]}
             />
           </div>
-          <p className="z-10 text-nowrap whitespace-pre-wrap   font-medium tracking-tighter text-black self-center  p-1  dark:text-white text-start  w-full">
+          <p className="text-[2rem] sm:text-5xl z-10 text-nowrap whitespace-pre-wrap   font-medium tracking-tighter self-center  p-1  dark:text-white text-start  w-full">
             {information.secondPart}
           </p>
         </div>

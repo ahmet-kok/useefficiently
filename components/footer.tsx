@@ -17,13 +17,11 @@ import { InstagramIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 export default function Footer() {
   return (
     <footer className=" h-[10vh] pb-4 lg:px-6 border-t xl:border-t-0 ">
-      <div className="flex h-[8vh] shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border dark:xl:border-none xl:dark:text-gray-50  xl:text-gray-900 xl:shadow-md box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:xl:[border:1px_solid_rgba(255,255,255,.1)]">
+      <div className="flex h-[8vh] shrink-0 items-center px-4 md:px-6  container xl:rounded-lg xl:border dark:xl:border-none xl:shadow-md box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:xl:[border:1px_solid_rgba(255,255,255,.1)]">
         <div className="flex items-center">
           <Link href={`/`} className="flex items-center " prefetch={false}>
             <h2
-              className="
-             font-semibold text-2xl from-text-black to-white
-            "
+              className="text-2xl"
             >
               {information.firstPart}
               <span className="text-2xl text-red-700">
