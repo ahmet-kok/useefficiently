@@ -54,9 +54,7 @@ export default function Team() {
           data-cal-link={information.calendly}
           data-cal-config='{"layout":"month_view"}'
         >
-          <span></span>
-
-          <ShinyButton text={t("scheduleConsultation")} />
+          <ShinyButton dark greenIcon text={t("scheduleConsultation")} />
         </Link>
       </div>
       <div className=" grid grid-cols-1 lg:grid-cols-2  items-center justify-center gap-4 ">
@@ -125,9 +123,7 @@ const TeamMember = ({ member }: TeamMemberProps) => (
     <div className="text-start w-full  m-4 flex flex-wrap">
       <div>
         <h4 className="w-full">{member.name}</h4>
-        <h6 className="w-full">
-          {member.role}
-        </h6>
+        <h6 className="w-full">{member.role}</h6>
       </div>
       <p className="line-clamp-4 h-auto overflow-scroll  md:line-clamp-3  w-full self-end">
         {member.bio ? member.bio : "No bio available"}

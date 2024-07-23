@@ -30,27 +30,18 @@
       "company": "YetGen",
       "customer": "Erhan Erkut",
       "logo": "/logos/YetkinGencler.svg",
-      "avatar": "/images/erhanerkut.png",
-      "text": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field.",
-      "story": "true",
-      "slug": "girvak"
+      "avatar": "/images/Erhan-Erkut.png",
+      "text": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field."
     },
     "2": {
-      "company": "Trendyol",
-      "customer": "Cansu Yılmaz",
-      "logo": "/logos/PublicSquare.svg",
-      "avatar": "https://github.com/miaa.png",
-      "story": "false",
-      "text": "Absolutely amazing experience! The team was very supportive, and the product quality exceeded my expectations."
-    },
-    "3": {
-      "company": "Arçelik",
-      "customer": "İbrahim Ethem",
-      "logo": "/logos/TurkishEntrepreneurshipFoundation.svg",
-      "avatar": "https://github.com/demir.png",
-      "text": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch.",
+      "company": "Lingu Dil Okulu",
+      "customer": "İrem Balkan",
+      "logo": "/logos/LinguDilOkulu.svg",
+      "avatar": "/images/Irem-Balkan.jpeg",
       "story": "true",
-      "slug": "yetgen"
+      "text": "UseEfficiently has transformed our operations at Lingu Dil Okulu. Thanks to Lukas Kaiser and his team, we've streamlined our workflow, making everything more efficient. Their expertise with Airtable has saved us countless hours, allowing us to focus more on our students and less on administrative tasks. Highly recommended!",
+      "slug": "lingu"
+    
     },
     "ClientTestimonials": {
       "title": "Client Testimonials",

@@ -28,10 +28,7 @@ export default function Faq() {
   const contactPath = usablePathnames.find((item) => item.name === "/contact");
   const questions: [{ question: string; answer: string }] =
     messages.Faq.questions;
-  /*   const multiStep = Object.keys(messages.Faq.multiStep).map((key) => {
-    return messages.Faq.multiStep[key];
-  });
- */
+
   return (
     <Section title={t("subtitle")} description={t("description")}>
       <div className="button-area ">
@@ -42,7 +39,7 @@ export default function Faq() {
           }
           className="buttons"
         >
-          <ShinyButton text={t(contactPath?.name.replace("/", ""))} />
+          <ShinyButton text={t(contactPath?.name.replace("/", ""))}/>
         </Link>
         <MultiStep
           text={t("ourProcess")}

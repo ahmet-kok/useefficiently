@@ -28,10 +28,7 @@ export default function MultiStep({
   }, [setLoading, loading]);
   return (
     <div className={cn("inline-block", className)}>
-      {/* Core MultiStepLoader Modal */}
-
-      {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
-      <ShinyButton onClick={() => setLoading(true)} text={text} />
+      <ShinyButton onClick={() => setLoading(true)} text={text} dark/>
       {isMultiStepDownloaded && (
         <>
           <MultiStepLoader

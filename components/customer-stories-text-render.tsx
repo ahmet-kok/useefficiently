@@ -2,6 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { marked } from "marked";
+import Link from "next/link";
+import ShinyButton from "@/components/magicui/shiny-button";
+import information from "@/information.json";
+import OrbitingCircle from "@/components/orbitingCircles";
+
 export function CustomerStoriesText({ slug }: { slug: string }) {
   const [postContent, setPostContent] = useState("");
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -89,8 +94,8 @@ export function CustomerStoriesText({ slug }: { slug: string }) {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto p-4 md:flex md:justify-center">
-      <div className="w-full md:max-w-3xl" ref={contentRef}>
+    <div className="overflow-y-auto p-4">
+      <div className="w-full md:max-w-3xl mx-auto" ref={contentRef}>
         {postContent ? (
           <article
             className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"

@@ -65,7 +65,7 @@ export default function Testimonials() {
 }
 
 const Testimonial = ({ testimonial, t, setIsDrawerOpen, setContent }: any) => (
-  <div className={" p-4 pt-0 lg:p-6 grid group cards text-start"}>
+  <div className={" p-4 pt-0 grid group cards text-start"}>
     <div>
       <div className="flex relative items-center justify-between my-4">
         <Image

@@ -39,7 +39,7 @@ const ShinyButton = ({
       onClick={onClick}
       {...animationProps}
       className={cn(
-        "relative rounded-lg w-full min-w-auto px-2 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow text-nowrap",
+        "mx-auto relative rounded-lg w-full min-w-auto px-2 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow text-nowrap",
         dark && "bg-primary text-primary-foreground",
         !dark &&
           "dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]"

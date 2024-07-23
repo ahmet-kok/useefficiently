@@ -23,20 +23,18 @@ const BentoGrid = ({
 };
 
 const BentoCard = ({
-  name,
+  title,
   className,
   description,
   href,
-  cta,
 }: {
-  name: string;
+  title: string;
   className: string;
   description: string;
   href: string;
-  cta: string;
 }) => (
   <div
-    key={name}
+    key={title}
     className={cn(
       "group flex relative col-span-3 flex-col justify-between cards text-start",
 
@@ -45,10 +43,7 @@ const BentoCard = ({
   >
     <div></div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-
-      <h3 className="text-xl font-semibold ">
-        {name}
-      </h3>
+      <h3 className="text-xl font-semibold ">{title}</h3>
       <p className="max-w-lg ">{description}</p>
     </div>
 
@@ -59,7 +54,7 @@ const BentoCard = ({
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
         <Link href={href}>
-          {cta}
+          Learn more
           <ArrowRightIcon className="ml-2 h-4 w-4" />
         </Link>
       </Button>

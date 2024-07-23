@@ -1,23 +1,24 @@
 [
   {
-    "id": 1,
     "title": "YetGen",
-    "author": "@leo",
+    "description": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field.",
     "slug": "yetgen",
-    "tags": ["no-code", "airtable"]
+    "tags": ["no-code", "airtable"],
+    "className": "col-span-3 lg:col-span-2"
   },
   {
-    "id": 2,
     "title": "Girisimcilik Vakfi",
-    "author": "@lukas",
+    "description": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch.",
     "slug": "girvak",
-    "tags": ["brevo", "softr"]
+    "tags": ["brevo", "softr"],
+    "className": "col-span-3 lg:col-span-1"
   },
   {
-    "id": 3,
-    "title": "Kodluyoruz",
-    "author": "@leo",
-    "slug": "kodluyoruz",
-    "tags": ["no-code", "airtable"]
+    "title": "Lingu Dil Okulu",
+    "description": "I am extremely satisfied with the service. The responsiveness and professionalism were top-notch.",
+    "slug": "lingu",
+    "tags": ["no-code", "airtable", "softr"],
+    "className": "col-span-3 lg:col-span-1",
+    "next": "col-span-3 lg:col-span-2"
   }
 ]

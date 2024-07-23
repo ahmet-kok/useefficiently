@@ -73,11 +73,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params: { locale },
-  modal,
 }: {
   children: React.ReactNode;
   params: { locale: string };
-  modal: React.ReactNode;
 }) {
   const messages = await getMessages();
   return (
@@ -105,7 +103,6 @@ export default async function RootLayout({
               <Header />
               {children}
               <Footer />
-              {modal}
             </ThemeProvider>
           </NextIntlClientProvider>
           <Analytics />

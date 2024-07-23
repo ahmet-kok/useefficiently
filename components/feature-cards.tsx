@@ -16,6 +16,7 @@ import {
   GearIcon,
 } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import ShinyButton from "./magicui/shiny-button";
 
 const iconProps = "w-8 h-8 aria-hidden";
 const grid = [
@@ -130,11 +131,7 @@ export default function FeaturesCards() {
       </div>
       {isMobile && visibleCount < grid.length && (
         <div className="flex justify-center mt-4">
-          <Button
-            onClick={showMore}
-          >
-            Show More
-          </Button>
+          <ShinyButton text="Show More" onClick={showMore}/>
         </div>
       )}
     </div>

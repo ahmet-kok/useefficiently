@@ -21,10 +21,9 @@ export default function ContactPage() {
           data-cal-link={information.calendly}
           data-cal-config='{"layout":"month_view"}'
         >
-          <ShinyButton text={t("scheduleConsultation")} greenIcon />
+          <ShinyButton text={t("scheduleConsultation")} greenIcon dark/>
         </Link>
       </div>
-      <div className=" grid grid-cols-1 lg:grid-cols-2  items-center justify-center gap-4 "></div>
       <OrbitingCircle />
       <CalCom />
     </Section>
