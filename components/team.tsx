@@ -57,7 +57,7 @@ export default function Team() {
           <ShinyButton dark greenIcon text={t("scheduleConsultation")} />
         </Link>
       </div>
-      <div className=" grid grid-cols-1 lg:grid-cols-2  items-center justify-center gap-4 ">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4   gap-4 group">
         {info.team.map((member, index) => (
           <TeamMember key={index} member={member} />
         ))}
@@ -83,51 +83,39 @@ interface TeamMemberProps {
 }
 
 const TeamMember = ({ member }: TeamMemberProps) => (
-  <div className={" h-[200px]  group cards flex"}>
-    <div className="relative ">
-      <Avatar className="h-full w-[200px] aspect-square text-6xl rounded-none">
-        <AvatarImage
-          src={member.avatar}
-          alt={`@${member.name}`}
-          className="object-cover"
-        />
-      </Avatar>
-      <div className=" absolute bottom-1 w-full  justify-center flex">
-        <Dock
-          style={
-            {
-              WebkitBackdropFilter: "blur(20px)",
-            } as React.CSSProperties
-          }
-          direction="middle"
-          className="p-0 px-3 h-12 m-0 backdrop-blur-2xl max-w-[95%]"
-        >
-          {member.social
-            ? member.social.map((social, index) => (
-                <DockIcon key={index}>
-                  <Link
-                    key={index}
-                    href={social.url}
-                    className="text-neutral-200"
-                    prefetch={false}
-                  >
-                    <SocialIcon iconName={social.icon as IconName} />
-                    <span className="sr-only">{social.name}</span>
-                  </Link>
-                </DockIcon>
-              ))
-            : null}
-        </Dock>
-      </div>
+  <div className="cards grid grid-cols-3 text-start gap-2 group">
+    <Avatar className="h-fit w-full aspect-square rounded-none col-span-3">
+      <AvatarImage
+        src={member.avatar}
+        alt={`@${member.name}`}
+        className="object-cover "
+      />
+    </Avatar>
+    <div className="grid col-span-3 gap-2 p-3">
+      <h4 className="col-span-3">{member.name}</h4>
+      <h5 className="col-span-3">{member.role}</h5>
     </div>
-    <div className="text-start w-full  m-4 flex flex-wrap">
-      <div>
-        <h4 className="w-full">{member.name}</h4>
-        <h6 className="w-full">{member.role}</h6>
-      </div>
-      <p className="line-clamp-4 h-auto overflow-scroll  md:line-clamp-3  w-full self-end">
-        {member.bio ? member.bio : "No bio available"}
-      </p>
+    <p className=" overflow-scroll row-span-5 line-clamp-5 px-3 self-end col-span-3">
+      {member.bio ? member.bio : "No bio available"}
+    </p>
+    <div className="self-end mx-auto justify-center flex col-span-3 p-3">
+      <Dock direction="middle" className="h-12 m-0 dark:bg-zinc-900">
+        {member.social
+          ? member.social.map((social, index) => (
+              <DockIcon key={index}>
+                <Link
+                  key={index}
+                  href={social.url}
+                  className=""
+                  prefetch={false}
+                >
+                  <SocialIcon iconName={social.icon as IconName} />
+                  <span className="sr-only">{social.name}</span>
+                </Link>
+              </DockIcon>
+            ))
+          : null}
+      </Dock>
     </div>
   </div>
 );

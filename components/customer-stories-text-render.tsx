@@ -94,17 +94,18 @@ export function CustomerStoriesText({ slug }: { slug: string }) {
   };
 
   return (
-    <div className="overflow-y-auto p-4">
-      <div className="w-full md:max-w-3xl mx-auto" ref={contentRef}>
-        {postContent ? (
-          <article
-            className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"
-            dangerouslySetInnerHTML={renderContent(postContent)}
-          />
-        ) : (
-          <p>No content available.</p>
-        )}
-      </div>
+    <div
+      className="w-full md:max-w-3xl mx-auto p-4 overflow-y-auto"
+      ref={contentRef}
+    >
+      {postContent ? (
+        <article
+          className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"
+          dangerouslySetInnerHTML={renderContent(postContent)}
+        />
+      ) : (
+        <p>No content available.</p>
+      )}
     </div>
   );
 }

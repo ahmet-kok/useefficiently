@@ -40,13 +40,13 @@ export const metadata: Metadata = {
       url: "/favicon.ico",
     },
   ],
-  title: "UseEfficiently - Your Airtable Service Partner",
+  title: "UseEfficiently - Your Airtable Service Provider",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
   keywords:
-    "Airtable, No-Code Solutions, Airtable Partner, UseEfficiently, Business Solutions, Client Testimonials, Expert Team",
+    "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions, Client Testimonials, Expert Team",
   openGraph: {
-    title: "UseEfficiently - Your Airtable Service Partner",
+    title: "UseEfficiently - Your Airtable Service Provider",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     url: information.website,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@" + information.slug,
-    title: "UseEfficiently - Your Airtable Service Partner",
+    title: "UseEfficiently - Your Airtable Service Provider",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     images: information.website + "/favicon.ico",

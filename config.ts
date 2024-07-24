@@ -1,5 +1,6 @@
 import { LocalePrefix, Pathnames } from "next-intl/routing";
 export const locales = ["en", "de", "tr"] as const;
+import information from "@/information.json";
 export const localePrefix = "as-needed" satisfies LocalePrefix;
 export const defaultLocale = "en" as const;
 export const alternateLinks = false;
@@ -56,6 +57,4 @@ export const pathnames = {
   },*/
 } satisfies Pathnames<typeof locales>;
 
-export const host = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : `http://localhost:3000`;
+export const host = information.website;

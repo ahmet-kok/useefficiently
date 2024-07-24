@@ -31,7 +31,8 @@
       "customer": "Erhan Erkut",
       "logo": "/logos/YetkinGencler.svg",
       "avatar": "/images/Erhan-Erkut.png",
-      "text": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field."
+      "text": "We worked with Use Efficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field.",
+      "story": "false"
     },
     "2": {
       "company": "Lingu Dil Okulu",
@@ -122,6 +123,11 @@
   "Contact": {
     "title": "Contact Us",
     "description": "Have a question or need more information? Get in touch with us, and we'll be happy to help!",
+    "scheduleConsultation": "Book 15-Minute Free Call"
+  },
+  "Benefits": {
+    "title": "Why we should work together",
+    "description": "We are dedicated to providing top-notch support and innovative solutions in the no-code space. Our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     "scheduleConsultation": "Book 15-Minute Free Call"
   }
 }
