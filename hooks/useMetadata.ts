@@ -40,11 +40,7 @@ const useMetadata = (title: string, description: string) => {
     setMetaProperty("og:type", "website");
     // add alt and url
 
-    setMetaProperty(
-      "og:image:url",
-      `${information.website}/api/og?title=${title}`
-    );
-    setMetaProperty("og:image:alt", `${information.company} Logo`);
+    setMetaProperty("og:image", `${information.website}/api/og?title=${title}`);
     // Set Twitter meta tags
     const setTwitterMeta = (name: string, content: string) => {
       let metaTag =
@@ -59,6 +55,7 @@ const useMetadata = (title: string, description: string) => {
 
     setTwitterMeta("twitter:card", "summary_large_image");
     setTwitterMeta("twitter:site", "@" + information.slug);
+    setTwitterMeta("twitter:domain", information.website);
     setTwitterMeta("twitter:title", title);
     setTwitterMeta("twitter:description", description);
     setTwitterMeta(
