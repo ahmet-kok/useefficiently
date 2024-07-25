@@ -40,10 +40,10 @@ export const metadata: Metadata = {
       url: "/favicon.ico",
     },
   ],
-  title: "UseEfficiently - Global Airtable Service Provider",
+/*   title: "UseEfficiently - Global Airtable Service Provider",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-  keywords:
+ */  keywords:
     "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
  /*  openGraph: {
     title: "UseEfficiently - Global Airtable Service Provider",
