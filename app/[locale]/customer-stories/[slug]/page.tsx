@@ -1,3 +1,6 @@
+"use client";
+
+
 import { CustomerStoriesText } from "@/components/customer-stories-text-render";
 import Link from "next/link";
 import ShinyButton from "@/components/magicui/shiny-button";

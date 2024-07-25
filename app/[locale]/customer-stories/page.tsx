@@ -1,3 +1,5 @@
+"use client"
+
 import contents from "@/public/contents/customer-stories/contents.json";
 import { CustomerStoriesBento } from "@/components/customer-stories-bento";
 import Section from "@/components/section";

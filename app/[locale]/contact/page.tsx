@@ -1,3 +1,6 @@
+"use client"
+
+
 import Contact from "@/components/contact";
 import useMetadata from "@/hooks/useMetadata";
 export default function ContactPage() {
