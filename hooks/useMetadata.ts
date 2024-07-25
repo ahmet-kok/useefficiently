@@ -38,8 +38,13 @@ const useMetadata = (title: string, description: string) => {
     setMetaProperty("og:description", description);
     setMetaProperty("og:url", `${information.website}${pathname}`);
     setMetaProperty("og:type", "website");
-    setMetaProperty("og:image", `${information.website}/api/og?title=${title}`);
+    // add alt and url
 
+    setMetaProperty(
+      "og:image:url",
+      `${information.website}/api/og?title=${title}`
+    );
+    setMetaProperty("og:image:alt", `${information.company} Logo`);
     // Set Twitter meta tags
     const setTwitterMeta = (name: string, content: string) => {
       let metaTag =
