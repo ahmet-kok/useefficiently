@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { Rubik as FontSans } from "next/font/google";
 import information from "@/information.json";
 import "@/app/globals.css";
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -18,6 +17,7 @@ import Header from "@/components/header";
 import type { Metadata } from "next";
 
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   robots: "index, follow",
@@ -40,22 +40,20 @@ export const metadata: Metadata = {
       url: "/favicon.ico",
     },
   ],
-  title: "UseEfficiently - Your Airtable Service Provider",
+  title: "UseEfficiently - Global Airtable Service Provider",
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
   keywords:
-    "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions, Client Testimonials, Expert Team",
+    "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
   openGraph: {
-    title: "UseEfficiently - Your Airtable Service Provider",
+    title: "UseEfficiently - Global Airtable Service Provider",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     url: information.website,
     type: "website",
     images: [
       {
-        url: information.website + "/favicon.ico",
-        width: 800,
-        height: 600,
+        url: information.website + "/api/og?title=" + information.company,
         alt: information.company + " Logo",
       },
     ],
@@ -63,10 +61,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@" + information.slug,
-    title: "UseEfficiently - Your Airtable Service Provider",
+    title: "UseEfficiently - Global Airtable Service Provider",
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    images: information.website + "/favicon.ico",
+    images: information.website + "/api/og?title=" + information.company,
   },
   authors: [{ name: information.company + " Team", url: information.website }],
 };
@@ -81,12 +79,12 @@ export default async function RootLayout({
   return (
     <>
       <html lang={locale} className="scroll-smooth">
-        <head>
+        <Head>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-        </head>
+        </Head>
         <body
           className={cn(
             "font-sans  min-h-screen dark:bg-zinc-900 ",

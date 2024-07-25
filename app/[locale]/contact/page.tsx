@@ -1,5 +1,10 @@
 import Contact from "@/components/contact";
-
+import useMetadata from "@/hooks/useMetadata";
 export default function ContactPage() {
-  return <Contact />;
+  useMetadata(
+    "Contact - UseEfficiently",
+    "Contact UseEfficiently for any queries or feedback."
+  );
+
+  return <Contact page />;
 }

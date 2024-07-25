@@ -16,21 +16,17 @@ import { InstagramIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 
 export default function Footer() {
   return (
-    <footer className=" h-[10vh] pb-4  border-t xl:border-t-0 ">
-      <div className="flex h-[8vh] shrink-0 items-center px-4   container xl:rounded-lg xl:border dark:xl:border-none xl:shadow-md box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:xl:[border:1px_solid_rgba(255,255,255,.1)]">
-        <div className="flex items-center">
-          <Link href={`/`} className="flex items-center " prefetch={false}>
-            <h2
-              className="text-2xl"
-            >
-              {information.firstPart}
-              <span className="text-2xl text-red-700">
-                {information.secondPart}
-              </span>
-            </h2>{" "}
-          </Link>
-        </div>
-        <NavigationMenu className="ml-auto items-center flex">
+    <footer className=" h-[10vh] pb-4  bordor-color-t xl:bordor-color-t-0 footer">
+      <div id="footer" className="h-[8vh]">
+        <Link href={`/`} className="flex items-center " prefetch={false}>
+          <h2 className="text-2xl">
+            {information.firstPart}
+            <span className="text-2xl text-red-700">
+              {information.secondPart}
+            </span>
+          </h2>{" "}
+        </Link>
+        <NavigationMenu className=" items-center flex">
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link

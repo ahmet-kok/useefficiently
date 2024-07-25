@@ -39,7 +39,7 @@ export default function Faq() {
           }
           className="buttons"
         >
-          <ShinyButton text={t(contactPath?.name.replace("/", ""))}/>
+          <ShinyButton text={t(contactPath?.name.replace("/", ""))} />
         </Link>
         <MultiStep
           text={t("ourProcess")}
@@ -48,25 +48,23 @@ export default function Faq() {
         />
       </div>
       <div>
-
-      <Accordion type="single" collapsible className="max-w-[800px] mx-auto">
-        {questions.map(({ question, answer }, key) => (
-          <AccordionItem
-            key={key}
-            value={question}
-            className={"cards px-4 mb-3 p-3 grid  "}
-          >
-            <AccordionTrigger className="hover:no-underline  ">
-              <h6>{question}</h6>
-            </AccordionTrigger>
-            <AccordionContent className="text-base text-start">
-              {answer}
-            </AccordionContent>
-            <div className="card-hover" />
-          </AccordionItem>
-        ))}
-      </Accordion>
-      
+        <Accordion type="single" collapsible className="max-w-[800px] mx-auto">
+          {questions.map(({ question, answer }, key) => (
+            <AccordionItem
+              key={key}
+              value={question}
+              className={"cards px-4 mb-3 p-3 grid  "}
+            >
+              <AccordionTrigger className="hover:no-underline text-start h6">
+                {question}
+              </AccordionTrigger>
+              <AccordionContent className="text-base text-start">
+                {answer}
+              </AccordionContent>
+              <div className="card-hover" />
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </Section>
   );

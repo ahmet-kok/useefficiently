@@ -36,9 +36,10 @@ export default function Header() {
     });
   return (
     <>
-      <header className=" w-full flex top-0 fixed xl:top-4 inset-x-0 z-[50]">
+      <header className=" w-full top-0 fixed xl:top-4 inset-x-0 z-[50]  header">
         <div
-          className="flex backdrop-blur h-14 sm:h-[8vh] shrink-0 items-center xl:border dark:xl:border-none   container xl:rounded-lg xl:box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] xl:transform-gpu xl:dark:[border:1px_solid_rgba(255,255,255,.1)] xl:bg-opacity-80 xl:backdrop-filter  xl:bg-transparent  xl:shadow-md"
+          id="header"
+          className="h-14 sm:h-[8vh]"
           style={
             {
               WebkitBackdropFilter: "blur(10px)",
@@ -54,90 +55,97 @@ export default function Header() {
               <MountainIcon className="h-8 w-8 mr-2" />
               <h2
                 className="
-             font-semibold text-3xl from-text-black to-white
+             font-semibold text-2xl sm:text-3xl 
             "
               >
                 {information.firstPart}
-                <span className="text-3xl text-red-700">
+                <span className="text-2xl sm:text-3xl text-red-700">
                   {information.secondPart}
                 </span>
               </h2>{" "}
             </Link>
           </div>
-          <NavigationMenu className="ml-auto items-center hidden md:flex">
-            <NavigationMenuList>
-              {usablePathnames.map((path, idx) => (
-                <NavigationMenuItem key={idx}>
-                  <NavigationMenuLink
-                    href={
-                      (localActive === "en" ? "" : "/" + localActive) +
-                      (path.slug[localActive]
-                        ? path.slug[localActive]
-                        : path.slug)
-                    }
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent text-base px-2"
-                    )}
-                  >
-                    {t(path.name === "/" ? "home" : path.name.replace("/", ""))}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-
-              <NavigationMenuItem>
-                <ModeToggle />
-                <span className="sr-only">{t("theme")}</span>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <div className="ml-auto flex items-center gap-4 md:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-12 w-12 rounded-full hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50"
-                >
-                  <MenuIcon className="h-9 w-9" />
-                  <span className="sr-only">{t("menu")}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="end"
-                className="w-[220px] dark:bg-zinc-900"
-              >
+          <div>
+            <NavigationMenu className="ml-auto items-center hidden md:flex">
+              <NavigationMenuList>
                 {usablePathnames.map((path, idx) => (
-                  <DropdownMenuItem key={idx}>
-                    <Link
-                      className="flex text-base items-center gap-2 w-full "
-                      prefetch={true}
+                  <NavigationMenuItem key={idx}>
+                    <NavigationMenuLink
                       href={
                         (localActive === "en" ? "" : "/" + localActive) +
                         (path.slug[localActive]
                           ? path.slug[localActive]
                           : path.slug)
                       }
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent text-base px-2"
+                      )}
                     >
-                      <span>
-                        {t(
-                          path.name === "/"
-                            ? "home"
-                            : path.name.replace("/", "")
-                        )}
-                      </span>
-                    </Link>
-                  </DropdownMenuItem>
+                      {t(
+                        path.name === "/" ? "home" : path.name.replace("/", "")
+                      )}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
                 ))}
 
-                <DropdownMenuSeparator />
-
-                <DropdownMenuItem className="flex items-center p-0 m-0" key={4}>
-                  <ModeToggle/> 
+                <NavigationMenuItem>
+                  <ModeToggle />
                   <span className="sr-only">{t("theme")}</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <div className="ml-auto flex items-center gap-4 md:hidden">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-12 w-12 rounded-full hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50"
+                  >
+                    <MenuIcon className="h-9 w-9" />
+                    <span className="sr-only">{t("menu")}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="end"
+                  className="w-[220px] dark:bg-zinc-900"
+                >
+                  {usablePathnames.map((path, idx) => (
+                    <DropdownMenuItem key={idx}>
+                      <Link
+                        className="flex text-base items-center gap-2 w-full "
+                        prefetch={true}
+                        href={
+                          (localActive === "en" ? "" : "/" + localActive) +
+                          (path.slug[localActive]
+                            ? path.slug[localActive]
+                            : path.slug)
+                        }
+                      >
+                        <span>
+                          {t(
+                            path.name === "/"
+                              ? "home"
+                              : path.name.replace("/", "")
+                          )}
+                        </span>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+
+                  <DropdownMenuSeparator />
+
+                  <DropdownMenuItem
+                    className="flex items-center p-0 m-0 "
+                    key={4}
+                  >
+                    <ModeToggle />
+                    <span className="sr-only">{t("theme")}</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
         </div>
       </header>

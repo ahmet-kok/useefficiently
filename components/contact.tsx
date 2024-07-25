@@ -6,10 +6,10 @@ import information from "@/information.json";
 import Section from "@/components/section";
 import OrbitingCircle from "@/components/orbitingCircles";
 
-export default function Contact() {
+export default function Contact({ page }: { page?: boolean }) {
   const t = useTranslations("Contact");
   return (
-    <Section title={t("title")} description={t("description")} center>
+    <Section title={t("title")} description={t("description")} center h1={page}>
       <div className="button-area">
         <Link href={"mailto:" + information.email} className="buttons">
           <ShinyButton text={information.email} />
@@ -21,12 +21,11 @@ export default function Contact() {
           data-cal-link={information.calendly}
           data-cal-config='{"layout":"month_view"}'
         >
-          <ShinyButton text={t("scheduleConsultation")} greenIcon dark/>
+          <ShinyButton text={t("scheduleConsultation")} greenIcon dark />
         </Link>
       </div>
       <OrbitingCircle />
       <CalCom />
     </Section>
-
   );
 }

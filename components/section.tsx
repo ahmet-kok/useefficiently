@@ -7,6 +7,7 @@ export default function Section({
   center = false,
   className,
   id,
+  h1,
 }: {
   title?: string;
   description?: string;
@@ -14,13 +15,16 @@ export default function Section({
   center?: boolean;
   className?: string;
   id?: string;
+  h1?: boolean;
 }) {
   return (
     <>
       {center && (
         <div className={"min-h-[75vh] flex items-center"} id={id}>
           <div className={cn("section space-y-10", className)}>
-            {title && <h1>{title}</h1>}
+            {title && h1 && <h1>{title}</h1>}
+            {title && !h1 && <h2>{title}</h2>}
+
             {description && <p>{description}</p>}
             {children}
           </div>

@@ -1,7 +1,6 @@
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 
 export function CustomerStoriesBento({ contents }: { contents: any[] }) {
-  console.log(contents);
   return (
     <BentoGrid>
       {contents.map((feature, idx) => (

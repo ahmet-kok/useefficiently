@@ -79,46 +79,68 @@
   transition: background-color ease 0.5s, color ease-out 0.2s;
 }
 
+.section,
+.header,
+.footer {
+  @apply container w-full;
+}
 .section {
-  @apply pb-4 container  px-4 md:px-6 2xl:px-0 text-center w-full;
+  @apply pb-4 px-4 text-center md:px-6;
+}
+
+.header,
+.footer {
+  @apply px-0 md:px-6;
 }
 
 p {
   @apply text-neutral-700 dark:text-neutral-300 text-base font-normal;
 }
 
-.cards {
-  @apply overflow-hidden rounded-lg  [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] border dark:border-none  dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset];
-}
 .section > p {
   @apply max-w-[800px] mx-auto md:text-xl leading-relaxed lg:text-lg xl:text-xl;
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   @apply font-bold dark:text-neutral-200 text-neutral-800;
 }
-h1 {
-  @apply text-5xl md:text-6xl lg:text-7xl;
+h1,
+.h1 {
+  @apply text-3xl sm:text-3xl md:text-6xl lg:text-7xl;
 }
-h2 {
-  @apply text-4xl md:text-5xl lg:text-5xl;
+h2,
+.h2 {
+  @apply text-3xl md:text-5xl lg:text-5xl;
 }
-h3 {
-  @apply text-4xl md:text-4xl lg:text-4xl;
+h3,
+.h3 {
+  @apply text-2xl md:text-4xl lg:text-4xl;
 }
-h4 {
-  @apply text-3xl md:text-3xl lg:text-3xl;
+h4,
+.h4 {
+  @apply text-xl md:text-3xl lg:text-3xl;
 }
-h5 {
+h5,
+.h5 {
   @apply text-lg md:text-xl lg:text-xl;
 }
-h6 {
+h6,
+.h6 {
   @apply text-base md:text-lg lg:text-xl;
+}
+.green-icon {
+  @apply top-[-8px] right-[-8px] absolute z-50 w-5 h-5 bg-green-500 border-2 border-white border-color rounded-full;
 }
 
 .button-area {
@@ -129,10 +151,27 @@ h6 {
   @apply shrink min-w-fit mx-auto sm:max-w-[290px] w-full;
 }
 
-.green-icon {
-  @apply top-[-8px] right-[-8px] absolute z-50  w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full;
+.cards {
+  @apply overflow-hidden rounded-lg border transform-gpu border-color;
+}
+/* .card-hover {
+ @apply pointer-events-none absolute inset-0 transform-gpu;
+}
+ */
+
+/* .cards {
+ @apply overflow-hidden rounded-lg [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu border-color border border-color dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset];
+}
+.card-hover {
+ @apply pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10;
+}
+ */
+
+#header,
+#footer {
+  @apply w-full flex items-center container md:rounded-lg justify-between xl:transform-gpu xl:bg-opacity-80 xl:backdrop-filter xl:bg-transparent backdrop-blur px-4  md:dark:[border:1px_solid_#2F2F31] md:border;
 }
 
-.card-hover {
-  @apply pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10;
+.border-color {
+  @apply dark:[border:1px_solid_#2F2F31] border;
 }

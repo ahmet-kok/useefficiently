@@ -74,7 +74,7 @@ const BentoCard = ({
     <div className="flex gap-5">
       {icons
         ? icons.map((icon, index) => (
-            <div className="border rounded-lg h-[60px] flex items-center" key={index}>
+            <div className="bordor-color rounded-lg h-[60px] flex items-center" key={index}>
               <SocialIcon
                 iconName={icon as IconName}
                 className="h-full p-4"

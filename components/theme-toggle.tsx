@@ -20,7 +20,7 @@ export function ModeToggle() {
     <>
       <div className="block md:hidden w-full h-full">
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex p-2 items-center gap-2 w-full h-full text-base" asChild>
+          <DropdownMenuTrigger className="flex p-2 items-center gap-2 w-full  h-full text-base" asChild>
             <button> 
               <SunIcon className="h-5 w-5 dark:hidden " />
               <MoonIcon className="h-5 w-5 hidden dark:inline-block " />
