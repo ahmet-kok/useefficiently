@@ -7,6 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Rubik as FontSans } from "next/font/google";
 import information from "@/information.json";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import "@/app/globals.css";
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
   ],
   title: {
     default: "UseEfficiently - Global Airtable Service Provider",
-    template: "%s | UseEfficiently",
+    template: "%s | UseEfficiently - Global Airtable Service Provider",
   },
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
@@ -111,6 +113,7 @@ export default async function RootLayout({
         <Analytics />
         <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId="G-LKGYCSRQFG" />
     </html>
   );
 }
