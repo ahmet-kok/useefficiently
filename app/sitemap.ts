@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { locales, pathnames, defaultLocale, host } from "@/config";
 import { getPathname } from "@/navigation";
+import contents from "@/public/contents/customer-stories/contents.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const keys = Object.keys(pathnames) as Array<keyof typeof pathnames>;
@@ -12,8 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const pathname = getPathname({ locale, href: key });
     return `${host}${pathname === "/" ? "" : pathname}`;
   }
-
-  return keys.map((key) => ({
+  const staticUrls = keys.map((key) => ({
     url: getUrl(key, defaultLocale),
     alternates: {
       languages: Object.fromEntries(
@@ -21,4 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
     },
   }));
+  const customerStoriesUrls = contents.map((content) => ({
+    url: `${host}/customer-stories/${content.slug}`,
+    alternates: {
+      languages: {},
+    },
+  }));
+  return [...staticUrls, ...customerStoriesUrls];
 }
