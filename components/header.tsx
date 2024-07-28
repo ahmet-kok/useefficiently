@@ -36,7 +36,7 @@ export default function Header() {
     });
   return (
     <>
-      <header className=" w-full top-0 fixed xl:top-4 inset-x-0 z-[50]  header">
+      <header className=" w-full top-0 fixed md:top-4 inset-x-0 z-[50]  header">
         <div
           id="header"
           className="h-14 sm:h-[8vh]"
@@ -66,7 +66,7 @@ export default function Header() {
             </Link>
           </div>
           <div>
-            <NavigationMenu className="ml-auto items-center hidden md:flex">
+            <NavigationMenu className="ml-auto items-center hidden lg:flex">
               <NavigationMenuList>
                 {usablePathnames.map((path, idx) => (
                   <NavigationMenuItem key={idx}>
@@ -95,7 +95,7 @@ export default function Header() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <div className="ml-auto flex items-center gap-4 md:hidden">
+            <div className="ml-auto flex items-center gap-4 lg:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
