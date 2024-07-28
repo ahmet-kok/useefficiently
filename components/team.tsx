@@ -42,7 +42,7 @@ export default function Team() {
   const t = useTranslations("Team");
 
   return (
-    <Section title={t("subtitle")} description={t("description")} center>
+    <Section title={t("subtitle")} description={t("description")} center h1>
       <div className="button-area">
         <Link href={"mailto:" + information.careerEmail} className="buttons">
           <ShinyButton text={information.careerEmail} />

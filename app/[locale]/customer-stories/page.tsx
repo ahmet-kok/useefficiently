@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
   return (
-    <Section center>
+    <Section center h1>
       <CustomerStoriesBento contents={contents} />
     </Section>
   );

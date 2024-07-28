@@ -12,6 +12,7 @@ export default function HeroSection() {
       title={t("heroTitleStart") + " " + t("heroTitleEnd")}
       description={t("heroText")}
       center
+      h1
     >
       <div className="button-area">
         <Link

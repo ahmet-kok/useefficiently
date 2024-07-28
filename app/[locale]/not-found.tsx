@@ -44,7 +44,7 @@ export default function NotFound() {
   const t = useTranslations("404");
   const localActive = useLocale();
   return (
-    <Section title={t("title")} description={t("description")} center>
+    <Section title={t("title")} description={t("description")} center h1>
       <div className="button-area">
         <Link
           href={localActive === "en" ? "/" : "/" + localActive}
