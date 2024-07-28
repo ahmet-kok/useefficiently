@@ -66,7 +66,7 @@ export default function BenefitsCards() {
     <div>
       <div className="xl:flex xl:flex-wrap  xl:justify-center gap-4 grid xl:grid-cols-none grid-cols-1  md:grid-cols-2">
         {visibleGrid.map((benefit) => (
-          <div key={benefit.title} className=" group px-8 py-2 xl:shrink xl:w-auto  rounded-full bordor-color ">
+          <div key={benefit.title} className=" group px-8 py-2 xl:shrink xl:w-auto  rounded-full border-color">
             <h5 className=" text-lg">{benefit.title}</h5>
             <p className="">{benefit.description}</p>
           </div>

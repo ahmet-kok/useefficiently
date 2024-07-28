@@ -17,7 +17,7 @@ export default function OrbitingCircle() {
       </span>
 
       <OrbitingCircles
-        className="h-[60px] w-[60px] bordor-color-none bg-transparent block"
+        className="h-[60px] w-[60px] border-color-none bg-transparent block"
         duration={20}
         delay={10}
         radius={screenSize > 640 ? 90 : 70}
@@ -27,7 +27,7 @@ export default function OrbitingCircle() {
 
       {/* Outer Circles (reverse) */}
       <OrbitingCircles
-        className="h-[60px] w-[60px] bordor-color-none bg-transparent"
+        className="h-[60px] w-[60px] border-color-none bg-transparent"
         reverse
         radius={screenSize > 640 ? 180 : 140}
         duration={20}
@@ -40,7 +40,7 @@ export default function OrbitingCircle() {
         />
       </OrbitingCircles>
       <OrbitingCircles
-        className="h-[40px] w-[40px] bordor-color-none bg-transparent block"
+        className="h-[40px] w-[40px] border-color-none bg-transparent block"
         reverse
         radius={screenSize > 640 ? 180 : 140}
         duration={20}

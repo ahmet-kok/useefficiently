@@ -64,7 +64,7 @@ export default function CalCom() {
     <>
       <motion.button
         {...animationProps}
-        className={`fixed p-2 bottom-5 sm:p-4 transition-[right] sm:bottom-10 duration-200  bg-transparent bordor-color-2 rounded-full bordor-color-black text-black backdrop-blur-xl z-[40] ${
+        className={`fixed p-2 bottom-5 sm:p-4 transition-[right] sm:bottom-10 duration-200  bg-transparent border-color-2 rounded-full border-color-black text-black backdrop-blur-xl z-[40] ${
           isAboveFooter
             ? "right-3 sm:right-10"
             : "sm:right-[-300px] right-[-300px]"

@@ -17,7 +17,6 @@ import Header from "@/components/header";
 import type { Metadata } from "next";
 
 import Footer from "@/components/footer";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   robots: "index, follow",
@@ -40,13 +39,19 @@ export const metadata: Metadata = {
       url: "/favicon.ico",
     },
   ],
-/*   title: "UseEfficiently - Global Airtable Service Provider",
+  title: {
+    default: "UseEfficiently - Global Airtable Service Provider",
+    template: "%s | UseEfficiently",
+  },
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
- */  keywords:
+  keywords:
     "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
- /*  openGraph: {
-    title: "UseEfficiently - Global Airtable Service Provider",
+  openGraph: {
+    title: {
+      default: "UseEfficiently - Global Airtable Service Provider",
+      template: "%s | UseEfficiently",
+    },
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     url: information.website,
@@ -58,14 +63,18 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@" + information.slug,
-    title: "UseEfficiently - Global Airtable Service Provider",
+    title: {
+      default: "UseEfficiently - Global Airtable Service Provider",
+      template: "%s | UseEfficiently",
+    },
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
     images: information.website + "/api/og?title=" + information.company,
-  }, */
+  },
   authors: [{ name: information.company + " Team", url: information.website }],
 };
 export default async function RootLayout({
@@ -77,36 +86,31 @@ export default async function RootLayout({
 }) {
   const messages = await getMessages();
   return (
-    <>
-      <html lang={locale} className="scroll-smooth">
-        <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-        </Head>
-        <body
-          className={cn(
-            "font-sans  min-h-screen dark:bg-zinc-900 ",
-            fontSans.variable
-          )}
-        >
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <Header />
-              {children}
-              <Footer />
-            </ThemeProvider>
-          </NextIntlClientProvider>
-          <Analytics />
-          <SpeedInsights />
-        </body>
-      </html>
-    </>
+    <html lang={locale} className="scroll-smooth">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body
+        className={cn(
+          "font-sans  min-h-screen dark:bg-zinc-900 ",
+          fontSans.variable
+        )}
+      >
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
   );
 }

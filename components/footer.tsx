@@ -16,7 +16,7 @@ import { InstagramIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 
 export default function Footer() {
   return (
-    <footer className=" h-[10vh] pb-4  bordor-color-t xl:bordor-color-t-0 footer">
+    <footer className=" h-[10vh] pb-4  border-color-t xl:border-color-t-0 footer">
       <div id="footer" className="h-[8vh]">
         <Link href={`/`} className="flex items-center " prefetch={false}>
           <h2 className="text-2xl">

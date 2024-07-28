@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu  bordor-color   dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset] px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-md [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu  border-color   dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset] px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "bordor-color-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+          "border-color-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
         secondary:
-          "bordor-color-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "border-color-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
         destructive:
-          "bordor-color-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
+          "border-color-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
       },
     },

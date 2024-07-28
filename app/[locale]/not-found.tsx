@@ -6,6 +6,39 @@ import information from "@/information.json";
 import Section from "@/components/section";
 import OrbitingCircle from "@/components/orbitingCircles";
 import { useLocale } from "next-intl";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "404 Not Found";
+  const description = "The page you are looking for does not exist.";
+
+  const metadata = {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: information.website,
+      type: "website",
+      images: [
+        {
+          url: information.website + "/api/og?title=" + title,
+          alt: information.company + " Logo",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      site: "@" + information.slug,
+      title: title,
+      description: description,
+      images: information.website + "/api/og?title=" + title,
+    },
+  };
+
+  return metadata;
+}
 
 export default function NotFound() {
   const t = useTranslations("404");

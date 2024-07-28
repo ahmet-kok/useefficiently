@@ -121,7 +121,7 @@ export default function FeaturesCards() {
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {visibleGrid.map((feature) => (
-          <div key={feature.title} className="text-start group cards p-4 ">
+          <div key={feature.title} className="text-start group cards p-4">
             {feature.icon}
             <h4 className="my-2 text-lg">{feature.title}</h4>
             <p className="my-2">{feature.description}</p>
@@ -131,7 +131,7 @@ export default function FeaturesCards() {
       </div>
       {isMobile && visibleCount < grid.length && (
         <div className="flex justify-center mt-4">
-          <ShinyButton text="Show More" onClick={showMore}/>
+          <ShinyButton text="Show More" onClick={showMore} />
         </div>
       )}
     </div>

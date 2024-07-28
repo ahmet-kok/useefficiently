@@ -15,7 +15,7 @@ export default function DotPatternDemo() {
     <>
       <div className=" h-[150px]  cards">
         <div className="self-center flex w-full max-w-[600px] mx-auto h-full py-5 ">
-          <p className="text-[2rem] sm:text-5xl z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter self-center  p-1  dark:text-white bordor-color-bottom text-end w-[50%] sm:text-end sm:w-full">
+          <p className="text-[2rem] sm:text-5xl z-10  text-nowrap whitespace-pre-wrap  font-medium tracking-tighter self-center  p-1  dark:text-white border-color-bottom text-end w-[50%] sm:text-end sm:w-full">
             {information.firstPart}
           </p>
           <div className="z-10  mx-3  whitespace-pre-wrap  font-medium tracking-tighter  dark:text-white  self-center text-center w-full">

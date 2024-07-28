@@ -151,6 +151,10 @@ h6,
   @apply shrink min-w-fit mx-auto sm:max-w-[290px] w-full;
 }
 
+.border-color {
+  @apply dark:[border:1px_solid_#2F2F31] border;
+}
+
 .cards {
   @apply overflow-hidden rounded-lg border transform-gpu border-color;
 }
@@ -172,6 +176,3 @@ h6,
   @apply w-full flex items-center container md:rounded-lg justify-between xl:transform-gpu xl:bg-opacity-80 xl:backdrop-filter xl:bg-transparent backdrop-blur px-4  md:dark:[border:1px_solid_#2F2F31] md:border;
 }
 
-.border-color {
-  @apply dark:[border:1px_solid_#2F2F31] border;
-}

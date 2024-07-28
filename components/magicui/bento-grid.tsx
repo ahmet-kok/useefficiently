@@ -17,7 +17,6 @@ interface SocialIconProps {
   className?: string;
 }
 
-
 const SocialIcon: FC<SocialIconProps> = ({
   iconName,
   className,
@@ -67,22 +66,27 @@ const BentoCard = ({
   <div
     key={title}
     className={cn(
-      "group flex relative flex-col justify-between cards text-start p-6 col-span-3",
-      size === "sm" ? "lg:col-span-1" : size === "md" ? "lg:col-span-2" : "lg:col-span-3",
+      "group flex relative flex-col justify-between cards text-start p-6 col-span-3 ",
+      size === "sm"
+        ? "lg:col-span-1"
+        : size === "md"
+        ? "lg:col-span-2"
+        : "lg:col-span-3"
     )}
   >
     <div className="flex gap-5">
       {icons
         ? icons.map((icon, index) => (
-            <div className="bordor-color rounded-lg h-[60px] flex items-center" key={index}>
-              <SocialIcon
-                iconName={icon as IconName}
-                className="h-full p-4"
-              />
+            <div
+              className="border-color rounded-lg h-[60px] flex items-center"
+              key={index}
+            >
+              <SocialIcon iconName={icon as IconName} className="h-full p-4" />
             </div>
           ))
         : null}{" "}
     </div>
+
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 group-hover:-translate-y-10">
       <h3 className="text-xl font-semibold ">{title}</h3>
       <p className="max-w-lg ">{description}</p>
@@ -100,7 +104,6 @@ const BentoCard = ({
         </Link>
       </Button>
     </div>
-    <div className="card-hover" />
   </div>
 );
 

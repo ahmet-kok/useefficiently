@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import Section from "@/components/section";
 type IconName = "GithubIcon" | "TwitterIcon" | "LinkedinIcon";
-
+import Head from "next/head";
 const iconMapping: Record<IconName, FC<{ className?: string }>> = {
   GithubIcon,
   TwitterIcon,
