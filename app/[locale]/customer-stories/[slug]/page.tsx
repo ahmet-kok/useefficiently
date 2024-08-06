@@ -50,7 +50,7 @@ export const generateMetadata = async ({
 export default function CustomerStory({ params }: Props) {
   return (
     <>
-      <div className="w-full md:container mx-auto px-4 overflow-y-auto">
+      <div className="mx-auto container p-4 sm:p-6">
         <Link href="/customer-stories" className="w-[250px]">
           <ShinyButton
             text="Back to Other Customer Stories"
@@ -59,6 +59,14 @@ export default function CustomerStory({ params }: Props) {
         </Link>
       </div>
       <CustomerStoriesText slug={params.slug} />
+      <div className="flex p-8">
+        <Link href="/customer-stories" className="w-[250px] mx-auto">
+          <ShinyButton
+            text="Back to Other Customer Stories"
+            className="w-fit "
+          />
+        </Link>
+      </div>
       <Contact />
     </>
   );

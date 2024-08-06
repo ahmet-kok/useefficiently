@@ -26,6 +26,11 @@ export const pathnames = {
     de: "/customer-stories",
     tr: "/portfolyo",
   },
+  "/use-cases": {
+    en: "/use-cases",
+    de: "/use-cases",
+    tr: "/kullanim-alanlari",
+  },
   "/team": {
     en: "/team",
     de: "/mannschaft",

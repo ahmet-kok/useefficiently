@@ -24,11 +24,11 @@ const logos = [
     url: "/logos/TurkishEntrepreneurshipFoundation.svg",
     site: "https://girisimcilikvakfi.org",
   },
-  {
+  /* {
     name: "PublicSquare",
     url: "/logos/PublicSquare.svg",
     site: "https://publicsquare.com.au",
-  },
+  }, */
   {
     name: "Google Game and Application academy",
     url: "/logos/GoogleGameandApplicationAcademy.svg",

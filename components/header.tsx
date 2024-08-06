@@ -10,7 +10,7 @@ import {
 import { pathnames, locales } from "@/config";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
-import { MenuIcon, MountainIcon } from "@/components/icons";
+import { MenuIcon, UseEfficientlyIcon } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -49,19 +49,17 @@ export default function Header() {
           <div className="flex items-center">
             <Link
               href={`/${localActive}`}
-              className="flex items-center "
+              className="flex items-center sm:gap-2"
               prefetch={false}
             >
-              <MountainIcon className="h-8 w-8 mr-2" />
+              <UseEfficientlyIcon className="h-14 w-14 py-2 sm:py-0 "/>
               <h2
                 className="
-             font-semibold text-2xl sm:text-3xl 
+             font-semibold text-2xl sm:text-4xl 
             "
               >
                 {information.firstPart}
-                <span className="text-2xl sm:text-3xl text-red-700">
-                  {information.secondPart}
-                </span>
+                {information.secondPart}
               </h2>{" "}
             </Link>
           </div>

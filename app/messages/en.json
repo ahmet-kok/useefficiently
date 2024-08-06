@@ -9,6 +9,7 @@
     "light": "Light Mode",
     "system": "System",
     "customer-stories": "What Our Clients Say",
+    "use-cases": "Use Cases",
     "menu": "Menu",
     "team": "Who We Are",
     "blog": "Blog",
@@ -20,7 +21,7 @@
     "heroTitleStart": "Revolutionize your business with our Airtable solutions",
     "heroTitleEnd": "",
     "heroText": "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    "scheduleConsultation": "Book 15-Minute Free Call",
+    "scheduleConsultation": "Book 30-Minute Free Call",
     "learnMore": "Learn More",
     "bookACall": "Book a Call"
   },
@@ -42,7 +43,6 @@
       "story": "true",
       "text": "UseEfficiently has transformed our operations at Lingu Dil Okulu. Thanks to Lukas Kaiser and his team, we've streamlined our workflow, making everything more efficient. Their expertise with Airtable has saved us countless hours, allowing us to focus more on our students and less on administrative tasks. Highly recommended!",
       "slug": "lingu"
-    
     },
     "ClientTestimonials": {
       "title": "Client Testimonials",
@@ -54,7 +54,7 @@
     "title": "Our Joyful Team",
     "subtitle": "Meet the Experts Behind the Magic",
     "description": "Our talented team of no-code experts is dedicated to transforming businesses with innovative solutions. Get to know the faces behind the magic!",
-    "scheduleConsultation": "Book 15-Minute Free Call"
+    "scheduleConsultation": "Book 30-Minute Free Call"
   },
   "Stepper": {
     "title": "Our Process",
@@ -117,17 +117,17 @@
   "404": {
     "title": "Oops! Page Not Found",
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
-    "scheduleConsultation": "Book 15-Minute Free Call",
+    "scheduleConsultation": "Book 30-Minute Free Call",
     "returnHome": "Return Home"
   },
   "Contact": {
     "title": "Contact Us",
     "description": "Have a question or need more information? Get in touch with us, and we'll be happy to help!",
-    "scheduleConsultation": "Book 15-Minute Free Call"
+    "scheduleConsultation": "Book 30-Minute Free Call"
   },
   "Benefits": {
     "title": "Why we should work together",
     "description": "We are dedicated to providing top-notch support and innovative solutions in the no-code space. Our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    "scheduleConsultation": "Book 15-Minute Free Call"
+    "scheduleConsultation": "Book 30-Minute Free Call"
   }
 }

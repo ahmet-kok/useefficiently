@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Rubik as FontSans } from "next/font/google";
 import information from "@/information.json";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "@/app/globals.css";
 const fontSans = FontSans({
@@ -27,22 +27,22 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/x-icon",
       sizes: "32x32",
-      url: "/favicon.ico",
+      url: "/favicon-32x32.png",
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: "/favicon.ico",
+      url: "/useefficiently.png",
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/favicon.ico",
+      url: "/apple-touch-icon.png",
     },
   ],
   title: {
-    default: "UseEfficiently - Global Airtable Service Provider",
+    default: information.title,
     template: "%s | UseEfficiently - Global Airtable Service Provider",
   },
   description:
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
   openGraph: {
     title: {
-      default: "UseEfficiently - Global Airtable Service Provider",
+      default: information.title,
       template: "%s | UseEfficiently",
     },
     description:
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@" + information.slug,
     title: {
-      default: "UseEfficiently - Global Airtable Service Provider",
+      default: information.title,
       template: "%s | UseEfficiently",
     },
     description:
