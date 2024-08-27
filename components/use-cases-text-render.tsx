@@ -100,7 +100,7 @@ export function UseCasesText({ slug }: { slug: string }) {
     >
       {postContent ? (
         <article
-          className="prose dark:prose-invert prose-img:rounded-lg  prose-a:text-blue-600 mx-auto"
+          className="prose dark:prose-invert prose-img:rounded-xl  prose-a:text-blue-600 mx-auto"
           dangerouslySetInnerHTML={renderContent(postContent)}
         />
       ) : (

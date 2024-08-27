@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
 export function ChevronDownIcon(props: any) {
   return (
     <svg
@@ -16,6 +16,35 @@ export function ChevronDownIcon(props: any) {
     >
       <path d="m6 9 6 6 6-6" />
     </svg>
+  );
+}
+
+export function MakeIcon(props: any) {
+  return (
+    <>
+      <Image
+        src="/make-dark.svg"
+        className="dark:hidden"
+        width={400}
+        height={400}
+        alt="Make.com"
+      />
+      <Image
+        src="/make-light.svg"
+        className="hidden dark:inline-block"
+        width={400}
+        height={400}
+        alt="Make.com"
+      />
+    </>
+  );
+}
+export function BubbleIcon(props: any) {
+  return (
+    <>
+      <BubbleDarkIcon className="dark:hidden w-full" />
+      <BubbleLightIcon className="hidden dark:inline-block w-full" />
+    </>
   );
 }
 export function DotFilledIcon(props: any) {

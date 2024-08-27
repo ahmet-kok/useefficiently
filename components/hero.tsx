@@ -24,7 +24,7 @@ export default function HeroSection() {
         >
           <ShinyButton greenIcon text={t("scheduleConsultation")} />
         </Link>
-        <Link href="#testimonials" className="buttons">
+        <Link href="#more" className="buttons">
           <ShinyButton dark text={t("learnMore")} />
         </Link>
       </div>

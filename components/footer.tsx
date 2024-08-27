@@ -11,19 +11,34 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
+import Image from "next/image";
 
-import { InstagramIcon, LinkedinIcon, DiscordIcon, ArchiveIcon } from "@/components/icons";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  DiscordIcon,
+  ArchiveIcon,
+} from "@/components/icons";
 
 export default function Footer() {
+  const localActive = useLocale();
+
   return (
     <footer className=" h-[10vh] pb-4  border-color-t xl:border-color-t-0 footer">
       <div id="footer" className="h-[8vh]">
-        <Link href={`/`} className="flex items-center " prefetch={false}>
-          <h2 className="text-2xl">
-            {information.firstPart}
-            <span className="text-2xl text-red-700">
-              {information.secondPart}
-            </span>
+        <Link
+          href={`/${localActive}`}
+          className="flex items-center"
+          prefetch={false}
+        >
+          <h2
+            className="
+             font-normal text-lg sm:text-xl m-2
+            "
+          >
+            made with ❤️ by Team {information.firstPart}
+            {information.secondPart}
           </h2>{" "}
         </Link>
         <div>

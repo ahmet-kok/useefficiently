@@ -5,7 +5,9 @@ import Image from "next/image";
 import {
   AirtableIcon,
   BubbleDarkIcon,
+  BubbleIcon,
   BubbleLightIcon,
+  MakeIcon,
   SoftrIcon,
 } from "./icons";
 import information from "@/information.json";
@@ -22,9 +24,9 @@ export default function DotPatternDemo() {
               className="w-full"
               words={[
                 AirtableIcon({ className: "w-full" }),
-                Icons.make({ className: "w-full" }),
+                BubbleIcon({ className: "w-full" }),
                 SoftrIcon({ className: " w-full" }),
-                Icons.bubble(),
+                MakeIcon({ className: "w-full" }),
               ]}
             />
             <span>{information.secondPart}</span>

@@ -18,7 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import ShinyButton from "./magicui/shiny-button";
 
-const iconProps = "w-8 h-8 aria-hidden";
+const iconProps = "w-8 h-8 aria-hidden text-[#155EDE]";
 const grid = [
   {
     title: "Project Management",
@@ -118,10 +118,10 @@ export default function FeaturesCards() {
   const visibleGrid = isMobile ? grid.slice(0, visibleCount) : grid;
 
   return (
-    <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {visibleGrid.map((feature) => (
-          <div key={feature.title} className="text-start group cards p-4">
+          <div key={feature.title} className="text-start group cards p-4 ">
             {feature.icon}
             <h4 className="my-2 text-lg">{feature.title}</h4>
             <p className="my-2">{feature.description}</p>
@@ -134,6 +134,6 @@ export default function FeaturesCards() {
           <ShinyButton text="Show More" onClick={showMore} />
         </div>
       )}
-    </div>
+    </>
   );
 }

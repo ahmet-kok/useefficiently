@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { ModeToggle } from "./theme-toggle";
 
 import information from "@/information.json";
+import Image from "next/image";
 export default function Header() {
   const t = useTranslations("Header");
 
@@ -39,7 +40,7 @@ export default function Header() {
       <header className=" w-full top-0 fixed md:top-4 inset-x-0 z-[50]  header">
         <div
           id="header"
-          className="h-14 sm:h-[8vh]"
+          className="min-h-14 sm:h-[8vh]"
           style={
             {
               WebkitBackdropFilter: "blur(10px)",
@@ -49,10 +50,11 @@ export default function Header() {
           <div className="flex items-center">
             <Link
               href={`/${localActive}`}
-              className="flex items-center sm:gap-2"
+              className="flex items-center gap-2"
               prefetch={false}
             >
-              <UseEfficientlyIcon className="h-14 w-14 py-2 sm:py-0 "/>
+              {/* <UseEfficientlyIcon className="h-14 w-14 py-2 sm:py-0 "/> */}
+              <Image src={"/logo.png"} width={56} height={56} alt="Logo" className="rounded-xl"/>
               <h2
                 className="
              font-semibold text-2xl sm:text-4xl 

@@ -140,7 +140,7 @@ h6,
   @apply text-base md:text-lg lg:text-xl;
 }
 .green-icon {
-  @apply top-[-8px] right-[-8px] absolute z-50 w-5 h-5 bg-green-500 border-2 border-white border-color rounded-full;
+  @apply top-[-8px] right-[-8px] absolute z-40 w-5 h-5 bg-green-500 border-2 border-white border-color rounded-full;
 }
 
 .button-area {
@@ -156,7 +156,7 @@ h6,
 }
 
 .cards {
-  @apply overflow-hidden rounded-lg border transform-gpu border-color;
+  @apply overflow-hidden rounded-xl border transform-gpu border-color;
 }
 /* .card-hover {
  @apply pointer-events-none absolute inset-0 transform-gpu;
@@ -164,7 +164,7 @@ h6,
  */
 
 /* .cards {
- @apply overflow-hidden rounded-lg [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu border-color border border-color dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset];
+ @apply overflow-hidden rounded-xl [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu border-color border border-color dark:[box-shadow:0_-20px_20px_-20px_#ffffff1f_inset];
 }
 .card-hover {
  @apply pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10;
@@ -173,6 +173,12 @@ h6,
 
 #header,
 #footer {
-  @apply w-full flex items-center container md:rounded-lg justify-between xl:transform-gpu xl:bg-opacity-80 xl:backdrop-filter xl:bg-transparent backdrop-blur px-4  md:dark:[border:1px_solid_#2F2F31] md:border;
+  @apply w-full flex items-center container md:rounded-xl justify-between xl:transform-gpu xl:bg-opacity-80 xl:backdrop-filter xl:bg-transparent backdrop-blur m-0 p-2 md:dark:[border:1px_solid_#2F2F31] md:border;
 }
 
+
+/* #header,
+#footer {
+  @apply w-full flex items-center container md:rounded-xl justify-between px-4  md:dark:[border:1px_solid_#2F2F31] md:border bg-gray-300 xl:bg-gradient-to-t z-50;
+}
+ */
