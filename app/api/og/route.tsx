@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import { AirtableIcon } from "@/components/icons";
+import { SiAirtable as AirtableIcon } from "react-icons/si";
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
@@ -11,8 +12,11 @@ export async function GET(request: Request) {
     return new ImageResponse(
       (
         <div
+          className="bg-zinc-900"
           style={{
-            backgroundColor: "white",
+            color: "#f5f3ff",
+
+            backgroundColor: "#18181b",
             backgroundSize: "150px 150px",
             height: "100%",
             width: "100%",
@@ -22,55 +26,36 @@ export async function GET(request: Request) {
             justifyContent: "space-between",
             flexDirection: "column",
             flexWrap: "nowrap",
+            fontSize: 80,
+            marginBottom: 150,
+            padding: "0 20px",
+            whiteSpace: "pre-wrap",
+            paddingTop: 100,
+
           }}
         >
+
+          {title}
           <div
+            className=" border-zinc-700 p-2 text-violet-50 bg-zinc-800 border"
             style={{
+              marginBottom: 20,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              justifyItems: "center",
-              fontSize: 60,
-              fontStyle: "bold",
-              letterSpacing: "-0.025em",
-              lineHeight: 1.5,
-              whiteSpace: "pre-wrap",
-              height: 150,
-            }}
-          >
-            <img
-              alt="Vercel"
-              height={100}
-              src="http://localhost:3000/useefficiently.svg"
-              width={100}
-            />
-            <span>UseEfficiently</span>
-          </div>
-          <div
-            style={{
-              fontSize: 80,
-              fontStyle: "normal",
-              letterSpacing: "-0.025em",
-              lineHeight: 1.4,
-              padding: "0 40px",
-              whiteSpace: "pre-wrap",
-            }}
-          >
-            {title}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              justifyItems: "center",
               fontSize: 70,
               fontStyle: "normal",
               letterSpacing: "-0.025em",
               lineHeight: 1.4,
               whiteSpace: "pre-wrap",
-              height: 200,
+              padding: 8,
+              paddingLeft: 26,
+              paddingRight: 26,
               gap: 25,
+              borderWidth: 1,
+              borderRadius: 9999,
+              backgroundColor: "#27272a",
+              borderColor: "#3f3f46",
             }}
           >
             <span>Use</span>
