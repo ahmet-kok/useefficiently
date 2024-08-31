@@ -5,20 +5,28 @@ import Image from "next/image";
 import { Block } from "@/components/block";
 import TextRotate from "@/components/textRotate";
 import { useCases, customers, testimonials } from "@/use";
+import partner from "@/public/partner.svg";
+
 import { ButtonBlock as Button } from "@/components/button";
 export default function Page() {
   return (
     <>
-      <div className="grid place-content-center min-h-screen items-center justify-center gap-16">
+      <div className="grid grid-cols-1 place-content-center min-h-screen items-center justify-center space-y-6">
         <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
-          Revolutionize your business with our Airtable solutions
+          Optimize Your Business with UseEfficiently Services
         </h1>
-        <div className="text-center font-medium leading-tight text-violet-200">
-          <p className="mb-8 text-2xl">
-            At UseEfficiently,our team of experts is here to help you master
-            Airtable and use it efficiently to meet all your needs.
-          </p>
-          <div className="flex justify-center text-violet-50 gap-2 sm:w-8/12 mx-auto text-nowrap">
+        <div className="text-center space-y-5 font-medium leading-tight text-violet-200">
+          <Image
+            className="mx-auto mb-4"
+            src={partner}
+            width="250"
+            height="250"
+            alt="Accredited Airtable Services Partner"
+          />
+          <h2 className="text-xl sm:text-2xl text-center font-medium leading-tight text-violet-200">
+            Accredited Airtable Services Partner
+          </h2>
+          <div className="flex flex-wrap justify-center text-violet-50 gap-2 sm:w-8/12 mx-auto text-nowrap">
             <Link
               href={""}
               className="flex-1 flex gap-1 items-center border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer justify-center"
@@ -34,14 +42,14 @@ export default function Page() {
           </div>
         </div>
         <Block>
-          <div className="flex gap-10  items-center justify-center text-5xl">
+          <div className="flex gap-7 sm:gap-10  items-center justify-center text-4xl sm:text-5xl">
             <span>Use</span>
             <TextRotate text={text}></TextRotate> <span>Efficiently</span>
           </div>
         </Block>
       </div>
       <div className="mb-16">
-        <h2 className="text-5xl font-medium leading-tight mb-4 text-center">
+        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 text-center">
           Our Airtable Based Solutions
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -56,13 +64,15 @@ export default function Page() {
                 "bg-violet-400 border border-violet-300"
               )}
             >
-              <h3 className="text-2xl font-medium">{useCase.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-medium">
+                {useCase.title}
+              </h3>
             </Button>
           ))}
         </div>
       </div>
-      <div className="grid gap-8 mb-16">
-        <h2 className="text-5xl font-medium leading-tight text-center">
+      <div className="grid gap-8">
+        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 text-center">
           Our Customers and Testimonials
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
@@ -99,7 +109,7 @@ export default function Page() {
               {testimonial.quote.split("\n").map((item, key) => {
                 return (
                   <p key={key} className="mb-3">
-                    {item}
+                    &quot;{item}&quot;
                   </p>
                 );
               })}

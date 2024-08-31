@@ -111,7 +111,7 @@ export const useCases = [
 
 export const team = [
   {
-    name: "Leo 🦁",
+    name: "Leo",
     title: "Automation Developer",
     address: "Istanbul, Turkiye",
     quote:
@@ -120,8 +120,8 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/ahmet-kok/",
   },
   {
-    name: "Nate 🐢",
-    title: "Automation Developer",
+    name: "Nate",
+    title: "IT Administrator",
     address: "Ontario, Canada",
     quote:
       "Nate, as a tech lead, has spent over 5 years guiding teams to build custom solutions without a single line of code. His focus is on finding the smartest, most efficient ways to tackle problems. Nate takes pride in creating seamless systems that make work easier for everyone involved.",
@@ -129,8 +129,8 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/nusretdogan/",
   },
   {
-    name: "Lukas 🦕",
-    title: "Automation Developer",
+    name: "Lukas",
+    title: "Airtable Expert",
     address: "Clausthal, Germany",
     quote:
       "Lukas started exploring no-code tools over 3 years ago when he saw the potential to empower businesses to create without coding. He’s passionate about helping others realize that they don’t need to be developers to build something amazing. Lukas enjoys teaching others how to unlock the full potential of no-code.",

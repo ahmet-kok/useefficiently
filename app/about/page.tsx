@@ -73,10 +73,6 @@ export default function Page() {
                     <Link href={member.linkedin} className="">
                       <SiLinkedin className=""></SiLinkedin>
                     </Link>
-                    <p className="text-2xl text-nowrap flex items-center">
-                      <PiMapPin />
-                      <span className="text-base">{member.address}</span>
-                    </p>
                   </div>
                 </div>
               </div>

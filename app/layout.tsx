@@ -41,12 +41,12 @@ export const metadata: Metadata = {
   ],
   title: {
     default: information.title,
-    template: "%s | UseEfficiently - Global Airtable Service Provider",
+    template: "%s | UseEfficiently - Accredited Airtable Services Partner",
   },
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
   keywords:
-    "Airtable, No-Code Solutions, Airtable Service Provider, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
+    "Airtable, No-Code Solutions, Accredited Airtable Services Partner, UseEfficiently, Business Solutions,Airtable Interfaces, Airtable Automations, Airtable Team",
   openGraph: {
     title: {
       default: information.title,
@@ -92,8 +92,10 @@ export default function RootLayout({
         )}
       >
         <Header />
+<main className="mt-[60px] sm:mt-0">
 
         {children}
+</main>
         <Footer />
         <Modal />
       </body>
