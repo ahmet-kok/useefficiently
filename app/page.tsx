@@ -11,7 +11,7 @@ import { ButtonBlock as Button } from "@/components/button";
 export default function Page() {
   return (
     <>
-      <div className="grid grid-cols-1 place-content-center min-h-screen items-center justify-center space-y-6">
+      <div className="grid grid-cols-1 place-content-center min-h-screen items-center justify-center space-y-20">
         <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
           Optimize Your Business with UseEfficiently Services
         </h1>
