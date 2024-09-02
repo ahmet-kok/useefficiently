@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import { Block } from "@/components/block";
 import Link from "next/link";
+import information from "@/information.json";
 
 const Modal = () => {
   const handleOverlayClick = (
@@ -34,13 +35,14 @@ const Modal = () => {
             Learn More
           </Link>
 
-          <Link
-            target="_blank"
+          <button
+            data-cal-namespace=""
+            data-cal-link={information.calendly}
+            data-cal-config='{"layout":"month_view"}'
             className="border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer"
-            href="https://cal.com/useefficiently/30min"
           >
             Contact us
-          </Link>
+          </button>
         </div>
       </Block>
     </div>

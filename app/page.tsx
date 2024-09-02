@@ -6,7 +6,7 @@ import { Block } from "@/components/block";
 import TextRotate from "@/components/textRotate";
 import { useCases, customers, testimonials } from "@/use";
 import partner from "@/public/partner.svg";
-
+import information from "@/information.json";
 import { ButtonBlock as Button } from "@/components/button";
 export default function Page() {
   return (
@@ -27,14 +27,16 @@ export default function Page() {
             Accredited Airtable Services Partner
           </h2>
           <div className="flex flex-wrap justify-center text-violet-50 gap-2 sm:w-8/12 mx-auto text-nowrap">
-            <Link
-              href={""}
+            <button
+              data-cal-namespace=""
+              data-cal-link={information.calendly}
+              data-cal-config='{"layout":"month_view"}'
               className="flex-1 flex gap-1 items-center border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer justify-center"
             >
               <span className="text-xl">Book 30-Minute Free Call</span>
-            </Link>
+            </button>
             <Link
-              href={""}
+              href={"#about"}
               className="flex flex-1 gap-1 items-center border-zinc-700 bg-zinc-800 border p-2 rounded-full px-3 cursor-pointer text-center justify-center"
             >
               <span className="text-xl">Learn more</span>
@@ -48,8 +50,8 @@ export default function Page() {
           </div>
         </Block>
       </div>
-      <div className="mb-16">
-        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 text-center">
+      <div className="mb-16" id="about">
+        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 pt-32 text-center">
           Our Airtable Based Solutions
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -71,10 +73,10 @@ export default function Page() {
           ))}
         </div>
       </div>
+      <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 text-center">
+        Our Customers and Testimonials
+      </h2>
       <div className="grid gap-8">
-        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 text-center">
-          Our Customers and Testimonials
-        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
           {customers.map((customer) => (
             <Button

@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ["latin"] });
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Link from "next/link";
+import use from "@/public/use.svg";
+import Image from "next/image";
 import Modal from "@/components/modal";
 
 export const metadata: Metadata = {
@@ -92,12 +95,39 @@ export default function RootLayout({
         )}
       >
         <Header />
-<main className="mt-[60px] sm:mt-0">
-
-        {children}
-</main>
+        <header className="invisible mb-10 z-[50] px-4 text-xl">
+          <nav className="flex mx-auto justify-between max-w-4xl rounded-xl border border-zinc-700 bg-zinc-800 p-3 pr-6 items-center">
+            <Link href="/" className="flex items-center gap-1 text-3xl">
+              <span className="text-2xl hidden sm:inline-block">Use</span>
+              <Image
+                src={use}
+                width="50"
+                height="50"
+                alt="UseEfficiently Logo"
+              />{" "}
+              <span className="text-2xl hidden sm:inline-block">
+                Efficiently
+              </span>
+              <span className="sr-only">UseEfficiently</span>
+            </Link>
+            <ul className="flex gap-2">
+              <li>
+                <Link prefetch href="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link prefetch href="/about">
+                  About
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main className=" sm:mt-0">{children}</main>
         <Footer />
         <Modal />
+        <CalCom />
       </body>
     </html>
   );
