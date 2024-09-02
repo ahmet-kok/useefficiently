@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <div className="grid grid-cols-1 place-content-center min-h-screen items-center justify-center space-y-20">
         <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
-          Optimize Your Business with UseEfficiently Services
+          We assist brands to use technology efficiently
         </h1>
         <div className="text-center space-y-5 font-medium leading-tight text-violet-200">
           <Image
