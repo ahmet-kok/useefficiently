@@ -128,6 +128,9 @@ export default function RootLayout({
         <Footer />
         <Modal />
         <CalCom />
+        <Analytics />
+        <SpeedInsights />
+        <GoogleAnalytics gaId="G-MS4ZQ0JQQD" />
       </body>
     </html>
   );
