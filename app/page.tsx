@@ -81,7 +81,7 @@ export default function Page() {
           {customers.map((customer) => (
             <Button
               key={customer.name}
-              title={customer.name}
+              title={""}
               description={customer.detail ? customer.detail : customer.name}
               link={customer.linkedin}
               className="justify-center flex border border-violet-300 bg-violet-50 items-center"

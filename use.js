@@ -17,6 +17,42 @@ export const customers = [
     name: "Turkish Entrepreneurship Foundation",
     logo: "/logos/TurkishEntrepreneurshipFoundation.svg",
     linkedin: "https://www.girisimcilikvakfi.org/",
+    detail: `
+    <h2 id="who-is-girvak-">Who is GIRVAK?</h2>
+<p><a href="https://www.girisimcilikvakfi.org/">GIRVAK</a> is the largest entrepreneurship foundation in Turkey, established by prominent businesspeople. Their main sponsor is <a href="https://www.isbank.com.tr/en">Isbank</a>, the wealthiest bank in the country. They initiate projects, provide education, and collaborate directly with Turkey’s legal authorities to foster an entrepreneurship culture in every aspect.</p>
+<h2 id="what-do-we-do-for-them-">What do we do for them?</h2>
+<h3 id="-republic-of-turkey-ministry-of-trade-cooperative-program-"><strong>Republic of Turkey Ministry of Trade - Cooperative Program</strong></h3>
+<p><strong>We have built and manage the IT system for GIRVAK’s cooperative program, which they operate in conjunction with <a href="https://www.trade.gov.tr/">Turkey’s Ministry of Trade</a> using Airtable. This includes:</strong></p>
+<ul>
+<li>Collecting cooperative data and applications, expected to reach 5000.</li>
+<li>Sending tailored automated emails with API-integrated <a href="https://www.brevo.com/">Brevo</a> and <a href="https://airtable.com/developers/scripting">Airtable scripts</a>.</li>
+<li>Creating a semi-automated email system that allows the team to send bulk emails again with Brevo from the Airtable admin interface at will.</li>
+<li>Creating Airtable admin and visual interfaces for a two-step application process, allowing the coordinator to evaluate and interface with the data securely.</li>
+</ul>
+<h3 id="project-management-system-for-the-whole-girvak-team">Project Management System for the Whole GIRVAK Team</h3>
+<p><strong>This system is the ultimate project management tool for all organizational departments to manage their projects, tasks, activities, events, and team communications. The purpose of this general IT system is for the entire organization to use Airtable exclusively and manage all activities in one place. This also includes engaging with their applicants, jury, mentors, contacts, sponsors, and triggering automations like email sending.</strong></p>
+<h3 id="-young-talent-program-"><strong>Young Talent Program</strong></h3>
+<p><strong>The Young Talent Program receives the most applicants, over 150,000 annually, for entrepreneurship education for university students. We manage its entire IT process using Airtable and integrated apps, which includes:</strong></p>
+<ul>
+<li>A five-stage application process with unique validation conditions, managing and clearing all data, matching application stages optimally and securely. We also match ongoing applications with historical applicant data to scrape necessary information for the GIRVAK team and juries.</li>
+<li>Creating three different evaluation interfaces for over 100 Airtable-editor-permissioned juries to evaluate applicants and decide on their advancement to the next stage.</li>
+<li>Creating a fully automated Airtable system for juries to create availability, send calendar invites via <a href="https://zoom.us/">Zoom</a> or Google Calendar, and allow applicants to choose from available slots, adding them to the individual meetings of the juries.<ul>
+<li>Implementing a calendar cancellation system for both juries and applicants.</li>
+<li>Automating the process if two applicants choose the same slot within the same 10 seconds, moving one to another meeting at the same time with another jury if available; if not, informing the applicant to choose again. And many more detailed automations fully implemented in Airtable…</li>
+</ul>
+</li>
+<li>Creating Airtable dashboards with necessary information for every stage.</li>
+<li>Creating secure admin coordinator interfaces for the GIRVAK team to oversee and modify jury and applicant information, send bulk emails, reschedule meetings, and more.</li>
+<li>Integrating Slack automation for team needs and tagging specific departments or people.</li>
+</ul>
+<h3 id="-google-game-and-app-development-academy-"><strong>Google Game and App Development Academy</strong></h3>
+<p><strong>This is a Game and App Development Academy program operated in collaboration with Google. It involves a four-stage application process, with over 50,000 applications annually. We created the entire IT system and manage it during their program, which includes:</strong></p>
+<ul>
+<li>Creating a four-stage application process with specific requirements.</li>
+<li>Implementing both automated email sending using Brevo API and Airtable scripts, and a manual bulk email sending system for the team.</li>
+<li>Creating Airtable dashboards and secure admin interfaces for the GIRVAK team to interface and visualize the data for their tailored needs.</li>
+</ul>
+`,
   },
   {
     name: "Google Game and Application Academy",

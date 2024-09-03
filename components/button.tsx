@@ -106,7 +106,32 @@ const ButtonBlock = ({
     console.log(firstLink);
     if (!modalTitle || !modalDescription || !modalLink || !firstLink) return;
     modalTitle.textContent = title;
-    modalDescription.textContent = description;
+    /*     modalDescription.textContent = description;
+     */ // add modal description p tags by splitting with the \n character, also find the ## and make that line h2 tags.
+    // add a class to the h2 tags to make them bold and larger
+    // add a class to the p tags to make them smaller
+
+    /* modalDescription.innerHTML = description
+      .split("\n")
+      .map((item, key) => {
+        if (item.startsWith("###")) {
+          return `<h3 class="text-xl font-bold">${item.replace("#", "")}</h3>`;
+        } else if (item.startsWith("##")) {
+          return `<h2 class="text-2xl font-bold">${item.replace(
+            "##",
+            ""
+          )}</h2>`;
+        }
+        if (item.includes("**")) {
+          return item.replace("**", "<strong>").replace("**", "</strong>");
+        }
+        
+
+        return `<p class="mt-2">${item}</p>`;
+      })
+      .join(""); */
+
+    modalDescription.innerHTML = description;
     if (link.length > 0) {
       firstLink.classList.remove("hidden");
       firstLink.href = link;
@@ -141,4 +166,4 @@ const ButtonBlock = ({
   );
 };
 
-export {Button, ButtonBlock};
+export { Button, ButtonBlock };
