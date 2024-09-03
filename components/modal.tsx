@@ -25,7 +25,7 @@ const Modal = () => {
     >
       <Block className="w-11/12 md:w-2/3 lg:w-1/3">
         <h2 className="mb-4 text-3xl modal-title"></h2>
-        <p className="mb-4 modal-description"></p>
+        <div className="mb-4 modal-description"></div>
         <div className="flex modal-link justify-end space-x-2">
           <Link
             target="_blank"
