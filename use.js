@@ -3,12 +3,15 @@ export const customers = [
     name: "Yetkin Gençler",
     logo: "/logos/YetkinGencler.svg",
     linkedin: "https://www.yetkingencler.com/",
-    detail: "YetGen'de Nate 4 yıl boyunca cto olarak yer aldı ve bütün it teknolojileri konusunda ekipleri yönlendirdi.\n Eğitim teknolojileri alanında airtable ile verimli bir optimize bir sistem inşaa etti. Leo ve Lukas bu sistemin tasarımında yer aldı. Ölçeklenebilir bir sistem tasarlandığı için şu an YetGen ekibi airtable kullanmaya devam ediyor."
+    detail:
+      "YetGen'de Nate 4 yıl boyunca cto olarak yer aldı ve bütün it teknolojileri konusunda ekipleri yönlendirdi.\n Eğitim teknolojileri alanında airtable ile verimli bir optimize bir sistem inşaa etti. Leo ve Lukas bu sistemin tasarımında yer aldı. Ölçeklenebilir bir sistem tasarlandığı için şu an YetGen ekibi airtable kullanmaya devam ediyor.",
   },
   {
     name: "PublicSquare",
     logo: "/logos/PublicSquare.svg",
     linkedin: "https://www.publicsquare.com.au/",
+    detail:
+      "We’ve been working with the PublicSquare team since the beginning of 2024. We’re adding new automations to the existing Airtable system and regularly monitoring them. To reduce costs, we’re moving automations to more budget-friendly platforms and ensuring the system operates efficiently. \nCurrently, there are over 200 automations running at least 40,000 times a month, making PublicSquare an efficient technology user.",
   },
   {
     name: "Turkish Entrepreneurship Foundation",
@@ -39,7 +42,7 @@ export const testimonials = [
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/deanarnold1/",
     quote:
-      "We worked with UseEfficiently for a long time and received high-quality service. Communication with the team was easy, and it was clear that they were experienced in their field.",
+      "A+++. I was thoroughly impressed with the results of this project. It turned out to be far more complex than anticipated, requiring a significant amount of persistence and technical skill. Leo demonstrated exceptional proficiency as a full-stack developer, especially in working with APIs and developing intricate automations. His approach to testing, analysis, and selection of third-party services and APIs was both meticulous and strategic. Working with Ahmet was a genuinely positive experience, and we got the job done together where im sure other freelancers would have given up or started asking about additional fees and so on.",
   },
   {
     name: "Selin Altuntecim",
