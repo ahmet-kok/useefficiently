@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.modal *{
+.modal *,
+.article * {
   color: #f5f3ff !important;
+}
+
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.article h1,
+.article h2,
+.article h3,
+.article h4{
+  color: #ddd6fe !important;
 }

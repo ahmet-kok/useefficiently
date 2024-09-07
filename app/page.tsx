@@ -96,7 +96,7 @@ export default function Page() {
             </Button>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2 grid-flow-dense article">
           {testimonials.map((testimonial) => (
             <Button
               className={cn(
@@ -104,17 +104,17 @@ export default function Page() {
                 testimonial.span
               )}
               key={testimonial.name}
-              title={testimonial.name}
-              description={testimonial.quote}
+              title={""}
+              description={
+                customers.find((x) => x.slug === testimonial.slug)?.detail ||
+                testimonial.quote
+              }
               link={testimonial.linkedin}
             >
-              {testimonial.quote.split("\n").map((item, key) => {
-                return (
-                  <p key={key} className="mb-3">
-                    &quot;{item}&quot;
-                  </p>
-                );
-              })}
+              <article
+                className="prose-xl prose-zinc modal bg-zinc-800 prose-p:text-base"
+                dangerouslySetInnerHTML={{ __html: testimonial.quote }}
+              />
 
               <Link
                 href={testimonial.linkedin}

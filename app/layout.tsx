@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     {
       rel: "icon",
-      type: "image/png",
+      type: "image/svg+xml",
       sizes: "16x16",
       url: "/use.svg",
     },

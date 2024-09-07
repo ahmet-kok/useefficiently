@@ -95,42 +95,25 @@ const ButtonBlock = ({
   }) => {
     const modal = document.getElementById("modal");
     if (!modal) return;
-    const modalTitle = modal.querySelector(".modal-title");
-    const modalDescription = modal.querySelector(".modal-description");
+    const subModal = modal.querySelector(".submodal");
     const modalLink = modal.querySelector(".modal-link");
-    if (!modalLink) return;
-
+    if (!subModal || !modalLink) return;
+    const article = subModal.querySelector(".article");
     const firstLink = modalLink.querySelector(
       ".first-link"
     ) as HTMLAnchorElement;
-    console.log(firstLink);
+    if (!article || !firstLink) return;
+    const modalTitle = article.querySelector(
+      ".modal-title"
+    ) as HTMLHeadingElement;
+    const modalDescription = article.querySelector(".modal-description");
     if (!modalTitle || !modalDescription || !modalLink || !firstLink) return;
     modalTitle.textContent = title;
-    /*     modalDescription.textContent = description;
-     */ // add modal description p tags by splitting with the \n character, also find the ## and make that line h2 tags.
-    // add a class to the h2 tags to make them bold and larger
-    // add a class to the p tags to make them smaller
-
-    /* modalDescription.innerHTML = description
-      .split("\n")
-      .map((item, key) => {
-        if (item.startsWith("###")) {
-          return `<h3 class="text-xl font-bold">${item.replace("#", "")}</h3>`;
-        } else if (item.startsWith("##")) {
-          return `<h2 class="text-2xl font-bold">${item.replace(
-            "##",
-            ""
-          )}</h2>`;
-        }
-        if (item.includes("**")) {
-          return item.replace("**", "<strong>").replace("**", "</strong>");
-        }
-        
-
-        return `<p class="mt-2">${item}</p>`;
-      })
-      .join(""); */
-
+    if (title === "") {
+      modalTitle.classList.add("hidden");
+    } else {
+      modalTitle.classList.remove("hidden");
+    }
     modalDescription.innerHTML = description;
     if (link.length > 0) {
       firstLink.classList.remove("hidden");
