@@ -5,6 +5,9 @@ export const customers = [
     logo: "/logos/YetkinGencler.svg",
     linkedin: "https://www.yetkingencler.com/",
     title: `<h1 id="who-is-yetgen-">YetGen</h1>`,
+    metaTitle: "Yetkin Gençler",
+    description:
+      "Yetkin Gençler is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable",
     detail: `<p>YetGen is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable</p>`,
   },
   {
@@ -13,6 +16,9 @@ export const customers = [
     logo: "/logos/PublicSquare.svg",
     linkedin: "https://www.publicsquare.com.au/",
     title: `<h1 id="who-is-publicsquare-">PublicSquare</h1>`,
+    metaTitle: "PublicSquare",
+    description:
+      "PublicSquare is a private fintech company based in Brisbane, Australia. Since launching in November 2021, the company has attracted strong interest from customers and investors by making its products accessible to as many aspiring homebuyers as possible.",
     detail: `<p>Founded by returning ex-pat and entrepreneur, Dean Arnold, PublicSquare is a private fintech company based in Brisbane, Australia. Since launching in November 2021, the company has attracted strong interest from customers and investors by making its products accessible to as many aspiring homebuyers as possible.</p>
 <h2 id="our-collaboration-with-publicsquare">Our Collaboration with PublicSquare</h2>
 <p>We’ve been working with the PublicSquare team since the beginning of 2024 to enhance their Airtable system. We continuously add new automations and regularly monitor them to ensure everything runs smoothly. To cut costs, we’re migrating automations to more budget-friendly platforms while keeping the system efficient.</p>
@@ -33,6 +39,9 @@ export const customers = [
     logo: "/logos/TurkiyeEntrepreneurshipFoundation.svg",
     linkedin: "https://www.girisimcilikvakfi.org/",
     title: `<h1 id="who-is-girvak-">Turkiye Entrepreneurship Foundation</h1>`,
+    metaTitle: "Turkiye Entrepreneurship Foundation",
+    description:
+      "GIRVAK is the largest entrepreneurship foundation in Turkey, established by prominent businesspeople. Their main sponsor is Isbank, the wealthiest bank in the country. They initiate projects, provide education, and collaborate directly with Turkey’s legal authorities to foster an entrepreneurship culture in every aspect.",
     detail: `<p><a href="https://www.girisimcilikvakfi.org/">GIRVAK</a> is the largest entrepreneurship foundation in Turkey, established by prominent businesspeople. Their main sponsor is <a href="https://www.isbank.com.tr/en">Isbank</a>, the wealthiest bank in the country. They initiate projects, provide education, and collaborate directly with Turkey’s legal authorities to foster an entrepreneurship culture in every aspect.</p>
 <h2 id="what-do-we-do-for-them-">What do we do for them?</h2>
 <h3 id="-republic-of-turkey-ministry-of-trade-cooperative-program-">Republic of Turkey Ministry of Trade - Cooperative Program</h3>
@@ -74,6 +83,9 @@ export const customers = [
     logo: "/logos/GoogleGameandApplicationAcademy.svg",
     linkedin: "https://www.yapayzekaveteknolojiakademisi.com/",
     title: `<h1 id="google-game-and-app-development-academy">Google Game and App Development Academy</h1>`,
+    metaTitle: "Google Game and App Development Academy",
+    description:
+      "This is a Game and App Development Academy program operated in collaboration with Google. It involves a four-stage application process, with over 50,000 applications annually. We created the entire IT system and manage it during their program.",
     detail: `<p>This is a Game and App Development Academy program operated in collaboration with Google. It involves a four-stage application process, with over 50,000 applications annually. We created the entire IT system and manage it during their program, which includes:</p>
 <ul>
 <li>Creating a four-stage application process with specific requirements.</li>
