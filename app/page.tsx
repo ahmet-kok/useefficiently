@@ -11,7 +11,7 @@ import { ButtonBlock as Button } from "@/components/button";
 export default function Page() {
   return (
     <>
-      <div className="grid grid-cols-1 place-content-center min-h-screen items-center justify-center space-y-20">
+      <div className="grid grid-cols-1 place-content-between pt-20 items-center justify-center space-y-20">
         <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
           We assist brands to use technology efficiently
         </h1>
@@ -51,7 +51,7 @@ export default function Page() {
         </Block>
       </div>
       <div className="mb-16" id="about">
-        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 pt-32 text-center">
+        <h2 className="text-3xl sm:text-5xl font-medium leading-tight mb-4 pt-16 text-center">
           Our Airtable Based Solutions
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -81,13 +81,12 @@ export default function Page() {
           {customers.map((customer) => (
             <Button
               key={customer.name}
-              title={""}
+              title={customer.name}
               description={customer.detail ? customer.detail : customer.name}
               link={customer.linkedin}
               className="justify-center flex border border-violet-300 bg-violet-50 items-center"
             >
               <Image
-                className=""
                 width={200}
                 height={200}
                 src={customer.logo}
@@ -104,7 +103,9 @@ export default function Page() {
                 testimonial.span
               )}
               key={testimonial.name}
-              title={""}
+              title={
+                customers.find((x) => x.slug === testimonial.slug)?.name || ""
+              }
               description={
                 customers.find((x) => x.slug === testimonial.slug)?.detail ||
                 testimonial.quote

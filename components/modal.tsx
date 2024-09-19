@@ -2,9 +2,7 @@
 import { Block } from "@/components/block";
 import Link from "next/link";
 import information from "@/information.json";
-import { RiCloseCircleFill, RiCloseCircleLine } from "react-icons/ri";
 import React from "react";
-import { IoIosCloseCircle } from "react-icons/io";
 
 const Modal = () => {
   const handleOverlayClick = (
@@ -21,6 +19,7 @@ const Modal = () => {
       if (!modal) return;
       modal.classList.add("hidden");
       modal.classList.remove("flex");
+      document.body.style.overflow = "unset";
     }
   };
 
@@ -30,13 +29,9 @@ const Modal = () => {
       className="fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 hidden"
       onClick={handleOverlayClick}
     >
-      <Block className="max-w-4xl max-h-[90vh] overflow-scroll space-y-5 modal relative">
-        <div className="flex justify-between submodal">
-          <div className="article space-y-5">
-            <h2 className="text-3xl modal-title"></h2>
-            <article className="prose lg:prose-xl  prose-zinc modal-description bg-zinc-800"></article>
-          </div>
-
+      <Block className="max-w-4xl max-h-[90vh] overflow-scroll space-y-5 modal relative mx-5">
+        <div className="flex justify-between submodal flex-nowrap">
+          <h2 className="text-5xl font-extrabold modal-title prose-xl"></h2>
           <button
             onClick={handleOverlayClick}
             className="h-min w-min justify-self-end text-4xl border border-violet-300 bg-violet-400 p-0 pb-1 rounded-full px-3 cursor-pointer items-center justify-center text-center text-violet-50"
@@ -44,6 +39,8 @@ const Modal = () => {
             &times;
           </button>
         </div>
+        <article className="prose lg:prose-xl  prose-zinc modal-description bg-zinc-800"></article>
+
         <div className="flex modal-link justify-end space-x-2">
           <Link
             target="_blank"

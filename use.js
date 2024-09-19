@@ -4,15 +4,16 @@ export const customers = [
     name: "Yetkin Gençler",
     logo: "/logos/YetkinGencler.svg",
     linkedin: "https://www.yetkingencler.com/",
-    detail: `<h1 id="who-is-yetgen-">YetGen</h1><p>YetGen is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable</p>`,
+    title: `<h1 id="who-is-yetgen-">YetGen</h1>`,
+    detail: `<p>YetGen is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable</p>`,
   },
   {
     slug: "publicsquare",
     name: "PublicSquare",
     logo: "/logos/PublicSquare.svg",
     linkedin: "https://www.publicsquare.com.au/",
-    detail: `<h1 id="who-is-publicsquare-">PublicSquare</h1>
-<p>Founded by returning ex-pat and entrepreneur, Dean Arnold, PublicSquare is a private fintech company based in Brisbane, Australia. Since launching in November 2021, the company has attracted strong interest from customers and investors by making its products accessible to as many aspiring homebuyers as possible.</p>
+    title: `<h1 id="who-is-publicsquare-">PublicSquare</h1>`,
+    detail: `<p>Founded by returning ex-pat and entrepreneur, Dean Arnold, PublicSquare is a private fintech company based in Brisbane, Australia. Since launching in November 2021, the company has attracted strong interest from customers and investors by making its products accessible to as many aspiring homebuyers as possible.</p>
 <h2 id="our-collaboration-with-publicsquare">Our Collaboration with PublicSquare</h2>
 <p>We’ve been working with the PublicSquare team since the beginning of 2024 to enhance their Airtable system. We continuously add new automations and regularly monitor them to ensure everything runs smoothly. To cut costs, we’re migrating automations to more budget-friendly platforms while keeping the system efficient.</p>
 <h2 id="over-200-automations-in-action">Over 200 Automations in Action</h2>
@@ -28,12 +29,11 @@ export const customers = [
   },
   {
     slug: "girvak",
-    name: "Turkish Entrepreneurship Foundation",
-    logo: "/logos/TurkishEntrepreneurshipFoundation.svg",
+    name: "Turkiye Entrepreneurship Foundation",
+    logo: "/logos/TurkiyeEntrepreneurshipFoundation.svg",
     linkedin: "https://www.girisimcilikvakfi.org/",
-    detail: `
-    <h1 id="who-is-girvak-">Turkiye Entrepreneurship Foundation</h1>
-<p><a href="https://www.girisimcilikvakfi.org/">GIRVAK</a> is the largest entrepreneurship foundation in Turkey, established by prominent businesspeople. Their main sponsor is <a href="https://www.isbank.com.tr/en">Isbank</a>, the wealthiest bank in the country. They initiate projects, provide education, and collaborate directly with Turkey’s legal authorities to foster an entrepreneurship culture in every aspect.</p>
+    title: `<h1 id="who-is-girvak-">Turkiye Entrepreneurship Foundation</h1>`,
+    detail: `<p><a href="https://www.girisimcilikvakfi.org/">GIRVAK</a> is the largest entrepreneurship foundation in Turkey, established by prominent businesspeople. Their main sponsor is <a href="https://www.isbank.com.tr/en">Isbank</a>, the wealthiest bank in the country. They initiate projects, provide education, and collaborate directly with Turkey’s legal authorities to foster an entrepreneurship culture in every aspect.</p>
 <h2 id="what-do-we-do-for-them-">What do we do for them?</h2>
 <h3 id="-republic-of-turkey-ministry-of-trade-cooperative-program-">Republic of Turkey Ministry of Trade - Cooperative Program</h3>
 <p>We have built and manage the IT system for GIRVAK’s cooperative program, which they operate in conjunction with <a href="https://www.trade.gov.tr/">Turkey’s Ministry of Trade</a> using Airtable. This includes:</p>
@@ -73,8 +73,8 @@ export const customers = [
     name: "Google Game and Application Academy",
     logo: "/logos/GoogleGameandApplicationAcademy.svg",
     linkedin: "https://www.yapayzekaveteknolojiakademisi.com/",
-    detail: `<h1 id="google-game-and-app-development-academy">Google Game and App Development Academy</h1>
-<p>This is a Game and App Development Academy program operated in collaboration with Google. It involves a four-stage application process, with over 50,000 applications annually. We created the entire IT system and manage it during their program, which includes:</p>
+    title: `<h1 id="google-game-and-app-development-academy">Google Game and App Development Academy</h1>`,
+    detail: `<p>This is a Game and App Development Academy program operated in collaboration with Google. It involves a four-stage application process, with over 50,000 applications annually. We created the entire IT system and manage it during their program, which includes:</p>
 <ul>
 <li>Creating a four-stage application process with specific requirements.</li>
 <li>Implementing both automated email sending using Brevo API and Airtable scripts, and a manual bulk email sending system for the team.</li>
@@ -97,7 +97,7 @@ export const testimonials = [
   {
     slug: "girvak",
     name: "Selin Altuntecim",
-    title: "Coordinator, Turkish Entrepreneurship Foundation",
+    title: "Coordinator, Turkiye Entrepreneurship Foundation",
     pic: "/images/Selin-Altuntecim.jpeg",
     span: "sm:col-span-2",
     linkedin: "https://www.linkedin.com/in/selin-altuntecim/",

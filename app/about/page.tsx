@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   return (
     <>
-      <div className="grid place-content-center grid-cols-1 min-h-screen items-center justify-center gap-16">
+      <div className="grid place-content-center grid-cols-1 pt-20 items-center justify-center gap-16 bg-orange-400">
         <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
           Team UseEfficiently
         </h1>
@@ -63,22 +63,22 @@ export default function Page() {
                 alt={member.name}
               />
               <div className="border border-zinc-700 flex bg-zinc-800 p-2 w-full rounded-full absolute">
-                <div className="" style={{ width: "150px" }}></div>
+                <div style={{ width: "150px" }}></div>
                 <div>
                   <h2 className="text-3xl font-medium">{member.name}</h2>
                   <h3 className="text-lg leading-tight text-violet-200 mb-2">
                     {member.title}
                   </h3>
                   <div className="w-min flex gap-2 text-violet-200 text-2xl items-center jus">
-                    <Link href={member.linkedin} className="">
-                      <SiLinkedin className=""></SiLinkedin>
+                    <Link href={member.linkedin} target="_blank">
+                      <SiLinkedin />
                     </Link>
                   </div>
                 </div>
               </div>
             </Button>
           ))}
-          <Button
+          {/*           <Button
             key="Your Name"
             title="Your Name"
             description="You can be here!"
@@ -94,7 +94,7 @@ export default function Page() {
               alt="Your Name"
             />
             <div className="border border-zinc-700 flex bg-zinc-800 p-6 w-full rounded-full absolute">
-              <div className="" style={{ width: "140px" }}></div>
+              <div style={{ width: "140px" }}></div>
               <div>
                 <h2 className="text-3xl font-medium">Your Name</h2>
                 <h3 className="text-lg leading-tight text-violet-200 mb-2">
@@ -102,7 +102,7 @@ export default function Page() {
                 </h3>
               </div>
             </div>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </>

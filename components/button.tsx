@@ -98,15 +98,14 @@ const ButtonBlock = ({
     const subModal = modal.querySelector(".submodal");
     const modalLink = modal.querySelector(".modal-link");
     if (!subModal || !modalLink) return;
-    const article = subModal.querySelector(".article");
     const firstLink = modalLink.querySelector(
       ".first-link"
     ) as HTMLAnchorElement;
-    if (!article || !firstLink) return;
-    const modalTitle = article.querySelector(
+    if (!firstLink) return;
+    const modalTitle = subModal.querySelector(
       ".modal-title"
     ) as HTMLHeadingElement;
-    const modalDescription = article.querySelector(".modal-description");
+    const modalDescription = modal.querySelector(".modal-description");
     if (!modalTitle || !modalDescription || !modalLink || !firstLink) return;
     modalTitle.textContent = title;
     if (title === "") {
@@ -121,6 +120,7 @@ const ButtonBlock = ({
     } else firstLink.classList.add("hidden");
     modal.classList.add("flex");
     modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
@@ -128,6 +128,7 @@ const ButtonBlock = ({
     if (!modal) return;
     modal.classList.add("hidden");
     modal.classList.remove("flex");
+    document.body.style.overflow = "unset";
   };
   return (
     <button

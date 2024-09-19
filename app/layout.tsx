@@ -91,40 +91,13 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "min-h-screen bg-zinc-900  text-violet-50 px-4 max-w-4xl mx-auto"
+          "min-h-screen bg-zinc-900  text-violet-50 px-4 max-w-4xl mx-auto flex-cols relative"
         )}
       >
         <Header />
-        <header className="invisible mb-10 z-[50] px-4 text-xl">
-          <nav className="flex mx-auto justify-between max-w-4xl rounded-xl border border-zinc-700 bg-zinc-800 p-3 pr-6 items-center">
-            <Link href="/" className="flex items-center gap-1 text-3xl">
-              <span className="text-2xl hidden sm:inline-block">Use</span>
-              <Image
-                src={use}
-                width="50"
-                height="50"
-                alt="UseEfficiently Logo"
-              />{" "}
-              <span className="text-2xl hidden sm:inline-block">
-                Efficiently
-              </span>
-              <span className="sr-only">UseEfficiently</span>
-            </Link>
-            <ul className="flex gap-2">
-              <li>
-                <Link prefetch href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link prefetch href="/about">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <div className="h-[6rem] invisible bg-orange-400"></div>
         <main className=" sm:mt-0">{children}</main>
+        <div className="h-[8rem] invisible"></div>
         <Footer />
         <Modal />
         <CalCom />
