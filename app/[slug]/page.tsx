@@ -56,7 +56,7 @@ export default function CustomerStory({ params }: Props) {
       </div>
 
       <article
-        className="prose-xl prose-zinc article"
+        className="prose sm:prose-xl prose-zinc article"
         dangerouslySetInnerHTML={{ __html: title + detail }}
       />
       <div className="flex p-8">

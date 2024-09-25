@@ -29,17 +29,17 @@ const Modal = () => {
       className="fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 hidden"
       onClick={handleOverlayClick}
     >
-      <Block className="max-w-4xl max-h-[90vh] overflow-scroll space-y-5 modal relative mx-5">
+      <Block className="max-w-4xl max-h-[90vh] overflow-scroll space-y-5 modal relative mx-2">
         <div className="flex justify-between submodal flex-nowrap">
-          <h2 className="text-5xl font-extrabold modal-title prose-xl"></h2>
+          <h2 className="text-3xl sm:text-5xl font-extrabold modal-title"></h2>
           <button
             onClick={handleOverlayClick}
-            className="h-min w-min justify-self-end text-4xl border border-violet-300 bg-violet-400 p-0 pb-1 rounded-full px-3 cursor-pointer items-center justify-center text-center text-violet-50"
+            className="h-min w-min justify-self-end text-3xl border border-violet-300 bg-violet-400 p-0 pb-0 rounded-full px-2 cursor-pointer items-center justify-center text-center text-violet-50"
           >
             &times;
           </button>
         </div>
-        <article className="prose lg:prose-xl  prose-zinc modal-description bg-zinc-800"></article>
+        <article className="prose-lg lg:prose-xl prose-zinc modal-description"></article>
 
         <div className="flex modal-link justify-end space-x-2">
           <Link

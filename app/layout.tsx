@@ -16,9 +16,6 @@ const inter = Inter({ subsets: ["latin"] });
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Link from "next/link";
-import use from "@/public/use.svg";
-import Image from "next/image";
 import Modal from "@/components/modal";
 
 export const metadata: Metadata = {
@@ -28,18 +25,48 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/x-icon",
       sizes: "32x32",
-      url: "/use.svg",
+      url: "/favicon-32x32.png",
     },
     {
       rel: "icon",
-      type: "image/svg+xml",
+      type: "image/png",
+      sizes: "192x192",
+      url: "/android-chrome-192x192.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "512x512",
+      url: "/android-chrome-512x512.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "96x96",
+      url: "/favicon-96x96.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
       sizes: "16x16",
-      url: "/use.svg",
+      url: "/favicon-16x16.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon-16x16.png",
+    },
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      sizes: "16x16",
+      url: "/favicon.ico",
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/use.svg",
+      url: "/apple-touch-icon.png",
     },
   ],
   title: {
