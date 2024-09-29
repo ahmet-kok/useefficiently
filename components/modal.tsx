@@ -29,7 +29,7 @@ const Modal = () => {
       className="fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 hidden"
       onClick={handleOverlayClick}
     >
-      <Block className="max-w-4xl max-h-[90vh] overflow-scroll space-y-5 modal relative mx-2">
+      <Block className="max-w-4xl max-h-[90vh] overflow-y-auto space-y-5 modal relative mx-2 overflow-x-hidden">
         <div className="flex justify-between submodal flex-nowrap">
           <h2 className="text-3xl sm:text-5xl font-extrabold modal-title"></h2>
           <button
