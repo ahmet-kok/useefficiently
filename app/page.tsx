@@ -119,6 +119,7 @@ export default function Page() {
 
               <Link
                 href={testimonial.linkedin}
+                target="_blank"
                 className="flex items-center gap-2"
               >
                 <Image
