@@ -104,7 +104,7 @@ export const testimonials = [
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/deanarnold1/",
     quote:
-      "<p>A+++. I was thoroughly impressed with the results of this project. It turned out to be far more complex than anticipated, requiring a significant amount of persistence and technical skill. Ahmet demonstrated exceptional proficiency as a full-stack developer, especially in working with APIs and developing intricate automations. His approach to testing, analysis, and selection of third-party services and APIs was both meticulous and strategic. Working with Ahmet was a genuinely positive experience, and we got the job done together where im sure other freelancers would have given up or started asking about additional fees and so on.</p>",
+      "<p>A+++. I was thoroughly impressed with the results of this project. It turned out to be far more complex than anticipated, requiring a significant amount of persistence and technical skill. Leo demonstrated exceptional proficiency as a full-stack developer, especially in working with APIs and developing intricate automations. His approach to testing, analysis, and selection of third-party services and APIs was both meticulous and strategic. Working with Leo was a genuinely positive experience, and we got the job done together where im sure other freelancers would have given up or started asking about additional fees and so on.</p>",
   },
   {
     slug: "girvak",
@@ -186,11 +186,11 @@ export const useCases = [
 
 export const team = [
   {
-    name: "Ahmet",
+    name: "Leo",
     title: "Automation Developer",
     address: "Istanbul, Turkiye",
     quote:
-      "Ahmet is all about making things work better. With a deep understanding of Airtable, he’s transformed how businesses handle their workflows. He loves seeing others succeed and often shares his expertise with the community, turning complex tasks into simple, efficient processes.",
+      "Leo is all about making things work better. With a deep understanding of Airtable, he’s transformed how businesses handle their workflows. He loves seeing others succeed and often shares his expertise with the community, turning complex tasks into simple, efficient processes.",
     pic: "/images/leo.jpeg",
     linkedin: "https://www.linkedin.com/in/ahmet-kok/",
   },
