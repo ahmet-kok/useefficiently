@@ -122,7 +122,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        <div className="h-[6rem] invisible bg-orange-400"></div>
+        <div className="h-[6rem] invisible "></div>
         <main className=" sm:mt-0">{children}</main>
         <div className="h-[8rem] invisible"></div>
         <Footer />

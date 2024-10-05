@@ -10,7 +10,7 @@ export const customers = [
       "Yetkin Gençler is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable",
     detail: `<p>YetGen is a 14-week online educational program that currently attracts more than 10,000 applicants and engages 2,000 participants per cohort. Participant’s data on attendance, course completion are sourced from different platforms and turned in to meaningful insights on Airtable</p>`,
   },
-  {
+/*   {
     slug: "publicsquare",
     name: "PublicSquare",
     logo: "/logos/PublicSquare.svg",
@@ -32,7 +32,7 @@ export const customers = [
 <h3 id="workflow-optimizations">Workflow Optimizations</h3>
 <p>Enhancing internal processes to ensure a smoother, more effective workflow.</p>
 `,
-  },
+  }, */
   {
     slug: "girvak",
     name: "Turkiye Entrepreneurship Foundation",
@@ -96,7 +96,7 @@ export const customers = [
 ];
 
 export const testimonials = [
-  {
+ /*  {
     slug: "publicsquare",
     name: "Dean Arnold",
     title: "CEO, PublicSquare",
@@ -105,13 +105,13 @@ export const testimonials = [
     linkedin: "https://www.linkedin.com/in/deanarnold1/",
     quote:
       "<p>A+++. I was thoroughly impressed with the results of this project. It turned out to be far more complex than anticipated, requiring a significant amount of persistence and technical skill. Leo demonstrated exceptional proficiency as a full-stack developer, especially in working with APIs and developing intricate automations. His approach to testing, analysis, and selection of third-party services and APIs was both meticulous and strategic. Working with Leo was a genuinely positive experience, and we got the job done together where im sure other freelancers would have given up or started asking about additional fees and so on.</p>",
-  },
+  }, */
   {
     slug: "girvak",
     name: "Selin Altuntecim",
     title: "Coordinator, Turkiye Entrepreneurship Foundation",
     pic: "/images/Selin-Altuntecim.jpeg",
-    span: "sm:col-span-2",
+    span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/selin-altuntecim/",
     quote: `<p>They’re a fun and energetic team that keeps us ahead in IT. We truly appreciate their dedication. We’ve successfully collaborated on 5 projects, each one building on the last. They assist us in delivering education programs to over 150,000 applicants annually and manage IT for our projects with the Republic of Turkey Ministry of Trade, supporting 5,000 corporations. All our workflows are seamlessly managed in Airtable, with customized apps tailored to each department’s needs.</p><p>This team ensures we can manage large-scale programs with confidence, where our credibility is crucial. We value our partnership and look forward to many more projects together.</p>`,
   },
