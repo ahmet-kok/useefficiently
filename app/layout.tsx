@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: information.website + "/api/og?title=" + information.company,
+        url: information.website + "/api/og?title=" + information.company + "\nAirtable Services Partner",
         alt: information.company + " Logo",
       },
     ],

@@ -7,7 +7,7 @@ export async function GET(request: Request) {
     const hasTitle = searchParams.has("title");
     const title = hasTitle
       ? searchParams.get("title")?.slice(0, 100)
-      : "My default title";
+      : "UseEfficiently\nAirtable Services Partner";
 
     return new ImageResponse(
       (
