@@ -114,6 +114,7 @@ const ButtonBlock = ({
       modalTitle.classList.remove("hidden");
     }
     modalDescription.innerHTML = description;
+
     if (link.length > 0) {
       firstLink.classList.remove("hidden");
       firstLink.href = link;

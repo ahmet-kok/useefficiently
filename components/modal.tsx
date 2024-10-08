@@ -17,12 +17,16 @@ const Modal = () => {
     if (e.target === e.currentTarget) {
       const modal = document.getElementById("modal");
       if (!modal) return;
+
       modal.classList.replace("opacity-100", "opacity-0");
       setTimeout(() => {
         modal.classList.add("hidden");
         modal.classList.remove("flex");
       }, 300);
       document.body.style.overflow = "unset";
+      const subModal = modal.querySelector(".modal");
+      if (!subModal) return;
+      subModal.scrollTop = 0;
     }
     3;
   };
