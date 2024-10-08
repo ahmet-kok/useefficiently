@@ -120,16 +120,12 @@ const ButtonBlock = ({
     } else firstLink.classList.add("hidden");
     modal.classList.add("flex");
     modal.classList.remove("hidden");
+    setTimeout(() => {
+      modal.classList.replace("opacity-0", "opacity-100");
+    }, 0.1);
     document.body.style.overflow = "hidden";
   };
 
-  const closeModal = () => {
-    const modal = document.getElementById("modal");
-    if (!modal) return;
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.style.overflow = "unset";
-  };
   return (
     <button
       onClick={() =>

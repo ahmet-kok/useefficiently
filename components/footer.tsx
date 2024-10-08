@@ -3,7 +3,7 @@ import { SiLinkedin, SiUpwork, SiInstagram, SiX } from "react-icons/si";
 import information from "@/information.json";
 export default function Footer() {
   return (
-    <footer className=" z-[50] text-xl mt-16 justify-self-end absolute left-0 right-0 place-self-end bottom-0 h-[6rem] w-full max-w-4xl">
+    <footer className=" z-[50] text-xl mt-16 justify-self-end absolute left-0 right-0 place-self-end bottom-0 h-[6rem] w-full max-w-4xl px-4">
       <nav className="flex justify-between w-full rounded-xl border border-zinc-700 bg-zinc-800 p-6 mb-6">
         <h2>
           made by Leo with <span className="text-violet-200">love</span>

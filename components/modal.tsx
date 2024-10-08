@@ -17,16 +17,20 @@ const Modal = () => {
     if (e.target === e.currentTarget) {
       const modal = document.getElementById("modal");
       if (!modal) return;
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
+      modal.classList.replace("opacity-100", "opacity-0");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }, 300);
       document.body.style.overflow = "unset";
     }
+    3;
   };
 
   return (
     <div
       id="modal"
-      className="fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 hidden"
+      className="fixed inset-0 bg-black bg-opacity-50 justify-center items-center z-50 hidden duration-300 opacity-0 transition-all"
       onClick={handleOverlayClick}
     >
       <Block className="max-w-4xl max-h-[90vh] overflow-y-auto space-y-5 modal relative mx-2 overflow-x-hidden">
