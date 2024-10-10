@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: "https://useefficiently.com/schedule-meeting",
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     ...customerSitemap,
   ];
 }
