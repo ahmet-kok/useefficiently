@@ -1,5 +1,6 @@
 "use client";
-import { getCalApi } from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import information from "@/information.json";
 import { useEffect } from "react";
 
 export default function CalCom() {
@@ -14,5 +15,5 @@ export default function CalCom() {
     })();
   }, []);
 
-  return <></>;
+  return <Cal calLink={information.cal} />;
 }

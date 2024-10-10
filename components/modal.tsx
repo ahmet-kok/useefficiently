@@ -60,7 +60,7 @@ const Modal = () => {
 
           <button
             data-cal-namespace=""
-            data-cal-link={information.calendly}
+            data-cal-link={information.cal}
             data-cal-config='{"layout":"month_view"}'
             className="border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer"
           >

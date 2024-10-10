@@ -44,14 +44,11 @@ const Button = ({
     } else firstLink.classList.add("hidden");
     modal.classList.add("flex");
     modal.classList.remove("hidden");
+    setTimeout(() => {
+      modal.classList.replace("opacity-0", "opacity-100");
+    }, 0.1);
   };
 
-  const closeModal = () => {
-    const modal = document.getElementById("modal");
-    if (!modal) return;
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-  };
   return (
     <button
       onClick={() =>

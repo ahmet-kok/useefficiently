@@ -38,7 +38,7 @@ export default function Page() {
           <div className="flex flex-wrap justify-center text-violet-50 gap-2 sm:w-8/12 mx-auto text-nowrap">
             <button
               data-cal-namespace=""
-              data-cal-link={information.calendly}
+              data-cal-link={information.cal}
               data-cal-config='{"layout":"month_view"}'
               className="flex-1 flex gap-1 items-center border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer justify-center"
             >
