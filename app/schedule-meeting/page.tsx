@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import CalCom from "@/components/calcom";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Schedule a Meeting";
+  const title = "Schedule a Meeting with UseEfficiently";
   const description = "Contact us for any questions or feedback you may have.";
 
   const metadata = {

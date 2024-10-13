@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   ],
   title: {
     default: information.title,
-    template: "%s | UseEfficiently - Accredited Airtable Services Partner",
+    template: "%s | UseEfficiently - Airtable Services Partner",
   },
   description:
     "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: information.website + "/api/og?title=" + information.company + "\nAirtable Services Partner",
+        url: information.website + "/api/og",
         alt: information.company + " Logo",
       },
     ],
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     },
     description:
       "At UseEfficiently, our team of experts is here to help you master Airtable and use it efficiently to meet all your needs.",
-    images: information.website + "/api/og?title=" + information.company,
+    images: information.website + "/api/og",
   },
   authors: [{ name: information.company + " Team", url: information.website }],
 };
