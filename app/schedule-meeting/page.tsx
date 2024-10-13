@@ -39,7 +39,7 @@ export default function Page() {
       <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
         Schedule a Meeting with UseEfficiently
       </h1>
-      <CalCom />
+      <CalCom show />
     </div>
   );
 }

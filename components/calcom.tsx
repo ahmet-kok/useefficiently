@@ -3,17 +3,16 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import information from "@/information.json";
 import { useEffect } from "react";
 
-export default function CalCom() {
+export default function CalCom({ show = false }: { show?: boolean }) {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({});
       cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
     })();
   }, []);
 
-  return <Cal calLink={information.cal} />;
+  return show && <Cal calLink={information.cal} />;
 }
