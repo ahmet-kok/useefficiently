@@ -21,17 +21,19 @@ export default function Page() {
             title="Airtable"
             description="Airtable is a low-code platform for building collaborative apps."
             position="right"
+          >*/}
+          <Link
+            href={"https://ecosystem.airtable.com/consultants/useefficiently"}
           >
-            <Link href={""}> */}
-              <Image
-                className="mx-auto mb-4"
-                src={partner}
-                width="250"
-                height="250"
-                alt="Accredited Airtable Services Partner"
-              />
-            {/* </Link>
-          </Popover> */}
+            <Image
+              className="mx-auto mb-4 cursor-pointer duration-300 transition-all hover:scale-105"
+              src={partner}
+              width="250"
+              height="250"
+              alt="Accredited Airtable Services Partner"
+            />
+          </Link>
+          {/*</Popover> */}
           <h2 className="text-xl sm:text-2xl text-center font-medium leading-tight text-violet-200">
             Accredited Airtable Services Partner
           </h2>
