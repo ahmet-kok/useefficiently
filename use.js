@@ -186,7 +186,7 @@ export const useCases = [
 
 export const team = [
   {
-    name: "Leo",
+    name: "Leo Kök",
     title: "Software Developer",
     address: "Istanbul, Turkiye",
     quote:
@@ -195,7 +195,7 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/ahmet-kok/",
   },
   {
-    name: "Nate",
+    name: "Nate Dogan",
     title: "Airtable Consultant",
     address: "Ontario, Canada",
     quote:
@@ -204,7 +204,7 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/nusretdogan/",
   },
   {
-    name: "Lukas",
+    name: "Lukas Kaiser",
     title: "Airtable Consultant",
     address: "Clausthal, Germany",
     quote:
