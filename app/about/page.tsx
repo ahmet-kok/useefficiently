@@ -64,9 +64,9 @@ export default function Page() {
                 <div style={{ width: "150px" }}></div>
                 <div>
                   <h2 className="text-3xl font-medium">{member.name}</h2>
-                  <h3 className="text-lg leading-tight text-violet-200 mb-2">
+                  {/* <h3 className="text-lg leading-tight text-violet-200 mb-2">
                     {member.title}
-                  </h3>
+                  </h3> */}
                   <div className="w-min flex gap-2 text-violet-200 text-2xl items-center jus">
                     <Link href={member.linkedin} target="_blank">
                       <SiLinkedin />

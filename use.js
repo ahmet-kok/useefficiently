@@ -78,6 +78,26 @@ export const customers = [
 `,
   },
   {
+    slug: "oihs",
+    name: "Ontario International High School",
+    logo: "/logos/OntarioInternationalHighSchool.png",
+    linkedin: "https://www.oihs.ca/",
+    title: ``,
+    metaTitle: "Ontario International High School",
+    description: "",
+    detail: ``,
+  },
+  {
+    slug: "gkp",
+    name: "Geleceğin Kooperatifleri",
+    logo: "/logos/GeleceginKooperatifleri.png",
+    linkedin: "https://www.girisimcilikvakfi.org/",
+    title: ``,
+    metaTitle: "Ontario International High School",
+    description: "",
+    detail: ``,
+  },
+  {
     slug: "oua",
     name: "Google Game and Application Academy",
     logo: "/logos/GoogleGameandApplicationAcademy.svg",
@@ -113,7 +133,7 @@ export const testimonials = [
     pic: "/images/Selin-Altuntecim.jpeg",
     span: "sm:col-span-2",
     linkedin: "https://www.linkedin.com/in/selin-altuntecim/",
-    quote: `<p>They’re a fun and energetic team that keeps us ahead in IT. We truly appreciate their dedication. We’ve successfully collaborated on 5 projects, each one building on the last. They assist us in delivering education programs to over 150,000 applicants annually and manage IT for our projects with the Republic of Turkey Ministry of Trade, supporting 5,000 corporations. All our workflows are seamlessly managed in Airtable, with customized apps tailored to each department’s needs.</p><p>This team ensures we can manage large-scale programs with confidence, where our credibility is crucial. We value our partnership and look forward to many more projects together.</p>`,
+    quote: `<p>I’m extremely pleased with the services provided by our partner. Their expertise has been invaluable in streamlining our processes, enhancing efficiency and organization. They consistently demonstrate industry knowledge and offer innovative solutions tailored to our needs. Communication has been smooth, with prompt responses to adjustments or feedback, ensuring outcomes that align with our goals. I highly recommend them for their dedication to quality, reliability, and professionalism.</p>`,
   },
   {
     slug: "yetgen",
@@ -211,5 +231,14 @@ export const team = [
       "Lukas started exploring no-code tools over 3 years ago when he saw the potential to empower businesses to create without coding. He’s passionate about helping others realize that they don’t need to be developers to build something amazing. Lukas enjoys teaching others how to unlock the full potential of no-code.",
     pic: "/images/lukas.jpeg",
     linkedin: "https://www.linkedin.com/in/lukas-kaiser-lk/",
+  },
+  {
+    name: "Yunus Şen",
+    title: "Solution Consultant",
+    address: "Istanbul, Turkiye",
+    quote:
+      "",
+    pic: "/images/yunus.jpeg",
+    linkedin: "https://www.linkedin.com/in/yunuseshen/",
   },
 ];
