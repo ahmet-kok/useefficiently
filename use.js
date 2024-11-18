@@ -2,7 +2,7 @@ export const customers = [
   {
     slug: "yetgen",
     name: "Yetkin Gençler",
-    logo: "/logos/YetkinGencler.svg",
+    logo: "https://cdn.useefficiently.com/YetkinGencler.svg",
     linkedin: "https://www.yetkingencler.com/",
     title: `<h1 id="who-is-yetgen-">YetGen</h1>`,
     metaTitle: "Yetkin Gençler",
@@ -13,7 +13,7 @@ export const customers = [
   {
     slug: "publicsquare",
     name: "PublicSquare",
-    logo: "/logos/PublicSquare.svg",
+    logo: "https://cdn.useefficiently.com/PublicSquare.svg",
     linkedin: "https://upwork.com/freelancers/ahmetkok",
     title: `<h1 id="who-is-publicsquare-">PublicSquare</h1>`,
     metaTitle: "PublicSquare",
@@ -36,7 +36,7 @@ export const customers = [
   {
     slug: "girvak",
     name: "Turkiye Entrepreneurship Foundation",
-    logo: "/logos/TurkiyeEntrepreneurshipFoundation.svg",
+    logo: "https://cdn.useefficiently.com/TurkiyeEntrepreneurshipFoundation.svg",
     linkedin: "https://www.girisimcilikvakfi.org/",
     title: `<h1 id="who-is-girvak-">Turkiye Entrepreneurship Foundation</h1>`,
     metaTitle: "Turkiye Entrepreneurship Foundation",
@@ -80,7 +80,7 @@ export const customers = [
   {
     slug: "oihs",
     name: "Ontario International High School",
-    logo: "/logos/OntarioInternationalHighSchool.png",
+    logo: "https://cdn.useefficiently.com/OntarioInternationalHighSchool.png",
     linkedin: "https://www.oihs.ca/",
     title: ``,
     metaTitle: "Ontario International High School",
@@ -90,7 +90,7 @@ export const customers = [
   {
     slug: "gkp",
     name: "Geleceğin Kooperatifleri",
-    logo: "/logos/GeleceginKooperatifleri.png",
+    logo: "https://cdn.useefficiently.com/GeleceginKooperatifleri.png",
     linkedin: "https://www.girisimcilikvakfi.org/",
     title: ``,
     metaTitle: "Ontario International High School",
@@ -100,7 +100,7 @@ export const customers = [
   {
     slug: "oua",
     name: "Google Game and Application Academy",
-    logo: "/logos/GoogleGameandApplicationAcademy.svg",
+    logo: "https://cdn.useefficiently.com/GoogleGameandApplicationAcademy.svg",
     linkedin: "https://www.yapayzekaveteknolojiakademisi.com/",
     title: `<h1 id="google-game-and-app-development-academy">Google Game and App Development Academy</h1>`,
     metaTitle: "Google Game and App Development Academy",
@@ -120,7 +120,7 @@ export const testimonials = [
     slug: "publicsquare",
     name: "Dean Arnold",
     title: "CEO, PublicSquare",
-    pic: "/images/Dean-Arnold.png",
+    pic: "https://cdn.useefficiently.com/Dean-Arnold.png",
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/deanarnold1/",
     quote:
@@ -130,7 +130,7 @@ export const testimonials = [
     slug: "girvak",
     name: "Selin Altuntecim",
     title: "Coordinator, Turkiye Entrepreneurship Foundation",
-    pic: "/images/Selin-Altuntecim.jpeg",
+    pic: "https://cdn.useefficiently.com/Selin-Altuntecim.jpeg",
     span: "sm:col-span-2",
     linkedin: "https://www.linkedin.com/in/selin-altuntecim/",
     quote: `<p>I’m extremely pleased with the services provided by our partner. Their expertise has been invaluable in streamlining our processes, enhancing efficiency and organization. They consistently demonstrate industry knowledge and offer innovative solutions tailored to our needs. Communication has been smooth, with prompt responses to adjustments or feedback, ensuring outcomes that align with our goals. I highly recommend them for their dedication to quality, reliability, and professionalism.</p>`,
@@ -139,7 +139,7 @@ export const testimonials = [
     slug: "yetgen",
     name: "Erhan Erkut",
     title: "Founder, Yetkin Gençler",
-    pic: "/images/Erhan-Erkut.png",
+    pic: "https://cdn.useefficiently.com/Erhan-Erkut.png",
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/erhan-erkut/",
     quote:
@@ -211,7 +211,7 @@ export const team = [
     address: "Istanbul, Turkiye",
     quote:
       "Leo is all about making things work better. With a deep understanding of Airtable, he’s transformed how businesses handle their workflows. He loves seeing others succeed and often shares his expertise with the community, turning complex tasks into simple, efficient processes.",
-    pic: "/images/leo.jpeg",
+    pic: "https://cdn.useefficiently.com/leo.jpeg",
     linkedin: "https://www.linkedin.com/in/ahmet-kok/",
   },
   {
@@ -220,7 +220,7 @@ export const team = [
     address: "Ontario, Canada",
     quote:
       "Nate, as a tech lead, has spent over 5 years guiding teams to build custom solutions without a single line of code. His focus is on finding the smartest, most efficient ways to tackle problems. Nate takes pride in creating seamless systems that make work easier for everyone involved.",
-    pic: "/images/nate.jpeg",
+    pic: "https://cdn.useefficiently.com/nate.jpeg",
     linkedin: "https://www.linkedin.com/in/nusretdogan/",
   },
   {
@@ -229,7 +229,7 @@ export const team = [
     address: "Clausthal, Germany",
     quote:
       "Lukas started exploring no-code tools over 3 years ago when he saw the potential to empower businesses to create without coding. He’s passionate about helping others realize that they don’t need to be developers to build something amazing. Lukas enjoys teaching others how to unlock the full potential of no-code.",
-    pic: "/images/lukas.jpeg",
+    pic: "https://cdn.useefficiently.com/lukas.jpeg",
     linkedin: "https://www.linkedin.com/in/lukas-kaiser-lk/",
   },
   {
@@ -238,7 +238,7 @@ export const team = [
     address: "Istanbul, Turkiye",
     quote:
       "",
-    pic: "/images/yunus.jpeg",
+    pic: "https://cdn.useefficiently.com/yunus.jpeg",
     linkedin: "https://www.linkedin.com/in/yunuseshen/",
   },
 ];

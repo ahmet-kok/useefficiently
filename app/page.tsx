@@ -28,6 +28,7 @@ export default function Page() {
             <Image
               className="mx-auto mb-4 cursor-pointer duration-300 transition-all hover:scale-105"
               src={partner}
+              loading="lazy"
               width="250"
               height="250"
               alt="Accredited Airtable Services Partner"
@@ -100,6 +101,7 @@ export default function Page() {
               <Image
                 width={200}
                 height={200}
+                loading="lazy"
                 src={customer.logo}
                 alt={customer.name}
               />
@@ -135,6 +137,7 @@ export default function Page() {
               >
                 <Image
                   className="aspect-square rounded-full"
+                  loading="lazy"
                   width={200}
                   height={200}
                   style={{ width: "70px" }}

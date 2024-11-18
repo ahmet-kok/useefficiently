@@ -1,5 +1,3 @@
-
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -10,11 +8,14 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cdn.useefficiently.com",
+      },
+      {
+        protocol: "https",
         hostname: "github.com",
       },
       { protocol: "https", hostname: "picsum.photos" },
     ],
   },
 };
- export default nextConfig;
- 
+export default nextConfig;
