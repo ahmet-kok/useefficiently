@@ -120,7 +120,7 @@ export const testimonials = [
     slug: "publicsquare",
     name: "Dean Arnold",
     title: "CEO, PublicSquare",
-    pic: "https://cdn.useefficiently.com/Dean-Arnold.png",
+    pic: "https://cdn.useefficiently.com/Dean-Arnold.jpeg",
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/deanarnold1/",
     quote:
@@ -139,7 +139,7 @@ export const testimonials = [
     slug: "yetgen",
     name: "Erhan Erkut",
     title: "Founder, Yetkin Gençler",
-    pic: "https://cdn.useefficiently.com/Erhan-Erkut.png",
+    pic: "https://cdn.useefficiently.com/Erhan-Erkut.jpeg",
     span: "sm:col-span-1",
     linkedin: "https://www.linkedin.com/in/erhan-erkut/",
     quote:
