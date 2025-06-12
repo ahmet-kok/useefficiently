@@ -9,6 +9,8 @@ import partner from "@/public/partner.svg";
 import information from "@/information.json";
 import { ButtonBlock as Button } from "@/components/button";
 import Popover from "@/components/popover";
+import { FilloutButton } from "@/components/fillout";
+
 export default function Page() {
   return (
     <>
@@ -39,14 +41,9 @@ export default function Page() {
             Accredited Airtable Services Partner
           </h2>
           <div className="flex flex-wrap justify-center text-violet-50 gap-2 sm:w-8/12 mx-auto text-nowrap">
-            <button
-              data-cal-namespace=""
-              data-cal-link={information.cal}
-              data-cal-config='{"layout":"month_view"}'
-              className="flex-1 flex gap-1 items-center border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer justify-center"
-            >
+            <FilloutButton className="flex-1 flex gap-1 items-center border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer justify-center">
               <span className="text-xl">Book 30-Minute Free Call</span>
-            </button>
+            </FilloutButton>
             <Link
               href={"#about"}
               className="flex flex-1 gap-1 items-center border-zinc-700 bg-zinc-800 border p-2 rounded-full px-3 cursor-pointer text-center justify-center"

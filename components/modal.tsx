@@ -3,6 +3,7 @@ import { Block } from "@/components/block";
 import Link from "next/link";
 import information from "@/information.json";
 import React from "react";
+import { FilloutButton } from "@/components/fillout";
 
 const Modal = () => {
   const handleOverlayClick = (
@@ -58,14 +59,9 @@ const Modal = () => {
             Learn More
           </Link>
 
-          <button
-            data-cal-namespace=""
-            data-cal-link={information.cal}
-            data-cal-config='{"layout":"month_view"}'
-            className="border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer"
-          >
+          <FilloutButton className="border border-violet-300 bg-violet-400 p-2 rounded-full px-3 cursor-pointer">
             Contact us
-          </button>
+          </FilloutButton>
         </div>
       </Block>
     </div>

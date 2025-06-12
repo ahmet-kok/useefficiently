@@ -1,6 +1,6 @@
 import information from "@/information.json";
 import { Metadata } from "next";
-import CalCom from "@/components/calcom";
+import FilloutEmbed from "@/components/fillout";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Schedule a Meeting with UseEfficiently";
@@ -33,13 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return metadata;
 }
+
 export default function Page() {
-  return (
-    <div className="grid place-content-center grid-cols-1 pt-20 items-center justify-center gap-16">
-      <h1 className="text-center text-4xl sm:text-6xl font-medium leading-tight content-center ">
-        Schedule a Meeting with UseEfficiently
-      </h1>
-      <CalCom show />
-    </div>
-  );
+  return <FilloutEmbed mode="fullscreen" show />;
 }

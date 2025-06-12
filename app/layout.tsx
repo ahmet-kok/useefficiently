@@ -6,11 +6,6 @@ import { Inter } from "next/font/google";
 import information from "@/information.json";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-import dynamic from "next/dynamic";
-
-const CalCom = dynamic(() => import("@/components/calcom"), {
-  ssr: false,
-});
 import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import type { Metadata } from "next";
@@ -127,7 +122,6 @@ export default function RootLayout({
         <div className="h-[8rem] invisible"></div>
         <Footer />
         <Modal />
-        <CalCom />
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-MS4ZQ0JQQD" />
