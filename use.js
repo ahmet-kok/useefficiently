@@ -214,7 +214,7 @@ export const team = [
     pic: "https://cdn.useefficiently.com/leo.jpeg",
     linkedin: "https://www.linkedin.com/in/ahmet-kok/",
   },
-  {
+/*   {
     name: "Nate Dogan",
     title: "Airtable Consultant",
     address: "Ontario, Canada",
@@ -222,7 +222,7 @@ export const team = [
       "Nate, as a tech lead, has spent over 5 years guiding teams to build custom solutions without a single line of code. His focus is on finding the smartest, most efficient ways to tackle problems. Nate takes pride in creating seamless systems that make work easier for everyone involved.",
     pic: "https://cdn.useefficiently.com/nate.jpeg",
     linkedin: "https://www.linkedin.com/in/nusretdogan/",
-  },
+  }, */
   {
     name: "Lukas Kaiser",
     title: "Airtable Consultant",
